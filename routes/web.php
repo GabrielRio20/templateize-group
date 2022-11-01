@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PersonalController;
+// use App\Http\Controllers\Auth;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +33,10 @@ Route::get('/templates/company/main', function () {
 });
 
 Route::get('/register', [PersonalController::class, 'register']);
+Route::get('/login', [PersonalController::class, 'login']);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

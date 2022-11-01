@@ -8,12 +8,84 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>@yield('title')</title>
 </head>
-<body style="background-color: #1D2023"> 
+<body style="background-color: #ffffff"> 
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top absolute" style="background-color: #1D2023;">
+  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url('#') }}">
+          <img src="{{ asset('img/Templateize.png') }}" alt="" width="100px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav me-auto">
+
+            </ul>
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ms-auto">
+                <!-- Authentication Links -->
+                @guest
+                    <li class="nav-item px-4">
+                      <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item px-4">
+                      <a class="nav-link " href="/category">CATEGORY</a>
+                    </li>
+                    <li class="nav-item px-4">
+                      <a class="nav-link" active href="g_virus">FREE TEMPLATE</a>
+                    </li>
+                    <div class="dropdown px-4">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Account
+                      </a>
+                    
+                      <ul class="dropdown-menu">
+                        @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                        @endif
+
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
+                        @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                  onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                @endguest
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+    {{-- <nav class="navbar navbar-expand-lg navbar sticky-top absolute font-bold text-light" style="background-color: #ffffff">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="" alt="" width="40" height="40">   INI LOGO
+            <img src="{{ asset('img/Templateize.png') }}" alt="" width="100px">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,12 +102,22 @@
                   <a class="nav-link" active href="g_virus">FREE TEMPLATE</a>
                 </li>
                 <li class="nav-item px-4">
-                  <a class="nav-link" href="/register">LOGIN</a>
+                  
+                  <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Account
+                    </a>
+                  
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/login">Login</a></li>
+                      <li><a class="dropdown-item" href="/register">Register</a></li>
+                    </ul>
+                  </div>
                 </li>
               </ul>
           </div>
         </div>
-      </nav>
+      </nav> --}}
 
       <div id="carouselExampleCaptions" class="carousel slide" style="height:20%" data-bs-ride="false">
         <div class="carousel-indicators">
@@ -78,7 +160,7 @@
 
       
       
-      <div class="p-5 mb-5 text-light" style="background-color: #1D2023;">
+      <div class="p-5 mb-5 text-light" style="background-color: #3180da;">
       <div class="container mt-5 mb-5 ml-0">
         @yield('container')
         @yield('search') <br><br>
