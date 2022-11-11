@@ -35,23 +35,32 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form method="POST" action="{{ route('login') }}" class="login100-form validate-form">
+				<form method="POST" action="{{ route('login') }}" class="login100-form">
+					@csrf
 					<span class="login100-form-title p-b-43">
 						Welcome Back!
 					</span>
-					
-					
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email">
+
+					<div class="wrap-input100 validate-input" >
+						<input class="input100 @error('email') is-invalid @enderror" type="email" id="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 						<span class="focus-input100"></span>
 						<span class="label-input100">Email</span>
+						@error('email')
+								<span class="invalid-feedback" role="alert">
+									<strong>{{ $message }}</strong>
+								</span>
+						@enderror
 					</div>
-					
-					
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass">
+
+					<div class="wrap-input100 validate-input">
+						<input class="input100 @error('password') is-invalid @enderror" type="password" id="password" name="password" value="{{ old('password') }}" required autocomplete="current-password">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Password</span>
+						@error('email')
+								<span class="invalid-feedback" role="alert">
+									<strong>{{ $message }}</strong>
+								</span>
+						@enderror
 					</div>
 
 					<div class="flex-sb-m w-full p-t-3 p-b-32">
@@ -69,28 +78,12 @@
 						</div>
 					</div>
 			
-
 					<div class="container-login100-form-btn">
 						<button type="submit" class="login100-form-btn">
 							Login
 						</button>
 					</div>
 					
-					<div class="text-center p-t-46 p-b-20">
-						<span class="txt2">
-							or sign up using
-						</span>
-					</div>
-
-					<div class="login100-form-social flex-c-m">
-						<a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
-							<i class="fa fa-facebook-f" aria-hidden="true"></i>
-						</a>
-
-						<a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-					</div>
 				</form>
 
 				<div class="login100-more" style="background-image: url({{asset("/img/background_login.jpeg")}});">

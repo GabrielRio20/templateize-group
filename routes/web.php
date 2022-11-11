@@ -55,4 +55,4 @@ Route::get('/', [MainController::class, 'index'])->name('home');
 Route::get('/user', [UserController::class, 'index'])->name('user.index');
 
 //route for templates
-Route::get('/user', [TemplatesController::class, 'index'])->name('templates');
+Route::get('/templates', [TemplatesController::class, 'index'])->name('templates');

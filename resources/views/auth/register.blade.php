@@ -36,107 +36,145 @@
 	@section('content')
 
 	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<form method="POST" action="{{ route('register') }}" class="login100-form validate-form">
-					@csrf
+        <div class="container-login100">
+            <div class="wrap-login100">
+                {{-- <div class="card text-bg-light"> --}}
+                    {{-- <div class="card-header">{{ __('Register') }}</div> --}}
 
-					<span class="login100-form-title p-b-43">
-						Welcome! Register Here
-					</span>
-
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input id="name" type="text" name="name" class="input100 @error('name') is-invalid @enderror" value="{{ old('name') }}" required autocomplete="name" autofocus>
-						<span class="focus-input100"></span>
-						<span class="label-input100">{{ __('Name') }}</span>
-						@error('name')
-							<span class="invalid-feedback" role="alert">
-								<strong>{{ $message }}</strong>
+                    <div class="wrap-login100">
+                        <form method="POST" action="{{ route('register') }}" class="login100-form validate-form">
+                            @csrf
+							<span class="login100-form-title p-b-43">
+								Welcome! Register Here
 							</span>
-						@enderror
-					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input id="email" type="text" name="email" class="input100 @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus>
-						<span class="focus-input100"></span>
-						<span class="label-input100">{{ __('Email Address') }}</span>
-						@error('email')
-							<span class="invalid-feedback" role="alert">
-								<strong>{{ $message }}</strong>
-							</span>
-						@enderror
-					</div>
-					
-					
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input id="password" type="password" name="password" class="input100 @error('password') is-invalid @enderror" required autocomplete="new-password">
-						<span class="focus-input100"></span>
-						<span class="label-input100">{{ __('Password') }}</span>
-					</div>
+                            {{-- <div class="row mb-3">
+                                <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
-					<div class="row mb-3">
-						<label for="password" class="col-md-1 col-form-label text-md-end">{{ __('Level') }}</label>
-						<div class="col-md-6">
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="level" id="user" value="user" checked>
-								<label class="form-check-label" for="flexRadioDefault1">
-								  Customer
-								</label>
+                                <div class="col-md-6">
+                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div> --}}
+
+							<div class="wrap-input100 validate-input" >
+								<input class="input100 @error('email') is-invalid @enderror" type="text" id="name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+								<span class="focus-input100"></span>
+								<span class="label-input100">Name</span>
+								@error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+								@enderror
 							</div>
 
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="level" id="contributor" value="admin" checked>
-								<label class="form-check-label" for="flexRadioDefault2">
-								  Contributor
-								</label>
+                            {{-- <div class="row mb-3">
+                                <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div> --}}
+
+							<div class="wrap-input100 validate-input" >
+								<input class="input100 @error('email') is-invalid @enderror" type="email" id="email" name="email" value="{{ old('email') }}" required autocomplete="email">
+								<span class="focus-input100"></span>
+								<span class="label-input100">Email</span>
+								@error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+								@enderror
 							</div>
-				
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="level" id="admin" value="admin" checked>
-								<label class="form-check-label" for="flexRadioDefault2">
-								  Admin
-								</label>
+
+                            {{-- <div class="row mb-3">
+                                <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div> --}}
+
+							<div class="wrap-input100 validate-input">
+								<input class="input100 @error('password') is-invalid @enderror" type="password" id="password" name="password" value="{{ old('password') }}" required autocomplete="new-password">
+								<span class="focus-input100"></span>
+								<span class="label-input100">Password</span>
+								@error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+								@enderror
 							</div>
+
+                            {{-- <div class="row mb-3">
+                                <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                </div>
+                            </div> --}}
+
+							<div class="wrap-input100 validate-input">
+								<input class="input100" type="password" id="password-confirm" name="password_confirmation" required autocomplete="new-password">
+								<span class="focus-input100"></span>
+								<span class="label-input100">Password</span>
+							</div>
+
+                            <div class="row mb-3">
+                                <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Level') }}</label>
+
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="level" id="user" value="user">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          User
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="level" id="flexRadioDefault2" checked value="admin">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                          Admin
+                                        </label>
+                                      </div>
+                                </div>
+
+                               
+                            </div>
+
+                            <div class="row mb-0">
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn btn-primary">
+                                        {{ __('Register') }}
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+						<div class="login100-more" style="background-image: url({{asset("/img/background_login.jpeg")}});">
 						</div>
-					</div>
 
-					{{-- <div class="flex-sb-m w-full p-t-3 p-b-32">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								Remember me
-							</label>
-						</div>
-
-						<div>
-							<a href="#" class="txt1">
-								Forgot Password?
-							</a>
-						</div>
-					</div>
-					
-					<div class="text-center p-t-46 p-b-20">
-						<span class="txt2">
-							or sign up using
-						</span>
-					</div>
-
-					<div class="login100-form-social flex-c-m">
-						<a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
-							<i class="fa fa-facebook-f" aria-hidden="true"></i>
-						</a>
-
-						<a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-					</div>
-				</form>
-
-				<div class="login100-more" style="background-image: url({{asset("/img/background_login.jpeg")}});">
-				</div>
-			</div>
-		</div>
-	</div>
+                    </div>
+                {{-- </div> --}}
+            </div>
+        </div>
+    </div>
 	
 	
 
