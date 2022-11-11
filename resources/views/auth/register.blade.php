@@ -1,6 +1,6 @@
-@extends('layouts.app')
 
-@section('content')
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,30 +31,76 @@
 <!--===============================================================================================-->
 </head>
 <body style="background-color: #ffffff;">
+	@extends('layouts.app')
 	
+	@section('content')
+
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form method="POST" action="{{ route('register') }}" class="login100-form validate-form">
+					@csrf
+
 					<span class="login100-form-title p-b-43">
 						Welcome! Register Here
 					</span>
-					
-					
+
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email">
+						<input id="name" type="text" name="name" class="input100 @error('name') is-invalid @enderror" value="{{ old('name') }}" required autocomplete="name" autofocus>
 						<span class="focus-input100"></span>
-						<span class="label-input100">Email</span>
+						<span class="label-input100">{{ __('Name') }}</span>
+						@error('name')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+						@enderror
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input id="email" type="text" name="email" class="input100 @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus>
+						<span class="focus-input100"></span>
+						<span class="label-input100">{{ __('Email Address') }}</span>
+						@error('email')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+						@enderror
 					</div>
 					
 					
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass">
+						<input id="password" type="password" name="password" class="input100 @error('password') is-invalid @enderror" required autocomplete="new-password">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Password</span>
+						<span class="label-input100">{{ __('Password') }}</span>
 					</div>
 
-					<div class="flex-sb-m w-full p-t-3 p-b-32">
+					<div class="row mb-3">
+						<label for="password" class="col-md-1 col-form-label text-md-end">{{ __('Level') }}</label>
+						<div class="col-md-6">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="level" id="user" value="user" checked>
+								<label class="form-check-label" for="flexRadioDefault1">
+								  Customer
+								</label>
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="level" id="contributor" value="admin" checked>
+								<label class="form-check-label" for="flexRadioDefault2">
+								  Contributor
+								</label>
+							</div>
+				
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="level" id="admin" value="admin" checked>
+								<label class="form-check-label" for="flexRadioDefault2">
+								  Admin
+								</label>
+							</div>
+						</div>
+					</div>
+
+					{{-- <div class="flex-sb-m w-full p-t-3 p-b-32">
 						<div class="contact100-form-checkbox">
 							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 							<label class="label-checkbox100" for="ckb1">
@@ -67,13 +113,6 @@
 								Forgot Password?
 							</a>
 						</div>
-					</div>
-			
-
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
 					</div>
 					
 					<div class="text-center p-t-46 p-b-20">
@@ -120,7 +159,9 @@
 <!--===============================================================================================-->
 	<script src="js/login.js"></script>
 
+@endsection
+
 </body>
 </html>
 </div>
-@endsection
+

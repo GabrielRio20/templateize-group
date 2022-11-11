@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,11 +28,14 @@
 <!--===============================================================================================-->
 </head>
 <body style="background-color: #f3f3f3;">
-	
+
+	@extends('layouts.app')
+
+	@section('content')
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form method="POST" action="{{ route('login') }}" class="login100-form validate-form">
 					<span class="login100-form-title p-b-43">
 						Welcome Back!
 					</span>
@@ -71,7 +71,7 @@
 			
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button type="submit" class="login100-form-btn">
 							Login
 						</button>
 					</div>
@@ -120,6 +120,8 @@
 <!--===============================================================================================-->
 	<script src="js/login.js"></script>
 
+	@endsection
+
 </body>
 </html>
-@endsection
+
