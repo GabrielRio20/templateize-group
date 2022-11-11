@@ -170,9 +170,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <div>
-        <img src="{{ asset('img/Templateize.png') }}" alt="" width="100px">
-      </div>
+    <img src="{{ asset('img/Templateize.png') }}" alt="" width="100px">
     </a>
 
     <!-- Sidebar -->

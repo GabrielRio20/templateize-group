@@ -48,6 +48,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+<<<<<<< HEAD
 //route for main page
 Route::get('/', [MainController::class, 'index'])->name('home');
 
@@ -56,3 +57,8 @@ Route::get('/user', [UserController::class, 'index'])->name('user.index');
 
 //route for templates
 Route::get('/templates', [TemplatesController::class, 'index'])->name('templates');
+=======
+Route::get('/Dashboard-Customer', function () {
+    return view('d_board_cust');
+});
+>>>>>>> a298d91bd6496bab246d2ce7b6196c3c7a23827f
