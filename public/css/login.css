@@ -306,6 +306,7 @@
     padding-left: 24px;
     left: 0;
     top: 30px;
+    /* opacity: 0; */
   
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
@@ -389,15 +390,18 @@
   .input100:focus + .focus-input100 + .label-input100 {
     top: 14px;
     font-size: 13px;
+    opacity: 1;
   }
   
   .has-val {
     height: 48px !important;
+    
   }
   
   .has-val + .focus-input100 + .label-input100 {
     top: 14px;
     font-size: 13px;
+    
   }
   
   /*==================================================================

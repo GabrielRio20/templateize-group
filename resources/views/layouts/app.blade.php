@@ -21,7 +21,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('#') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
                   <img src="{{ asset('img/Templateize.png') }}" alt="" width="100">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -39,13 +39,13 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item px-4">
-                              <a class="nav-link" href="/">HOME</a>
+                              <a class="nav-link" href="{{ route('home') }}">{{ __('HOME') }}</a>
                             </li>
                             <li class="nav-item px-4">
-                              <a class="nav-link " href="/category">CATEGORY</a>
+                              <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
                             </li>
                             <li class="nav-item px-4">
-                              <a class="nav-link" active href="g_virus">FREE TEMPLATE</a>
+                              <a class="nav-link" active href="#">{{ __('FREE TEMPLATES') }}</a>
                             </li>
                             <div class="dropdown px-4">
                               <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,6 +65,13 @@
                                     </li>
                                 @endif
                                 @else
+
+                                @if(Auth::check() && Auth::user()->level == 'admin')
+                                <li class="nav-item me-4">
+                                    <a class="nav-link" href="{{ route('user.index') }}">{{ __('User') }}</a>
+                                </li>
+                                @endif
+
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}
@@ -91,7 +98,7 @@
             </div>
           </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>

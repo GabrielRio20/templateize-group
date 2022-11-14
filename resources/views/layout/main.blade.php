@@ -33,10 +33,10 @@
                       <a class="nav-link" href="/">HOME</a>
                     </li>
                     <li class="nav-item px-4">
-                      <a class="nav-link " href="/category">CATEGORY</a>
+                      <a class="nav-link " href="{{ route('templates') }}">TEMPLATES</a>
                     </li>
                     <li class="nav-item px-4">
-                      <a class="nav-link" active href="g_virus">FREE TEMPLATE</a>
+                      <a class="nav-link" active href="/templates">FREE TEMPLATE</a>
                     </li>
                     <div class="dropdown px-4">
                       <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -81,43 +81,6 @@
         </div>
     </div>
   </nav>
-
-    {{-- <nav class="navbar navbar-expand-lg navbar sticky-top absolute font-bold text-light" style="background-color: #ffffff">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <img src="{{ asset('img/Templateize.png') }}" alt="" width="100px">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item px-4">
-                  <a class="nav-link" href="/">HOME</a>
-                </li>
-                <li class="nav-item px-4">
-                  <a class="nav-link " href="/category">CATEGORY</a>
-                </li>
-                <li class="nav-item px-4">
-                  <a class="nav-link" active href="g_virus">FREE TEMPLATE</a>
-                </li>
-                <li class="nav-item px-4">
-                  
-                  <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Account
-                    </a>
-                  
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/login">Login</a></li>
-                      <li><a class="dropdown-item" href="/register">Register</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-          </div>
-        </div>
-      </nav> --}}
 
       <div id="carouselExampleCaptions" class="carousel slide" style="height:20%" data-bs-ride="false">
         <div class="carousel-indicators">

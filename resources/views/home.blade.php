@@ -1,7 +1,7 @@
 @extends('layout/main')
 
 @section('title')
-Home
+Templateize - Template for any Projects
 @endsection
 
 @section('container')
@@ -11,17 +11,18 @@ Home
 @section('search')
 <form class="d-flex" role="search">
   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn btn-outline-success" type="submit">Search</button>
+  <button class="btn btn-outline-dark" type="submit">Search</button>
 </form>
 @endsection
 
 @section('category')
-<h3 id="template">Category</h3>
+<h3 id="template">Templates</h3>
 <div class="row">
 
-  <div class="col-sm-3 d-flex align-items-stretch">
+  {{-- <div class="col-sm-3 d-flex align-items-stretch"> --}}
+  <div class="col-sm-3">
     <div class="card" style="width: 18rem">
-      <img src="https://i.pinimg.com/originals/0d/67/72/0d677237854ed19dcfe69f0f9a4065ee.jpg" class="card-img-top" alt="...">
+      <img src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title" style="color: black">Special title treatment</h5>
         <p class="card-text" style="color: black">With supporting text below as a natural lead-in to additional content.</p>
@@ -30,9 +31,9 @@ Home
     </div>
   </div>
 
-  <div class="col-sm-3 d-flex align-items-stretch">
+  <div class="col-sm-3">
     <div class="card" style="width: 18rem">
-      <img src="https://i.pinimg.com/originals/f9/99/5c/f9995c054004e3b1333359357cbc5981.jpg" class="card-img-top" alt="...">
+      <img src="https://bootstrapmade.com/content/templatefiles/Impact/Impact-bootstrap-website-template-md.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title" style="color: black">Special title treatment</h5>
         <p class="card-text" style="color: black">With supporting text below as a natural lead-in to additional content.</p>
@@ -41,9 +42,9 @@ Home
     </div>
   </div>
 
-  <div class="col-sm-3 d-flex align-items-stretch">
+  <div class="col-sm-3">
     <div class="card" style="width: 18rem">
-      <img src="https://upload.wikimedia.org/wikipedia/en/d/da/Trevor_Philips.Grand_Theft_Auto_V.jpg" class="card-img-top" alt="..." href="/templates/company/main">
+      <img src="https://bootstrapmade.com/content/templatefiles/Yummy/Yummy-bootstrap-website-template-md.png" class="card-img-top" alt="..." href="/templates/company/main">
       <div class="card-body">
         <h5 class="card-title" style="color: black">Special title treatment</h5>
         <p class="card-text" style="color: black">With supporting text below as a natural lead-in to additional content.</p>
@@ -52,9 +53,9 @@ Home
     </div>
   </div>
 
-  <div class="col-sm-3 d-flex align-items-stretch">
+  <div class="col-sm-3">
     <div class="card" style="width: 18rem">
-      <img src="https://i.pinimg.com/originals/c1/56/3f/c1563ff65f5882183b13a5c470d0e3d2.png" class="card-img-top" alt="...">
+      <img src="https://www.flexgigzz.com/wp-content/uploads/2021/04/bexer-bootstrap-business-template.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title" style="color: black">Special title treatment</h5>
         <p class="card-text" style="color: black">With supporting text below as a natural lead-in to additional content.</p>
