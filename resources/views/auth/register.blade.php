@@ -134,33 +134,40 @@
 							<div class="wrap-input100 validate-input">
 								<input class="input100" type="password" id="password-confirm" name="password_confirmation" required autocomplete="new-password">
 								<span class="focus-input100"></span>
-								<span class="label-input100">Password</span>
+								<span class="label-input100">Confirm Password</span>
 							</div>
 
-                            <div class="row mb-3">
-                                <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Level') }}</label>
+                            <div class="row mb-1">
+                                <label for="password" class="col-md-4 col-form-label">{{ __('Level') }}</label>
+                            </div>
+                            
+                            <div class="col mb-5">
 
-                                <div class="col-md-6">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="level" id="user" value="user">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                          User
-                                        </label>
-                                      </div>
-                                      <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="level" id="flexRadioDefault2" checked value="admin">
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                          Admin
-                                        </label>
-                                      </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="level" id="customer" value="customer">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      Customer
+                                    </label>
                                 </div>
 
-                               
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="level" id="contributor" value="contributor">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                      Contributor
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="level" id="admin" value="admin">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                      Admin
+                                    </label>
+                                </div>
                             </div>
 
                             <div class="row mb-0">
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                <div class="container-login100-form-btn">
+                                    <button type="submit" class="login100-form-btn">
                                         {{ __('Register') }}
                                     </button>
                                 </div>
