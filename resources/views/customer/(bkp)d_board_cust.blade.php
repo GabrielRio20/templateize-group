@@ -26,6 +26,9 @@
   <link rel="stylesheet" href="{{asset('lte/plugins/summernote/summernote-bs4.min.css')}}">
 </head>
 <body class="sidebar-mini side-bar closed sidebar-collapse">
+@extends('layouts.app')
+
+@section('content')
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -1461,6 +1464,7 @@
   </aside>
   <!-- /.control-sidebar -->
 </div>
+
 <!-- ./wrapper -->
 
 <!-- jQuery -->
@@ -1497,5 +1501,6 @@
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+@endsection
 </body>
 </html>

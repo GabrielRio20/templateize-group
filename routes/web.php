@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 // use App\Http\Controllers\Auth;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\TemplatesController;
 
@@ -56,6 +57,10 @@ Route::get('/user', [UserController::class, 'index'])->name('user.index');
 //route for templates
 Route::get('/templates', [TemplatesController::class, 'index'])->name('templates');
 
-Route::get('/Dashboard-Customer', function () {
-    return view('d_board_cust');
-});
+//route for dashboard customer
+Route::get('/dashboardCust', [CustomerController::class, 'index'])->name('dBoardCust');
+
+// Route::get('/Dashboard-Customer', function () {
+//     return view('d_board_cust');
+// });
+
