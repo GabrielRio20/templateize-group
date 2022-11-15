@@ -1,0 +1,62 @@
+*{
+    font-family: Dosis;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    margin: 0;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: 260px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.sidebar .header {
+    margin-bottom: 20px;
+    padding: 24px;
+}
+
+.sidebar .sidebar-content .list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 25px 24px;
+    gap: 15px;
+    font-size: 24px;
+    font-style: none;
+}
+
+.sidebar .sidebar-content .list-item a {
+    text-decoration: none;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
+.sidebar .sidebar-content .list-item .icon {
+    width: 20px;
+}
+
+.sidebar .sidebar-content .list-item:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 25px 24px;
+    gap: 15px;
+    font-size: 24px;
+    font-style: none;
+    background-color: rgb(182, 182, 182);
+}
+
+.main-content {
+    background-color: aquamarine;
+    flex-grow: 1;
+}
