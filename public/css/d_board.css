@@ -1,5 +1,5 @@
 *{
-    font-family: Dosis;
+    font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -16,6 +16,7 @@
     width: 260px;
     box-sizing: border-box;
     flex-direction: column;
+    z-index: 1;
 }
 
 .sidebar .header {
@@ -29,20 +30,20 @@
     align-items: center;
     padding: 25px 24px;
     gap: 15px;
-    font-size: 24px;
+    font-size: 16px;
     font-style: none;
 }
 
 .sidebar .sidebar-content .list-item a {
     text-decoration: none;
-    font-family: 'Dosis';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     color: rgb(0, 0, 0);
 }
 
 .sidebar .sidebar-content .list-item .icon {
-    width: 20px;
+    width: 24px;
+    margin-right: 10px;
 }
 
 .sidebar .sidebar-content .list-item:hover {
@@ -51,7 +52,7 @@
     align-items: center;
     padding: 25px 24px;
     gap: 15px;
-    font-size: 24px;
+    font-size: 16px;
     font-style: none;
     background-color: rgb(182, 182, 182);
 }

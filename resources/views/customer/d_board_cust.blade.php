@@ -10,60 +10,53 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat&display=swap" rel="stylesheet">
+  
 
   <link rel="stylesheet" href="{{asset('css/d_board.css')}}">
 </head>
 <body>
 @extends('layouts.app')
-
-@section('content')
   <div class="container_dashboard">
     <div class="sidebar">
-      <div class="header">
-        <div class="list-item">
-          <a href="#">
-          <img src="img/Templateize.png" width="200px">
-          </a>
-        </div>
-      </div>
       <div class="sidebar-content">
           <div class="list-item">
             <a href="#">
               <img src="img/icons/DashIcon.png" alt="" class="icon">
-              <span class="description">Dashboard</span>
+              <span class="description">DASHBOARD</span>
             </a>
           </div>
           <div class="list-item">
             <a href="#">
               <img src="img/icons/TempIcon.png" alt="" class="icon">
-              <span class="description">Templates</span>
+              <span class="description">TEMPLATES</span>
             </a>
           </div>
           <div class="list-item">
             <a href="#">
               <img src="img/icons/EarnIcon.png" alt="" class="icon">
-              <span class="description">Earnings</span>
+              <span class="description">EARNINGS</span>
             </a>
           </div>
           <div class="list-item">
             <a href="#">
               <img src="img/icons/CommIcon.png" alt="" class="icon">
-              <span class="description">Comment</span>
+              <span class="description">COMMENT</span>
             </a>
           </div>
           <div class="list-item">
             <a href="#">
               <img src="img/icons/FeedIcon.png" alt="" class="icon">
-              <span class="description">Feedback</span>
+              <span class="description">FEEDBACK</span>
             </a>
           </div>
         </div>
     </div>
     <div class="main-content">
+      @include('part.navbar_main')
+      <h1>Test</h1>
 
     </div>
   </div>
-@endsection
 </body>
 </html>
