@@ -19,7 +19,7 @@
 </head>
 <body>
     <div id="app">
-    @include('Part.navbar_main')
+    @include('part.navbar_main')
         <main>
             @yield('content')
         </main>

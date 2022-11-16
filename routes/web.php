@@ -8,6 +8,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\TemplatesController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\DetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,3 +66,6 @@ Route::get('/dashboardCust', [CustomerController::class, 'index'])->name('dBoard
 //     return view('d_board_cust');
 // });
 
+Route::get('/shop', [ShopController::class, 'index'])->name('shopping');
+
+Route::get('/detail', [DetailController::class, 'index'])->name('shopDetail');
