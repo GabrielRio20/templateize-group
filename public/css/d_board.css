@@ -1,74 +1,62 @@
 *{
+    font-family: Dosis;
     padding: 0;
     margin: 0;
 }
-.container_cust {
+
+.container {
     display: flex;
     min-height: 100vh;
 }
 
-.sidebar_cust{
-    background-color:rgb(154, 191, 223);
-    width: 260px;
-    padding: 24px;
+.sidebar {
+    margin: 0;
     display: flex;
+    background-color: rgb(255, 255, 255);
+    width: 260px;
     box-sizing: border-box;
     flex-direction: column;
 }
 
-/* .main_cust{
-    background-color:rgb(34, 1, 1);
-    flex-grow:1;
-} */
-
-.sidebar_cust .description-header{
-    text-align:center;
-    color:black;
-    line-height: 16px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
+.sidebar .header {
+    margin-bottom: 20px;
+    padding: 24px;
 }
 
-.sidebar_cust a{
-    text-decoration: none;
-}
-
-.sidebar_cust .header_cust .list-item{
+.sidebar .sidebar-content .list-item {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 12px;
-    border-radius: 8px;
-    background-color: rgb(255, 255, 255);
-    height: 40px;
-    box-sizing: border-box;
+    padding: 25px 24px;
+    gap: 15px;
+    font-size: 24px;
+    font-style: none;
 }
 
-.sidebar_cust .header_cust .list-item .icon{
-    margin-right: 12px;
-}
-
-.sidebar_cust .main_cust .list-item .description{
+.sidebar .sidebar-content .list-item a {
+    text-decoration: none;
+    font-family: 'Dosis';
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height:16px;
-    text-align:center;
-    color:black;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
 }
 
-.sidebar_cust .main_cust .list-item {
+.sidebar .sidebar-content .list-item .icon {
+    width: 20px;
+}
+
+.sidebar .sidebar-content .list-item:hover {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     align-items: center;
-    padding: 12px 10px;
-    /* background: rgb(189, 75, 0); */
-    border-radius: 8px;
-    width: 212px;
-    box-sizing: border-box;
+    padding: 25px 24px;
+    gap: 15px;
+    font-size: 24px;
+    font-style: none;
+    background-color: rgb(182, 182, 182);
 }
 
-.sidebar_cust .main_cust .list-item:hover{
-    background: rgb(25, 186, 250);
+.main-content {
+    background-color: aquamarine;
+    flex-grow: 1;
 }

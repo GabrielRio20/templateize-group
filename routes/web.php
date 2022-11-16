@@ -46,9 +46,7 @@ Route::get('/templates/company/main', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 
 //route for main page
 Route::get('/', [MainController::class, 'index'])->name('home');
