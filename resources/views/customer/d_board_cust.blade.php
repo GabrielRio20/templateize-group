@@ -15,7 +15,10 @@
   <link rel="stylesheet" href="{{asset('css/d_board.css')}}">
 </head>
 <body>
-  <div class="container">
+@extends('layouts.app')
+
+@section('content')
+  <div class="container_dashboard">
     <div class="sidebar">
       <div class="header">
         <div class="list-item">
@@ -61,5 +64,6 @@
 
     </div>
   </div>
+@endsection
 </body>
 </html>

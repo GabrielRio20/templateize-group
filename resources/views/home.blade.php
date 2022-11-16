@@ -78,7 +78,7 @@ Templateize - Template for any Projects
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ url('css/styles.css') }}" type="text/css" rel='stylesheet'>
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> --}}
-    <title>@yield('title')</title>
+    <title>Templatize</title>
 </head>
 <body style="background-color: #ffffff"> 
 
