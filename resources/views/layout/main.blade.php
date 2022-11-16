@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -82,6 +82,9 @@
     </div>
   </nav>
 
+
+@section('content')
+
       <div id="carouselExampleCaptions" class="carousel slide" style="height:20%" data-bs-ride="false">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -125,14 +128,69 @@
       
       <div class="p-5 mb-5 text-light" style="background-color: #3180da;">
       <div class="container mt-5 mb-5 ml-0">
-        @yield('container')
-        @yield('search') <br><br>
-        @yield('category')
+
+        
+        <h3>Proffesional Websites <br> Template for Any Project</h3><br>
+
+        
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit">Search</button>
+        </form><br><br>
+
+        
+        <h3 id="template">Templates</h3>
+        <div class="row">
+
+          <div class="col-sm-3">
+            <div class="card" style="width: 18rem">
+              <img src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="color: black">Special title treatment</h5>
+                <p class="card-text" style="color: black">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="/templates/company/main" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-sm-3">
+            <div class="card" style="width: 18rem">
+              <img src="https://bootstrapmade.com/content/templatefiles/Impact/Impact-bootstrap-website-template-md.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="color: black">Special title treatment</h5>
+                <p class="card-text" style="color: black">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="/templates/company/main" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-sm-3">
+            <div class="card" style="width: 18rem">
+              <img src="https://bootstrapmade.com/content/templatefiles/Yummy/Yummy-bootstrap-website-template-md.png" class="card-img-top" alt="..." href="/templates/company/main">
+              <div class="card-body">
+                <h5 class="card-title" style="color: black">Special title treatment</h5>
+                <p class="card-text" style="color: black">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-sm-3">
+            <div class="card" style="width: 18rem">
+              <img src="https://www.flexgigzz.com/wp-content/uploads/2021/04/bexer-bootstrap-business-template.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="color: black">Special title treatment</h5>
+                <p class="card-text" style="color: black">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+        
       </div>
     </div>
-
-    
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    @endsection
 </body>
-</html>
+</html> --}}
