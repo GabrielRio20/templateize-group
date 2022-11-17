@@ -1,5 +1,5 @@
 *{
-    font-family: Dosis;
+    font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -27,7 +27,7 @@
 }
 
 .sidebar .header {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 24px;
 }
 
@@ -37,15 +37,14 @@
     align-items: center;
     padding: 25px 24px;
     gap: 15px;
-    font-size: 24px;
+    font-size: 16px;
     font-style: none;
 }
 
 .sidebar .sidebar-content .list-item a {
     text-decoration: none;
-    font-family: 'Dosis';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     color: rgb(0, 0, 0);
 }
 
@@ -64,7 +63,7 @@
     align-items: center;
     padding: 25px 24px;
     gap: 15px;
-    font-size: 24px;
+    font-size: 16px;
     font-style: none;
     background-color: rgb(182, 182, 182);
 }
