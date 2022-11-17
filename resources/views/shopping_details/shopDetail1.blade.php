@@ -69,18 +69,16 @@
 </head>
 
 <body>
-@extends('layouts.app')
-
-@section('content')
+@include('part.navbar_main')
 
     <section class="container sproduct my-5 pt-5">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+                <img class="img-fluid w-100 pb-5" src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.png" id="MainImg" alt="" >
                 
                 <div class="small-img-group">
                     <div class="small-img-col">
-                        <img src="https://broonet.com/wp-content/uploads/2020/03/mewarnai-gambar-kartun-4.jpg" width="100%" class="small-img" alt="">
+                        <img src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.png" width="100%" class="small-img" alt="">
                     </div>
 
                     <div class="small-img-col">
@@ -113,44 +111,46 @@
                     id, efficitur in nulla.</span>
             </div>
 
-    <div class="row mx-auto container fluid mt-5 mb-5">
+        <div class="row mx-auto container fluid mt-5 mb-5">
 
-    <div class="product text-center col-lg-3 col-md-4 col-12 ">
-            <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
-            <h5 class="p-name">1Template</h5>
-            <h4 class="p-price">$1</h4>
-            <button class="buy-btn" onClick="location.href='/detail'">Buy now</button>
-            <hr>
-        </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12 ">
+                <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+                <h5 class="p-name">1Template</h5>
+                <h4 class="p-price">$1</h4>
+                <button class="buy-btn" onClick="location.href='/detail2'">Buy now</button>
+                <hr>
+            </div>
 
-        <div class="product text-center col-lg-3 col-md-4 col-12">
-            <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
-            <h5 class="p-name">2Template</h5>
-            <h4 class="p-price">$1</h4>
-            <button class="buy-btn">Buy now</button>
-            <hr>
-        </div>
-        
-        <div class="product text-center col-lg-3 col-md-4 col-12">
-            <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
-            <h5 class="p-name">3Template</h5>
-            <h4 class="p-price">$1</h4>
-            <button class="buy-btn">Buy now</button>
-            <hr>
-        </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+                <h5 class="p-name">2Template</h5>
+                <h4 class="p-price">$1</h4>
+                <button class="buy-btn" onClick="location.href='/detail3'">Buy now</button>
+                <hr>
+            </div>
+            
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+                <h5 class="p-name">3Template</h5>
+                <h4 class="p-price">$1</h4>
+                <button class="buy-btn" onClick="location.href='/detail4'">Buy now</button>
+                <hr>
+            </div>
 
-        <div class="product text-center col-lg-3 col-md-4 col-12">
-            <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
-            <h5 class="p-name">4Template</h5>
-            <h4 class="p-price">$1</h4>
-            <button class="buy-btn">Buy now</button>
-            <hr>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+                <h5 class="p-name">4Template</h5>
+                <h4 class="p-price">$1</h4>
+                <button class="buy-btn" onClick="location.href='/detail5'">Buy now</button>
+                <hr>
+            </div>
         </div>
-    </div>
-    </section>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+<script src="{{ asset('js/shop_details.js') }}"></script>
+
+    
 </body>
-@endsection
+
 </html>        
