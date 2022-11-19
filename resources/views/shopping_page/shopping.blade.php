@@ -73,34 +73,34 @@
     
     <div class="row mx-auto container fluid">
     <div class="product text-center col-lg-3 col-md-4 col-12">
-            <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+            <img class="img-fluid mb-3" src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.png" alt="">
             <h5 class="p-name">1Template</h5>
             <h4 class="p-price">$1</h4>
-            <button class="buy-btn" onClick="location.href='/detail'">Buy now</button>
+            <button class="buy-btn" onClick="location.href='/detail1'">Buy now</button>
             <hr>
         </div>
 
         <div class="product text-center col-lg-3 col-md-4 col-12">
-            <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+            <img class="img-fluid mb-3" src="https://bootstrapmade.com/content/templatefiles/Impact/Impact-bootstrap-website-template-md.png" alt="">
             <h5 class="p-name">2Template</h5>
             <h4 class="p-price">$1</h4>
-            <button class="buy-btn">Buy now</button>
+            <button class="buy-btn" onClick="location.href='/detail2'">Buy now</button>
             <hr>
         </div>
         
         <div class="product text-center col-lg-3 col-md-4 col-12">
-            <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+            <img class="img-fluid mb-3" src="https://bootstrapmade.com/content/templatefiles/Yummy/Yummy-bootstrap-website-template-md.png" class="card-img-top" alt="..." href="/templates/company/main" alt="">
             <h5 class="p-name">3Template</h5>
             <h4 class="p-price">$1</h4>
-            <button class="buy-btn">Buy now</button>
+            <button class="buy-btn" onClick="location.href='/detail3'">Buy now</button>
             <hr>
         </div>
 
         <div class="product text-center col-lg-3 col-md-4 col-12">
-            <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+            <img class="img-fluid mb-3" src="https://www.flexgigzz.com/wp-content/uploads/2021/04/bexer-bootstrap-business-template.jpg" alt="">
             <h5 class="p-name">4Template</h5>
             <h4 class="p-price">$1</h4>
-            <button class="buy-btn">Buy now</button>
+            <button class="buy-btn" onClick="location.href='/detail4'">Buy now</button>
             <hr>
         </div>
 
@@ -108,7 +108,7 @@
             <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
             <h5 class="p-name">5Template</h5>
             <h4 class="p-price">$1</h4>
-            <button class="buy-btn">Buy now</button>
+            <button class="buy-btn" onClick="location.href='/detail5'">Buy now</button>
             <hr>
         </div>
 
@@ -154,8 +154,8 @@
     </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> --}}
 @endsection
 </body>
 

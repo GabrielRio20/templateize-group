@@ -1,5 +1,6 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+                
                 <a class="navbar-brand" href="{{ url('/') }}">
                   <img src="{{ asset('img/Templateize.png') }}" alt="" width="100">
                 </a>
@@ -24,24 +25,13 @@
                               <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
                             </li>
                             <li class="nav-item px-4">
-                              <a class="nav-link" active href="#">{{ __('FREE TEMPLATES') }}</a>
+                              <a class="nav-link" active href="{{ route('shopping') }}">{{ __('FREE TEMPLATES') }}</a>
                             </li>
-                            <div class="dropdown px-4">
                             
-                        {{-- @if(Auth::check() && Auth::user()->level == 'admin')
-                            <li class="nav-item px-4">
-                                <a class="nav-link" href="{{ route('home') }}">{{ __('HOME') }}</a>
-                            </li>
-                            <li class="nav-item px-4">
-                                <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
-                            </li>
-                            <li class="nav-item px-4">
-                                <a class="nav-link" active href="#">{{ __('FREE TEMPLATES') }}</a>
-                            </li>
-                        @endif --}}
+                            <li class="nav-item dropdown px-4">
 
-                              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Account
+                              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true" v-pre>
+                                ACCOUNT 
                               </a>
                             
                               <ul class="dropdown-menu">
@@ -56,6 +46,7 @@
                                         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
                                 @endif
+                              </ul>
                                 @else
                                 
                                 {{-- admin --}}
@@ -69,9 +60,41 @@
                                 <li class="nav-item px-4">
                                     <a class="nav-link" active href="#">{{ __('FREE TEMPLATES') }}</a>
                                 </li>
-                                <li class="nav-item me-4">
-                                    <a class="nav-link" href="{{ route('user.index') }}">{{ __('User') }}</a>
+
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true" v-pre>
+                                        {{ Auth::user()->name }}
+                                    </a>
+
+                                    
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    @if(Auth::check() && Auth::user()->level == 'admin')
+                                    
+                                        <a class="dropdown-item" href="{{ route('dBoardCust') }}">
+                                            {{ __('Dahboard') }}
+                                        </a>
+
+                                        <a class="dropdown-item" href="{{ route('user.index') }}">
+                                            {{ __('User') }}
+                                        </a>
+                                        
+                                    @endif
+        
+                                        {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form> --}}
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                          onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+        
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div> 
                                 </li>
+
                                 @endif
                                 
                                 {{-- customer --}}
@@ -83,9 +106,9 @@
                                     <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
                                 </li>
                                 <li class="nav-item px-4">
-                                    <a class="nav-link" active href="#">{{ __('FREE TEMPLATES') }}</a>
+                                    <a class="nav-link" active href="{{ route('shopping') }}">{{ __('FREE TEMPLATES') }}</a>
                                 </li>
-                                @endif
+                                
 
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true" v-pre>
@@ -114,14 +137,11 @@
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                             @csrf
                                         </form>
-                                    </div>
-
-                                    
-        
-                                    
+                                    </div> 
                                 </li>
+                                @endif
                               </ul>
-                            </div>
+                            </li>
                             
                         @endguest
                     </ul>

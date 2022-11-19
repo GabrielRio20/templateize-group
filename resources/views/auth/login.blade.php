@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V18</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -25,13 +25,13 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <!--===============================================================================================-->
 </head>
 <body style="background-color: #f3f3f3;">
 
-	@extends('layouts.app')
-
-	@section('content')
+	@include('part.navbar_main')
+	{{-- @section('content') --}}
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
@@ -71,11 +71,11 @@
 							</label>
 						</div>
 
-						<div>
+						{{-- <div>
 							<a href="#" class="txt1">
 								Forgot Password?
 							</a>
-						</div>
+						</div> --}}
 					</div>
 			
 					<div class="container-login100-form-btn">
@@ -111,9 +111,11 @@
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/login.js"></script>
+	{{-- <script src="js/login.js"></script> --}}
+	<script src="{{ asset('js/login.js') }}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-	@endsection
+	{{-- @endsection --}}
 
 </body>
 </html>

@@ -66,6 +66,15 @@ Route::get('/Dashboard-Cont', function () {
      return view('d_board_cont');
 });
 
+//route for templates shopping page
 Route::get('/shop', [ShopController::class, 'index'])->name('shopping');
 
-Route::get('/detail', [DetailController::class, 'index'])->name('shopDetail');
+//route for template detail
+
+//template 
+Route::get('/detail1', [DetailController::class, 'detail1'])->name('shopDetail1');
+Route::get('/detail2', [DetailController::class, 'detail2'])->name('shopDetail2');
+Route::get('/detail3', [DetailController::class, 'detail3'])->name('shopDetail3');
+Route::get('/detail4', [DetailController::class, 'detail4'])->name('shopDetail4');
+
+//beli
