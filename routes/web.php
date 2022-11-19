@@ -62,9 +62,9 @@ Route::get('/templates', [TemplatesController::class, 'index'])->name('templates
 //route for dashboard customer
 Route::get('/dashboardCust', [CustomerController::class, 'index'])->name('dBoardCust');
 
-// Route::get('/Dashboard-Customer', function () {
-//     return view('d_board_cust');
-// });
+Route::get('/Dashboard-Cont', function () {
+     return view('d_board_cont');
+});
 
 Route::get('/shop', [ShopController::class, 'index'])->name('shopping');
 

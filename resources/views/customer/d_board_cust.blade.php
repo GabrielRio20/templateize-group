@@ -53,7 +53,7 @@
         </div>
     </div>
     <div class="main-content">
-      @include('part.navbar_main')
+      @include('part.navbar_cust')
       <h1>Test</h1>
 
     </div>
