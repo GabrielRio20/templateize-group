@@ -26,6 +26,12 @@
     transition:all ease-out .3s;
 }
 
+.logo.logo-kecil{
+    width: 60px;
+    content:url('/public/img/t.png');
+}
+
+
 .sidebar .header {
     margin-bottom: 10px;
     padding: 24px;
@@ -86,6 +92,7 @@
     display: block;
     height: 20px;
     cursor:pointer;
+    margin-left: 0;
 }
 
 #menu-checkbox{
@@ -117,7 +124,11 @@
     top: 16px;
 }
 
-#hamburger:before{
+/* .logo-kecil{
+    display
+} */
+
+/* #hamburger:before{
     content: "MENU";
     position: absolute;
     top: 5px;
@@ -135,12 +146,16 @@
 
 #menu-checkbox:checked + #menu-label::after{
     left:39px;
-}
+} */
 
-#menu-checkbox:checked + #menu-label #hamburger::before {
+/* #menu-checkbox:checked + #menu-label #hamburger::before {
     animation:moveUpThenDown 0.8s ease 0.2s forwards,
     shakeUp 0.8s ease 0.2s forwards,
     shakeDown 0.2s ease 0.8s forwards
+} */
+
+.container .list-item{
+    margin-right: 40px;
 }
 
 @keyframes moveUpThenDown{

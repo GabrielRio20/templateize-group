@@ -11,23 +11,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="{{asset('css/d_board.css')}}">
 </head>
 <body>
-@extends('layouts.app')
 
-@section('content')
   <div class="container_dashboard">
     <div class="sidebar">
       <div class="header">
         <div class="list-item">
           <a href="#">
-          <img src="img/Templateize.png" width="200px">
+          <img src="img/Templateize.png" id="logo" class="logo" width="200px">
+          
           </a>
         </div>
       </div>
       <div class="sidebar-content">
+          {{-- <div class="list-item">
+            <div id="menu-button">
+              <input type="checkbox" id="menu-checkbox">
+              <label for="menu-checkbox" id="menu-label">
+                <div id = "hamburger"></div>
+            </div>
+          </div> --}}
           <div class="list-item">
             <a href="#">
               <img src="img/icons/DashIcon.png" alt="" class="icon">
@@ -61,9 +67,11 @@
         </div>
     </div>
     <div class="main-content">
-
+      @include('part.navbar_cust')
     </div>
   </div>
-@endsection
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="{{ asset('js/d_board.js') }}"></script>
+</body>
 </body>
 </html>
