@@ -43,19 +43,19 @@
           <div class="list-item">
             <a href="#">
               <img src="img/icons/TempIcon.png" alt="" class="icon">
-              <span class="description">Templates</span>
+              <span class="description">TEMPLATES</span>
             </a>
           </div>
           <div class="list-item">
             <a href="#">
               <img src="img/icons/EarnIcon.png" alt="" class="icon">
-              <span class="description">Earnings</span>
+              <span class="description">EARNINGS</span>
             </a>
           </div>
           <div class="list-item">
             <a href="#">
               <img src="img/icons/CommIcon.png" alt="" class="icon">
-              <span class="description">Comment</span>
+              <span class="description">COMMENT</span>
             </a>
           </div>
           <div class="list-item">

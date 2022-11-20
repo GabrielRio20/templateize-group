@@ -18,6 +18,7 @@
     box-sizing: border-box;
     flex-direction: column;
     transition:all ease-in .3s;
+    /* z-index: 1; */
 
 }
 
