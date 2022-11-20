@@ -68,6 +68,8 @@ Route::get('/dashboardCust', [CustomerController::class, 'index'])->name('dBoard
 
 //route for templates shopping page
 Route::get('/shop', [ShopController::class, 'index'])->name('shopping');
+Route::get('/shop-create', [ShopController::class, 'create'])->name('shopping.create');
+Route::post('/shop', [ShopController::class, 'store'])->name('shopping.store');
 
 //route for template detail
 
@@ -76,5 +78,8 @@ Route::get('/detail1', [DetailController::class, 'detail1'])->name('shopDetail1'
 Route::get('/detail2', [DetailController::class, 'detail2'])->name('shopDetail2');
 Route::get('/detail3', [DetailController::class, 'detail3'])->name('shopDetail3');
 Route::get('/detail4', [DetailController::class, 'detail4'])->name('shopDetail4');
+
+//admin's route
+
 
 //beli

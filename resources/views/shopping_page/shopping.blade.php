@@ -61,9 +61,10 @@
 </head>
 
 <body>
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
 
-@section('content')
+@include('part.navbar_main')
+{{-- @section('content') --}}
 <section id="featured" class="my-5 pb-5">
     <div class="container text-center mt-5 py-5">
         <h3>Template</h3>
@@ -71,16 +72,19 @@
         <p>Silahkan lihat dan pilih template yang anda inginkan</p>
     </div>
     
+    
     <div class="row mx-auto container fluid">
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-            <img class="img-fluid mb-3" src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.png" alt="">
-            <h5 class="p-name">1Template</h5>
-            <h4 class="p-price">$1</h4>
+        @foreach($shopping as $item)
+        <div class="product text-center col-lg-3 col-md-4 col-12">
+            <img class="img-fluid mb-3" src="{{ asset('img/shopping/'.$item->picture) }}" alt="">
+            <h5 class="p-name">{{ $item->template_name }}</h5>
+            <h4 class="p-price">Rp {{ $item->price }}</h4>
             <button class="buy-btn" onClick="location.href='/detail1'">Buy now</button>
             <hr>
         </div>
+        @endforeach
 
-        <div class="product text-center col-lg-3 col-md-4 col-12">
+        {{-- <div class="product text-center col-lg-3 col-md-4 col-12">
             <img class="img-fluid mb-3" src="https://bootstrapmade.com/content/templatefiles/Impact/Impact-bootstrap-website-template-md.png" alt="">
             <h5 class="p-name">2Template</h5>
             <h4 class="p-price">$1</h4>
@@ -134,9 +138,9 @@
             <h4 class="p-price">$1</h4>
             <button class="buy-btn">Buy now</button>
             <hr>
-        </div>
+        </div> --}}
 
-        <nav aria-label="...">
+        
         <ul class="pagination mt-5">
             <li class="page-item disabled">
             <a class="page-link">Previous</a>
@@ -150,13 +154,13 @@
             <a class="page-link" href="#">Next</a>
             </li>
         </ul>
-    </nav>
     </div>
+    
 </section>
 
-{{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> --}}
-@endsection
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+{{-- @endsection --}}
 </body>
 
 </html>
