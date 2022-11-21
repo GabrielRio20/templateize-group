@@ -34,8 +34,8 @@ class ShopController extends Controller
         $picture = $request->picture;
         $namafile = time().'.'.$picture->getClientOriginalExtension();
 
-        Image::make($picture)->resize(800, 600)->save('thumb/'.$namafile);
-        $picture->move('img/shopping', $namafile);
+        Image::make($picture)->resize(800, 450)->save('thumb/'.$namafile);
+        // $picture->move('img/shopping', $namafile);
 
         $shopping->picture = $namafile;
         $shopping->save();

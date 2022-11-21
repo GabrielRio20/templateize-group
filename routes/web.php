@@ -4,12 +4,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 // use App\Http\Controllers\Auth;
+use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DetailController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\TemplatesController;
-use App\Http\Controllers\ShopController;
-use App\Http\Controllers\DetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,6 +63,9 @@ Route::get('/templates', [TemplatesController::class, 'index'])->name('templates
 //route for dashboard customer
 Route::get('/dashboardCust', [CustomerController::class, 'index'])->name('dBoardCust');
 
+//route for dashboard admin
+Route::get('/dashboardAdmin', [AdminController::class, 'index'])->name('dBoardAdmin');
+
 // Route::get('/Dashboard-Customer', function () {
 //     return view('d_board_cust');
 // });
@@ -74,12 +78,10 @@ Route::post('/shop', [ShopController::class, 'store'])->name('shopping.store');
 //route for template detail
 
 //template 
-Route::get('/detail1', [DetailController::class, 'detail1'])->name('shopDetail1');
-Route::get('/detail2', [DetailController::class, 'detail2'])->name('shopDetail2');
-Route::get('/detail3', [DetailController::class, 'detail3'])->name('shopDetail3');
-Route::get('/detail4', [DetailController::class, 'detail4'])->name('shopDetail4');
+// Route::get('/detail1', [DetailController::class, 'detail1'])->name('shopDetail1');
+// Route::get('/detail2', [DetailController::class, 'detail2'])->name('shopDetail2');
+// Route::get('/detail3', [DetailController::class, 'detail3'])->name('shopDetail3');
+// Route::get('/detail4', [DetailController::class, 'detail4'])->name('shopDetail4');
 
-//admin's route
-
-
-//beli
+//buy route
+Route::get('/details/{id}', [DetailController::class, 'index'])->name('details');
