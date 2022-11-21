@@ -83,3 +83,9 @@ Route::get('/detail4', [DetailController::class, 'detail4'])->name('shopDetail4'
 
 
 //beli
+
+
+//phpinfo
+Route::get('/phpinfo', function() {
+    return phpinfo();
+});
