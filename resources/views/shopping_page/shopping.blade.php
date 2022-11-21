@@ -79,7 +79,7 @@
             <h5 class="p-name">{{ $item->template_name }}</h5>
             <h4 class="p-price">{{ "Rp".number_format($item->price, 0, '.', '.') }}</h4>
             
-            <a class="btn btn-primary" href="{{ route('details', $item->id) }}">Buy now</a>
+            <a class="btn btn-primary" href="{{ route('details', $item->id) }}">Details</a>
             <hr>
 
         </div>

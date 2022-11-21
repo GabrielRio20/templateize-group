@@ -74,19 +74,19 @@
     <section class="container sproduct my-5 pt-5">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-5" src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.png" id="MainImg" alt="" >
+                <img class="img-fluid w-100 pb-5" src="{{ asset('thumb/'.$shopping->picture) }}" id="MainImg" alt="" >
                 
                 <div class="small-img-group">
                     <div class="small-img-col">
+                        <img src="{{ asset('thumb/'.$shopping->picture) }}" width="100%" class="small-img" width="100%" class="small-img" alt="">
+                    </div>
+
+                    <div class="small-img-col">
+                        <img src="https://broonet.com/wp-content/uploads/2020/03/mewarnai-gambar-kartun-4.jpg" width="100%" class="small-img" alt="">
+                    </div>
+
+                    <div class="small-img-col">
                         <img src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.png" width="100%" class="small-img" alt="">
-                    </div>
-
-                    <div class="small-img-col">
-                        <img src="https://broonet.com/wp-content/uploads/2020/03/mewarnai-gambar-kartun-4.jpg" width="100%" class="small-img" alt="">
-                    </div>
-
-                    <div class="small-img-col">
-                        <img src="https://broonet.com/wp-content/uploads/2020/03/mewarnai-gambar-kartun-4.jpg" width="100%" class="small-img" alt="">
                     </div>
 
                     <div class="small-img-col">
@@ -102,19 +102,13 @@
                 <h6>Home/ Template</h6>
 
                 <h3 class="py-4">{{ $shopping->template_name }}</h3>
-                <h2>$69</h2>
-                <button class="buy-btn">Beli Template</button>
-                <h4 class="mt-5 mb-5">detail</h4>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Mauris semper et lorem eget finibus. Integer non tempor nisl, 
-                    nec ultricies orci. Aliquam erat volutpat. Morbi mollis diam eget 
-                    est molestie mollis. Pellentesque tincidunt felis non enim ullamcorper 
-                    placerat. Donec ut libero at quam molestie sollicitudin eu ut diam. 
-                    Proin in sollicitudin lorem. Sed dolor sem, volutpat nec bibendum 
-                    id, efficitur in nulla.</span>
+                <h2>{{ "Rp".number_format($shopping->price, 0, '.', '.') }}</h2>
+                <button class="buy-btn">Buy Template</button>
+                <h4 class="mt-5 mb-5">Description</h4>
+                <span>{{ $shopping->description }}</span>
             </div>
 
-        <div class="row mx-auto container fluid mt-5 mb-5">
+        {{-- <div class="row mx-auto container fluid mt-5 mb-5">
 
             <div class="product text-center col-lg-3 col-md-4 col-12 ">
                 <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
@@ -147,7 +141,7 @@
                 <button class="buy-btn" onClick="location.href='/detail5'">Buy now</button>
                 <hr>
             </div>
-        </div>
+        </div> --}}
 
         {{-- @endforeach --}}
 

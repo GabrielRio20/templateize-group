@@ -12,5 +12,5 @@ g_kecil[2].onclick = function(){
     g_besar.src = g_kecil[2].src;
 }
 g_kecil[3].onclick = function(){
-    g_besar.src = g_kecil[4].src;
+    g_besar.src = g_kecil[3].src;
 }
