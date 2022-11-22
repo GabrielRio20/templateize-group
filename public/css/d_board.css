@@ -48,7 +48,14 @@
     gap: 15px;
     font-size: 16px;
     font-style: none;
+    text-decoration: none;
+    color: black;
 }
+
+/* .sidebar .sidebar-content .list-item .description{
+    color:black;
+    text-decoration: none;
+} */
 
 .sidebar .sidebar-content .list-item a {
     text-decoration: none;

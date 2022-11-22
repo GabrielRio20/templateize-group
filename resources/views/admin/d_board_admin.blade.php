@@ -34,42 +34,37 @@
                 <div id = "hamburger"></div>
             </div>
           </div> --}}
-          <div class="list-item">
-            <a href="#">
+          
+            <a href="#" class="list-item">
               <img src="img/icons/DashIcon.png" alt="" class="icon">
               <span class="description">DASHBOARD</span>
             </a>
-          </div>
-          <div class="list-item">
-            <a href="{{ route('user.index') }}">
+          
+            <a href="{{ route('user.index') }}" class="list-item">
               <img src="img/icons/DashIcon.png" alt="" class="icon">
               <span class="description">MANAGE USERS</span>
             </a>
-          </div>
-          {{-- <div  href="{{ route('shopping.create') }}"> --}}
+          
             <a href="{{ route('shopping.create') }}" class="list-item">
               <img src="img/icons/TempIcon.png" alt="" class="icon">
               <span class="description">ADD TEMPLATES</span>
             </a>
-          {{-- </div> --}}
-          <div class="list-item">
-            <a href="#">
+
+            <a href="#" class="list-item">
               <img src="img/icons/EarnIcon.png" alt="" class="icon">
               <span class="description">EARNINGS</span>
             </a>
-          </div>
-          <div class="list-item">
-            <a href="#">
+
+            <a href="#" class="list-item">
               <img src="img/icons/CommIcon.png" alt="" class="icon">
               <span class="description">COMMENT</span>
             </a>
-          </div>
-          <div class="list-item">
-            <a href="#">
+
+            <a href="#" class="list-item">
               <img src="img/icons/FeedIcon.png" alt="" class="icon">
               <span class="description">FEEDBACK</span>
             </a>
-          </div>
+
         </div>
     </div>
     <div class="main-content">
