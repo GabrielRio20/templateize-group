@@ -46,12 +46,12 @@
               <span class="description">MANAGE USERS</span>
             </a>
           </div>
-          <div class="list-item">
-            <a href="{{ route('shopping.create') }}">
+          {{-- <div  href="{{ route('shopping.create') }}"> --}}
+            <a href="{{ route('shopping.create') }}" class="list-item">
               <img src="img/icons/TempIcon.png" alt="" class="icon">
               <span class="description">ADD TEMPLATES</span>
             </a>
-          </div>
+          {{-- </div> --}}
           <div class="list-item">
             <a href="#">
               <img src="img/icons/EarnIcon.png" alt="" class="icon">
@@ -74,6 +74,11 @@
     </div>
     <div class="main-content">
       @include('part.navbar_cust')
+      <div class="main-dBoard">
+        {{-- <h1>halo</h1> --}}
+        {{-- @include('user.index') --}}
+        @yield('user')
+      </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

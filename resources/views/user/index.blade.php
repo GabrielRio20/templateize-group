@@ -4,6 +4,11 @@
     <div class="alert alert-success">{{ Session::get('pesan') }}</div>
 @endif
 
+@extends('admin.d_board_admin')
+
+@section('user')
+
+<h1> Manage User </h1>
 <table class="table table-striped">
     <thead>
         <tr>

@@ -17,5 +17,6 @@ class UserController extends Controller
         $no = 0;
         $data_user = User::all();
         return view('user.index', compact('data_user', 'no'));
+        // return view('admin.d_board_admin', compact('data_user', 'no'));
     }
 }
