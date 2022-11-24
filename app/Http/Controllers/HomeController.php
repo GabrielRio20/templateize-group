@@ -12,10 +12,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -28,7 +28,7 @@ class HomeController extends Controller
     }
 
     public function shop(){
-        $shopping = Shopping::paginate(10);
+        $shopping = Shopping::paginate(8);
         return view('home', compact('shopping'));
     }
 }
