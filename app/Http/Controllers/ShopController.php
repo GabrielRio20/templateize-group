@@ -9,10 +9,22 @@ use File;
 
 class ShopController extends Controller
 {
+    
     public function index(){
         $shopping = Shopping::paginate(10);
         return view('shopping_page.shopping', compact('shopping'));
+        // return view('home', compact('shopping'));
     }
+
+    public function home(){
+        $shopping = Shopping::paginate(10);
+        return view('home', compact('shopping'));
+    }
+
+    // public function homeCust(){
+    //     $shopping = Shopping::paginate(10);
+    //     return view('home', compact('shopping'));
+    // }
 
     public function create(){
         return view('shopping_page.create');
@@ -20,6 +32,7 @@ class ShopController extends Controller
 
     public function store(Request $request){
         $this->validate($request, [
+            // 'id' => 'required',
             'template_name' => 'required',
             'picture'=> 'image|mimes:jpeg,jpg,png',
             'description' => 'required',
@@ -27,6 +40,7 @@ class ShopController extends Controller
         ]);
 
         $shopping = New Shopping;
+        $shopping->id = $request->id;
         $shopping->template_name = $request->template_name;
         $shopping->description = $request->description;
         $shopping->price = $request->price;
@@ -40,5 +54,7 @@ class ShopController extends Controller
         $shopping->picture = $namafile;
         $shopping->save();
         return redirect('/shop')->with('pesan', 'Data berhasil disimpan');
+
+    
     }
 }

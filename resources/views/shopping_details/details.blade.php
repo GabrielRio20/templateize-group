@@ -71,7 +71,17 @@
 <body>
 @include('part.navbar_main')
 
-    <section class="container sproduct my-5 pt-5">
+<div class="col-md-12 m-4">
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Details</li>
+        </ol>
+      </nav>
+</div>
+
+
+    <section class="container sproduct my-5">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
                 <img class="img-fluid w-100 pb-5" src="{{ asset('thumb/'.$shopping->picture) }}" id="MainImg" alt="" >
@@ -96,16 +106,22 @@
             </div>
 
             <div class="col-lg-6 col-md-12 col-12">
+            <form method="get" action="{{ url('buy') }}/{{ $shopping->id }}" >
 
                 {{-- @foreach($shopping as $item) --}}
 
-                <h6>Home/ Template</h6>
+                {{-- <h6>Home/ Template</h6> --}}
+                <h6>{{ $shopping->id }}</h6>
 
                 <h3 class="py-4">{{ $shopping->template_name }}</h3>
                 <h2>{{ "Rp".number_format($shopping->price, 0, '.', '.') }}</h2>
-                <button class="buy-btn">Buy Template</button>
+
+                <button class="buy-btn" type="submit">Buy Template</button>
+
                 <h4 class="mt-5 mb-5">Description</h4>
                 <span>{{ $shopping->description }}</span>
+
+            </form>
             </div>
 
         {{-- <div class="row mx-auto container fluid mt-5 mb-5">
@@ -144,6 +160,7 @@
         </div> --}}
 
         {{-- @endforeach --}}
+    </section>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>

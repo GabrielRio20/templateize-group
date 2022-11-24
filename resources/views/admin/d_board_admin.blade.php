@@ -72,7 +72,7 @@
       <div class="main-dBoard">
         {{-- <h1>halo</h1> --}}
         {{-- @include('user.index') --}}
-        @yield('user')
+        @yield('main')
       </div>
     </div>
   </div>

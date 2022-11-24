@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ url('css/styles.css') }}" type="text/css" rel='stylesheet'>
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Templateize</title>
 </head>
 <body style="background-color: #ffffff"> 
 
   
-  @extends('layouts.app')
+  {{-- @extends('layouts.app') --}}
+  @include('part.navbar_main')
 
-    @section('content')
+    {{-- @section('content') --}}
 
       <div id="carouselExampleCaptions" class="carousel slide" style="height:20%" data-bs-ride="false">
         <div class="carousel-indicators">
@@ -72,7 +73,7 @@
         <h3 id="template">Templates</h3>
         <div class="row">
 
-          <div class="col-sm-3">
+          {{-- <div class="col-sm-3">
             <div class="card" style="width: 18rem">
               <img src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.png" class="card-img-top" alt="...">
               <div class="card-body">
@@ -114,15 +115,35 @@
                 <a href="#" class="btn btn-primary">See details</a>
               </div>
             </div>
-          </div>
+          </div> --}}
+        
+          @foreach($shopping as $item)
+        <div class="product text-center col-lg-3 col-md-4 col-12">
+            <img class="img-fluid mb-3" src="{{ asset('thumb/'.$item->picture) }}" alt="">
+            <h5 class="p-name">{{ $item->template_name }}</h5>
+            <h4 class="p-price">{{ "Rp".number_format($item->price, 0, '.', '.') }}</h4>
+            
+            <a class="btn btn-primary" href="{{ route('details', $item->id) }}">Details</a>
+            <hr>
+
+        </div>
+        @endforeach
         
         </div>
         
       </div>
     </div>
-    @endsection
 
-    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script> --}}
+    {{-- @include('layout.feedback') --}}
+    {{-- @include('shopping_page.shopping') --}}
+
+    {{-- @endsection --}}
+    
+    {{-- <div class="feedback">
+    @yield('feedback')
+    </div> --}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
 

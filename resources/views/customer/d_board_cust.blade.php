@@ -34,40 +34,39 @@
                 <div id = "hamburger"></div>
             </div>
           </div> --}}
-          <div class="list-item">
-            <a href="#">
+          
+            <a href="#" class="list-item">
               <img src="img/icons/DashIcon.png" alt="" class="icon">
               <span class="description">DASHBOARD</span>
             </a>
-          </div>
-          <div class="list-item">
-            <a href="#">
+          
+            <a href="{{ route('myTemplates') }}" class="list-item">
               <img src="img/icons/TempIcon.png" alt="" class="icon">
-              <span class="description">TEMPLATES</span>
+              <span class="description">MY TEMPLATES</span>
             </a>
-          </div>
-          <div class="list-item">
-            <a href="#">
+          
+            {{-- <a href="#" class="list-item">
               <img src="img/icons/EarnIcon.png" alt="" class="icon">
               <span class="description">EARNINGS</span>
-            </a>
-          </div>
-          <div class="list-item">
-            <a href="#">
+            </a> --}}
+          
+            <a href="#" class="list-item">
               <img src="img/icons/CommIcon.png" alt="" class="icon">
               <span class="description">COMMENT</span>
             </a>
-          </div>
-          <div class="list-item">
-            <a href="#">
+          
+            <a href="#" class="list-item">
               <img src="img/icons/FeedIcon.png" alt="" class="icon">
               <span class="description">FEEDBACK</span>
             </a>
-          </div>
+          
         </div>
     </div>
     <div class="main-content">
       @include('part.navbar_cust')
+      <div class="main-dBoard">
+        @yield('main')
+      </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

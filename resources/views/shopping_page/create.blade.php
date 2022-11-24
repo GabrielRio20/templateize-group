@@ -10,8 +10,8 @@
 <body>
     {{-- @include('part.navbar_main') --}}
     @extends('admin.d_board_admin')
-    @section('user')
-    <div class="container">
+    @section('main')
+    <div class="container m-3">
         <h4>Add Template</h4>
     
         {{-- @if (count($errors) > 0)
@@ -24,12 +24,13 @@
     
         <form method="post" action="{{ route('shopping.store') }}" enctype="multipart/form-data">
         @csrf
-            <div>Template Name <input type="text" name="template_name"></div>
+        <div class="form-group">
+            <div>Template Name <input type="text" name="template_name" class="form-control"></div>
             
-            <div>Price <input type="text" name="price"></div>
-            <div>Description <input type="textarea" name="description"></div>
+            <div>Price <input type="text" name="price" class="form-control"></div>
+            <div>Description <input type="textarea" name="description" class="form-control"></div>
     
-            <div class="form-group">
+            <div class="form-group mb-4">
                 <label for="picture"> Upload Foto</label>
                 <input type="file" class="form-control" name="picture">
             </div>
@@ -38,8 +39,10 @@
             class="date form-control" id="datepicker" placeholder="yyyy/mm/dd"></div> --}}
     
             <!-- <input type="text" id="datepicker"></p> -->
-            <div><button type="submit">Save</button>
-            <a href="/shop">Cancel</a></div>
+            <div><button type="submit" class="btn btn-primary">Save</button>
+            <a href="/shop" class="btn btn-danger">Cancel</a></div>
+        </div>
+            
         </form>
     </div>
     
