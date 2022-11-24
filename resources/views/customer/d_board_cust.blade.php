@@ -35,10 +35,10 @@
             </div>
           </div> --}}
           
-            <a href="#" class="list-item">
+            <!-- <a href="#" class="list-item">
               <img src="img/icons/DashIcon.png" alt="" class="icon">
               <span class="description">DASHBOARD</span>
-            </a>
+            </a> -->
           
             <a href="{{ route('myTemplates') }}" class="list-item">
               <img src="img/icons/TempIcon.png" alt="" class="icon">
