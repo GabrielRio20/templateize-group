@@ -22,4 +22,5 @@ class CustomerController extends Controller
 
         return view('customer.my_templates', compact('shopping', 'id'));
     }
+
 }

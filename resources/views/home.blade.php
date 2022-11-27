@@ -16,13 +16,13 @@
 
     {{-- @section('content') --}}
 
-      <div id="carouselExampleCaptions" class="carousel slide" style="height:20%" data-bs-ride="false">
-        <div class="carousel-indicators">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators" >
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner m-auto" style="height:90vh">
+        <div class="carousel-inner m-auto" style="max-height:91vh">
           <div class="carousel-item active">
             <img src="https://i.pinimg.com/originals/d8/45/84/d84584e64ab8d30cbcbcd19269bd98c7.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption" style="bottom: 35%">
@@ -31,7 +31,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="https://w0.peakpx.com/wallpaper/1022/653/HD-wallpaper-flower-colourful-evening-full-green-graphy-sunset-white-yellow.jpg" class="d-block w-100" alt="...">
+            <img src="https://i.pinimg.com/originals/d8/45/84/d84584e64ab8d30cbcbcd19269bd98c7.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption" style="bottom: 35%">
               <h1>Templateize</h1>
               <p>Professional Website Template for Any Project</p> 
@@ -57,8 +57,8 @@
 
       
       
-      <div class="p-5 mb-5 text-light" style="background-color: #3180da;">
-      <div class="container mt-5 mb-5 ml-0">
+    <div class="p-5 mb-5 text-light" style="background-image: url('/img/Background.png')">
+      <div class="container mt-5 mb-5 ml-0" style="padding-top: 10%; padding-bottom:10%">
 
         {{-- @yield('container') --}}
         <h3>Professional Websites <br> Template for Any Project</h3><br>
@@ -70,55 +70,19 @@
         </form><br><br>
 
         {{-- @yield('category') --}}
-        <h3 id="template">Templates</h3>
-        <div class="row">
+        
+       
+      </div>
+        
+    </div>
 
-          {{-- <div class="col-sm-3">
-            <div class="card" style="width: 18rem">
-              <img src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title" style="color: black">Template 1</h5>
-                <p class="card-text" style="color: black">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="/templates/company/main" class="btn btn-primary">See details</a>
-              </div>
-            </div>
-          </div>
-        
-          <div class="col-sm-3">
-            <div class="card" style="width: 18rem">
-              <img src="https://bootstrapmade.com/content/templatefiles/Impact/Impact-bootstrap-website-template-md.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title" style="color: black">Template 2</h5>
-                <p class="card-text" style="color: black">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="/templates/company/main" class="btn btn-primary">See details</a>
-              </div>
-            </div>
-          </div>
-        
-          <div class="col-sm-3">
-            <div class="card" style="width: 18rem">
-              <img src="https://bootstrapmade.com/content/templatefiles/Yummy/Yummy-bootstrap-website-template-md.png" class="card-img-top" alt="..." href="/templates/company/main">
-              <div class="card-body">
-                <h5 class="card-title" style="color: black">Template 3</h5>
-                <p class="card-text" style="color: black">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">See details</a>
-              </div>
-            </div>
-          </div>
-        
-          <div class="col-sm-3">
-            <div class="card" style="width: 18rem">
-              <img src="https://www.flexgigzz.com/wp-content/uploads/2021/04/bexer-bootstrap-business-template.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title" style="color: black">Template 4</h5>
-                <p class="card-text" style="color: black">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">See details</a>
-              </div>
-            </div>
-          </div> --}}
-        
+    
+    <div class="p-5 mb-5 text-dark" style="background-color: #ffffff;">
+      <div class="container mt-3 mb-5 ml-0">
+        <div class="row">
+          <h3 class="text-dark mb-5" id="template">Templates</h3>
           @foreach($shopping as $item)
-        <div class="product text-center col-lg-3 col-md-4 col-12">
+          <div class="product text-center col-lg-3 col-md-4 col-12">
             <img class="img-fluid mb-3" src="{{ asset('thumb/'.$item->picture) }}" alt="">
             <h5 class="p-name">{{ $item->template_name }}</h5>
             <h4 class="p-price">{{ "Rp".number_format($item->price, 0, '.', '.') }}</h4>
@@ -126,11 +90,12 @@
             <a class="btn btn-primary" href="{{ route('details', $item->id) }}">Details</a>
             <hr>
 
-        </div>
-        @endforeach
+          </div>
+          @endforeach
         
         </div>
-        
+        <a class="d-flex justify-content-center" href="{{ route('shopping') }}"><button type="submit" class="btn btn-primary w-50">See More...</button>
+        </a>
       </div>
     </div>
           

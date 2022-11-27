@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+use App\Models\Pesanan;
 use App\Models\Shopping;
 use Illuminate\Http\Request;
+use App\Models\PesananDetail;
+use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DetailController extends Controller
 {
@@ -17,9 +22,52 @@ class DetailController extends Controller
         return view('shopping_details.details', compact('shopping'));
     }
 
-    public function buy(Request $request){
-        // $shopping = Shopping::where('id', $id)->first();
-        // return redirect('/details{id}')->with('pesan', 'Berhasil membeli template', compact('shopping'));
+    public function buy(Request $request, $id){
+        $shopping_all = Shopping::all();
+        $shopping = Shopping::where('id', $id)->first();
+        $tanggal = Carbon::now();
+
+        //cek validasi
+        $cek_pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
+
+        //simpan ke database pesanan
+        if(empty($cek_pesanan)){
+            $pesanan = new Pesanan;
+            $pesanan->user_id = Auth::user()->id;
+            $pesanan->tanggal = $tanggal;
+            $pesanan->status = 0;
+            $pesanan->total_price = 0;
+            $pesanan->save();
+        }
+        
+        //simpan ke database pesanan detail
+        $pesanan_baru = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
+
+        //cek pesanan detail
+        $cek_pesanan_detail = PesananDetail::where('barang_id', $shopping->id)->where('pesanan_id', $pesanan_baru->id)->first();
+
+        if(empty($cek_pesanan_detail)){
+            $pesanan_detail = new PesananDetail;
+            $pesanan_detail->barang_id = $shopping->id;
+            $pesanan_detail->pesanan_id = $pesanan_baru->id;
+            $pesanan_detail->jumlah_harga = $shopping->price;
+            $pesanan_detail->save();
+        }
+        else{
+            $pesanan_detail = PesananDetail::where('barang_id', $shopping->id)->where('pesanan_id', $pesanan_baru->id)->first();
+            $pesanan_detail->jumlah_harga = $shopping->price;
+            $pesanan_detail->update();
+        }
+
+        //jumlah total
+        $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
+        $pesanan->total_price = $pesanan->total_price + $shopping->price;
+        $pesanan->update();
+        
+        // return redirect('/details/{id}')->with('pesan', 'Berhasil membeli template', compact('shopping_all'));
+        Alert::success('Congratulations!', 'Your template purchased succesfully.');
+        return redirect()->back()->with('pesan', 'Your purchase is success, Enjoy your template!', compact('shopping_all'));
+
     }
 
     // public function buy($id){
@@ -30,4 +78,13 @@ class DetailController extends Controller
     //     $shopping->save();
     //     return view('customer.my_templates', compact('shopping', 'id'));
     // }
+
+    public function checkout(){
+        
+        $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
+        $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
+        $shopping = Shopping::where('id', $pesanan->id)->first();
+        
+        return view('shopping_details.checkout', compact('pesanan', 'pesanan_detail', 'shopping'));
+    }
 }

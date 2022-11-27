@@ -10,7 +10,7 @@ class PesananDetail extends Model
     protected $table="pesanan_detail";
 
     public function shopping(){
-        return $this->belongsTo('App\Models\Shopping', 'id', 'id');
+        return $this->belongsTo(Shopping::class, 'barang_id', 'id');
     }
 
     public function pesanan(){
