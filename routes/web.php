@@ -9,6 +9,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\TemplatesController;
 
@@ -84,4 +85,7 @@ Route::get('/buy/{id}', [DetailController::class, 'buy'])->name('buy');
 
 //route for checkout page
 Route::get('/checkout', [DetailController::class, 'checkout'])->name('checkout');
+
+//about us
+Route::get('/about', [HomeController::class, 'aboutUs'])->name('aboutUs');
 

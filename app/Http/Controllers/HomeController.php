@@ -31,4 +31,8 @@ class HomeController extends Controller
         $shopping = Shopping::paginate(8);
         return view('home', compact('shopping'));
     }
+
+    public function aboutUs(){
+        return view('aboutUs');
+    }
 }

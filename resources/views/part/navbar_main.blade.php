@@ -26,7 +26,10 @@
                         <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a class="nav-link" active href="{{ route('shopping') }}">{{ __('FREE TEMPLATES') }}</a>
+                        <a class="nav-link" active href="{{ route('shopping') }}">{{ __('OUR TEMPLATES') }}</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
                     </li>
                     
                     <li class="nav-item dropdown px-4">
@@ -60,6 +63,9 @@
                         </li>
                         <li class="nav-item px-4">
                             <a class="nav-link" active href="{{ route('shopping') }}">{{ __('OUR TEMPLATES') }}</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -112,19 +118,22 @@
                         <li class="nav-item px-4">
                             <a class="nav-link" active href="{{ route('shopping') }}">{{ __('OUR TEMPLATES') }}</a>
                         </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
+                        </li>
                         
-                        <?php
+                        {{-- <?php
                         $pesanan_utama = \App\Models\Pesanan::where('user_id', Auth::user()->id)->where('status',0)->first();
                         $notif = \App\Models\PesananDetail::where('pesanan_id', $pesanan_utama->id)->count();
                         if($notif == null){
                             $notif == 0;
                         }
-                        ?>
+                        ?> --}}
 
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true" v-pre>
                                 {{ Auth::user()->name }}
-                                <span class="badge bg-danger">{{ $notif }}</span>
+                                <span class="badge bg-danger">{{ 1 }}</span>
                             </a>
 
                             
@@ -139,7 +148,7 @@
                                 
                                 <a class="dropdown-item" href="{{ route('checkout') }}">
                                     {{ __('Checkout') }}
-                                    <span class="badge bg-danger">{{ $notif }}</span>
+                                    <span class="badge bg-danger">{{ 1 }}</span>
                                 </a>
                                 
                             @endif
@@ -171,6 +180,9 @@
                         <li class="nav-item px-4">
                             <a class="nav-link" active href="{{ route('shopping') }}">{{ __('OUR TEMPLATES') }}</a>
                         </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
+                        </li>
                         
 
                         <li class="nav-item dropdown">
@@ -213,7 +225,10 @@
                             <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
                         </li>
                         <li class="nav-item px-4">
-                            <a class="nav-link" active href="{{ route('shopping') }}">{{ __('FREE TEMPLATES') }}</a>
+                            <a class="nav-link" active href="{{ route('shopping') }}">{{ __('OUR TEMPLATES') }}</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
                         </li>
                         
 
