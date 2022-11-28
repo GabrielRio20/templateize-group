@@ -28,27 +28,11 @@ Auth::routes([
     
 ]);
 
-// Route::get('/', function () {
-//     return view('home');
-// });
-// Route::get('/template', function () {
-//     return view('./home/category');
-// });
-
-// Route::get('/templates/company/main', [UmbrellaController::class, 'home']);
-// Route::get('/t_virus', [UmbrellaController::class, 'tVirus']);
-// Route::get('/g_virus', [UmbrellaController::class, 'gVirus']);
-// Route::get('/parasite', [UmbrellaController::class, 'parasite']);
-
 Route::get('/templates/company/main', function () {
     return view('templates/company/main');
 });
 
-// Route::get('/register', [PersonalController::class, 'register']);
-// Route::get('/login', [PersonalController::class, 'login']);
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'shop'])->name('home');
-
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'shop'])->name('shop');
 
@@ -85,6 +69,12 @@ Route::get('/buy/{id}', [DetailController::class, 'buy'])->name('buy');
 
 //route for checkout page
 Route::get('/checkout', [DetailController::class, 'checkout'])->name('checkout');
+
+//delete route for checkout page
+Route::delete('checkout/{id}', [DetailController::class, 'delete'])->name('deleteCheckout');
+
+//checkout confirmation route
+Route::get('confirmation', [DetailController::class, 'confirmation'])->name('confirmation');
 
 //about us
 Route::get('/about', [HomeController::class, 'aboutUs'])->name('aboutUs');

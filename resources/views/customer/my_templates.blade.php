@@ -22,14 +22,17 @@
         </thead>
 
         <tbody>
-            @foreach($shopping as $item)
+            <?php $no = 1; ?>
+            @if(!empty($pesanan))
+            @foreach($pesanan_detail as $item)
                 <tr>
-                    <td>{{ ++$id }}</td>
-                    <td>{{ $item->template_name }}</td>
-                    <td>{{ $item->description }}</td>
+                    <td>{{ $no++ }}</td>
+                    <td>{{ $item->shopping->template_name }}</td>
+                    <td>{{ $pesanan->tanggal }}</td>
                     {{-- <td>{{ $user->level }}</td> --}}
                 </tr>
             @endforeach
+            @endif
         </tbody>
     </table>
     @endsection

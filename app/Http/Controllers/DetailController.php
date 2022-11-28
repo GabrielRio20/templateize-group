@@ -65,8 +65,9 @@ class DetailController extends Controller
         $pesanan->update();
         
         // return redirect('/details/{id}')->with('pesan', 'Berhasil membeli template', compact('shopping_all'));
-        Alert::success('Congratulations!', 'Your template purchased succesfully.');
+        Alert::success('Congratulations!', 'Your Template added to Cart.');
         return redirect()->back()->with('pesan', 'Your purchase is success, Enjoy your template!', compact('shopping_all'));
+        // return view('shopping_details.checkout');
 
     }
 
@@ -82,9 +83,34 @@ class DetailController extends Controller
     public function checkout(){
         
         $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
-        $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
-        $shopping = Shopping::where('id', $pesanan->id)->first();
+        if(!empty($pesanan)){
+            $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
+        }
+        else{
+            $pesanan_detail = 0;
+        }
+
+        return view('shopping_details.checkout', compact('pesanan', 'pesanan_detail'));
+    }
+
+    public function delete($id){
+        $pesanan_detail = PesananDetail::where('id', $id)->first();
         
-        return view('shopping_details.checkout', compact('pesanan', 'pesanan_detail', 'shopping'));
+        $pesanan_1 = Pesanan::where('id', $pesanan_detail->pesanan_id)->first();
+        $pesanan_1->total_price = $pesanan_1->total_price-$pesanan_detail->jumlah_harga;
+        $pesanan_1->update();
+
+        $pesanan_detail->delete();
+        Alert::error('Danger', 'Template deleted');
+        return redirect('checkout');
+    }
+
+    public function confirmation(){
+        $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
+        $pesanan->status = 1;
+        $pesanan->update();
+
+        Alert::success('Congratulations!', 'Your template purchased succesfully.');
+        return redirect('checkout');
     }
 }

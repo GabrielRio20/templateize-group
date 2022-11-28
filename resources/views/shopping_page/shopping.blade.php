@@ -77,7 +77,7 @@
         <div class="product text-center col-lg-3 col-md-4 col-12">
             <img class="img-fluid mb-3" src="{{ asset('thumb/'.$item->picture) }}" alt="">
             <h5 class="p-name">{{ $item->template_name }}</h5>
-            <h4 class="p-price">{{ "Rp".number_format($item->price, 0, '.', '.') }}</h4>
+            <h4 class="p-price">Rp {{ number_format($item->price, 0, '.', '.') }}</h4>
             
             <a class="btn btn-primary" href="{{ route('details', $item->id) }}">Details</a>
             <hr>

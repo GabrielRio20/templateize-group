@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pesanan;
 use App\Models\Shopping;
 use Illuminate\Http\Request;
+use App\Models\PesananDetail;
+use Illuminate\Support\Facades\Auth;
 
 class CustomerController extends Controller
 {
@@ -15,12 +18,23 @@ class CustomerController extends Controller
         // $shopping = Shopping::all();
         // return view('customer.my_templates', compact('shopping'));
 
-        $batas = 10;
-        $shopping = Shopping::all();
-        $shopping = Shopping::orderBy('id')->paginate($batas);
-        $id = $batas * ($shopping -> currentPage() - 1);
+        // $batas = 10;
+        // $shopping = Shopping::all();
+        // $shopping = Shopping::orderBy('id')->paginate($batas);
+        // $id = $batas * ($shopping -> currentPage() - 1);
+        $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 1)->first();
+        if(!empty($pesanan)){
+            $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
+            $shopping = Shopping::where('id', $pesanan->id)->get();
+        }
+        else{
+            $pesanan_detail = 0;
+            $shopping = 0;
+        }
+        
+        // $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
 
-        return view('customer.my_templates', compact('shopping', 'id'));
+        return view('customer.my_templates', compact('pesanan', 'pesanan_detail', 'shopping'));
     }
 
 }

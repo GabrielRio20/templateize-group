@@ -122,18 +122,20 @@
                             <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
                         </li>
                         
-                        {{-- <?php
+                        <?php
                         $pesanan_utama = \App\Models\Pesanan::where('user_id', Auth::user()->id)->where('status',0)->first();
-                        $notif = \App\Models\PesananDetail::where('pesanan_id', $pesanan_utama->id)->count();
-                        if($notif == null){
-                            $notif == 0;
+
+                        if(!empty($pesanan_utama)){
+                            $notif = \App\Models\PesananDetail::where('pesanan_id', $pesanan_utama->id)->count();
                         }
-                        ?> --}}
+                        ?>
 
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true" v-pre>
                                 {{ Auth::user()->name }}
-                                <span class="badge bg-danger">{{ 1 }}</span>
+                                @if(!empty($notif))
+                                <span class="badge bg-danger">{{ $notif }}</span>
+                                @endif
                             </a>
 
                             
@@ -148,7 +150,9 @@
                                 
                                 <a class="dropdown-item" href="{{ route('checkout') }}">
                                     {{ __('Checkout') }}
-                                    <span class="badge bg-danger">{{ 1 }}</span>
+                                    @if(!empty($notif))
+                                    <span class="badge bg-danger">{{ $notif }}</span>
+                                    @endif
                                 </a>
                                 
                             @endif
