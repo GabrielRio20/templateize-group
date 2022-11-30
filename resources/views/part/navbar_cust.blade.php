@@ -31,12 +31,15 @@
                   <li class="nav-item px-4">
                     <a class="nav-link" href="{{ route('home') }}">{{ __('HOME') }}</a>
                   </li>
-                  <li class="nav-item px-4">
+                  {{-- <li class="nav-item px-4">
                     <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
+                  </li> --}}
+                  <li class="nav-item px-4">
+                    <a class="nav-link" active href="{{ route('shopping') }}">{{ __('TEMPLATES') }}</a>
                   </li>
                   <li class="nav-item px-4">
-                    <a class="nav-link" active href="{{ route('shopping') }}">{{ __('FREE TEMPLATES') }}</a>
-                  </li>
+                    <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
+                </li>
                   
                   <li class="nav-item dropdown px-4">
 
@@ -64,12 +67,15 @@
                       <li class="nav-item px-4">
                           <a class="nav-link" href="{{ route('home') }}">{{ __('HOME') }}</a>
                       </li>
-                      <li class="nav-item px-4">
+                      {{-- <li class="nav-item px-4">
                           <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
+                      </li> --}}
+                      <li class="nav-item px-4">
+                          <a class="nav-link" active href="{{ route('shopping') }}">{{ __('TEMPLATES') }}</a>
                       </li>
                       <li class="nav-item px-4">
-                          <a class="nav-link" active href="{{ route('shopping') }}">{{ __('OUR TEMPLATES') }}</a>
-                      </li>
+                        <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
+                    </li>
 
                       <li class="nav-item dropdown">
                           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true" v-pre>
@@ -112,12 +118,15 @@
                       <li class="nav-item px-4">
                           <a class="nav-link" href="{{ route('home') }}">{{ __('HOME') }}</a>
                       </li>
-                      <li class="nav-item px-4">
+                      {{-- <li class="nav-item px-4">
                           <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
+                      </li> --}}
+                      <li class="nav-item px-4">
+                          <a class="nav-link" active href="{{ route('shopping') }}">{{ __('TEMPLATES') }}</a>
                       </li>
                       <li class="nav-item px-4">
-                          <a class="nav-link" active href="{{ route('shopping') }}">{{ __('OUR TEMPLATES') }}</a>
-                      </li>
+                        <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
+                    </li>
                       
 
                       <li class="nav-item dropdown">

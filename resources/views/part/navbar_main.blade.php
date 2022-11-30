@@ -1,4 +1,9 @@
-
+{{-- <style>
+    *{
+        /* font-family: 'Dosis', sans-serif; */
+    }
+    
+</style> --}}
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         
@@ -22,11 +27,11 @@
                     <li class="nav-item px-4">
                         <a class="nav-link" href="{{ route('home') }}">{{ __('HOME') }}</a>
                     </li>
-                    <li class="nav-item px-4">
+                    {{-- <li class="nav-item px-4">
                         <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item px-4">
-                        <a class="nav-link" active href="{{ route('shopping') }}">{{ __('OUR TEMPLATES') }}</a>
+                        <a class="nav-link" active href="{{ route('shopping') }}">{{ __('TEMPLATES') }}</a>
                     </li>
                     <li class="nav-item px-4">
                         <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
@@ -58,11 +63,11 @@
                         <li class="nav-item px-4">
                             <a class="nav-link" href="{{ route('home') }}">{{ __('HOME') }}</a>
                         </li>
-                        <li class="nav-item px-4">
+                        {{-- <li class="nav-item px-4">
                             <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item px-4">
-                            <a class="nav-link" active href="{{ route('shopping') }}">{{ __('OUR TEMPLATES') }}</a>
+                            <a class="nav-link" active href="{{ route('shopping') }}">{{ __('TEMPLATES') }}</a>
                         </li>
                         <li class="nav-item px-4">
                             <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
@@ -112,11 +117,11 @@
                         <li class="nav-item px-4">
                             <a class="nav-link" href="{{ route('home') }}">{{ __('HOME') }}</a>
                         </li>
-                        <li class="nav-item px-4">
+                        {{-- <li class="nav-item px-4">
                             <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item px-4">
-                            <a class="nav-link" active href="{{ route('shopping') }}">{{ __('OUR TEMPLATES') }}</a>
+                            <a class="nav-link" active href="{{ route('shopping') }}">{{ __('TEMPLATES') }}</a>
                         </li>
                         <li class="nav-item px-4">
                             <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
@@ -149,7 +154,7 @@
                                 </a>
                                 
                                 <a class="dropdown-item" href="{{ route('checkout') }}">
-                                    {{ __('Checkout') }}
+                                    {{ __('Cart') }}
                                     @if(!empty($notif))
                                     <span class="badge bg-danger">{{ $notif }}</span>
                                     @endif
@@ -178,11 +183,11 @@
                         <li class="nav-item px-4">
                             <a class="nav-link" href="{{ route('home') }}">{{ __('HOME') }}</a>
                         </li>
-                        <li class="nav-item px-4">
+                        {{-- <li class="nav-item px-4">
                             <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item px-4">
-                            <a class="nav-link" active href="{{ route('shopping') }}">{{ __('OUR TEMPLATES') }}</a>
+                            <a class="nav-link" active href="{{ route('shopping') }}">{{ __('TEMPLATES') }}</a>
                         </li>
                         <li class="nav-item px-4">
                             <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>

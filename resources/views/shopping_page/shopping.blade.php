@@ -85,7 +85,7 @@
         </div>
         @endforeach
         
-        <ul class="pagination mt-5">
+        {{-- <ul class="pagination mt-5">
             <li class="page-item disabled">
             <a class="page-link">Previous</a>
             </li>
@@ -97,8 +97,11 @@
             <li class="page-item">
             <a class="page-link" href="#">Next</a>
             </li>
-        </ul>
+        </ul> --}}
+<div>{{ $shopping -> links("pagination::bootstrap-5") }}</div>
+
     </div>
+
     
 </section>
 

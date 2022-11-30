@@ -31,8 +31,24 @@
             <div>Description <input type="textarea" name="description" class="form-control"></div>
     
             <div class="form-group mb-4">
-                <label for="picture"> Upload Foto</label>
+                <label for="picture"> 1st Picture </label>
                 <input type="file" class="form-control" name="picture">
+            </div>
+            {{-- <div class="form-group mb-4">
+                <label for="picture"> 2nd Picture </label>
+                <input type="file" class="form-control" name="picture">
+            </div>
+            <div class="form-group mb-4">
+                <label for="picture"> 3rd Picture </label>
+                <input type="file" class="form-control" name="picture">
+            </div>
+            <div class="form-group mb-4">
+                <label for="picture"> 4th Picture </label>
+                <input type="file" class="form-control" name="picture">
+            </div> --}}
+            <div class="form-group mb-4">
+                <label for="picture"> Template Upload </label>
+                <input type="file" class="form-control" name="document">
             </div>
             
             {{-- <div>Tgl. Terbit <input type="date" name="tgl_terbit"

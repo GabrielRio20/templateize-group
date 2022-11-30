@@ -113,4 +113,8 @@ class DetailController extends Controller
         Alert::success('Congratulations!', 'Your template purchased succesfully.');
         return redirect('checkout');
     }
+
+    // public function download(){
+    //     $pesanan = Pesanan::where('id')
+    // }
 }

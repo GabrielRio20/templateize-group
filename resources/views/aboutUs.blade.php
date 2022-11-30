@@ -13,7 +13,7 @@
                 padding: 0;
                 margin: 0;
                 box-sizing: border-box;
-                font-family: 'Dosis', sans-serif;
+                /* font-family: 'Dosis', sans-serif; */
                 outline: none;
             }
             .about{
@@ -284,7 +284,7 @@
                              <div class="inner">
                                  <div class="info">
                                       <h5>Ahmad Fatha Mumtaza</h5>
-                                      <p>Frontend/ Mbatang</p>
+                                      <p>Front-End</p>
                                       <div class="social-links">
                                           <a href=""><span class="fa fa-facebook"></span></a>
                                           <a href=""><span class="fa fa-twitter"></span></a>

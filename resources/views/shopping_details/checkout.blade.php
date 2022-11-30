@@ -25,7 +25,7 @@
     <div class="col-md-12 p-4">
         <div class="card">
             <div class="card-header">
-                <h4><i class="fa fa-shopping-cart"></i> Checkout </h4>
+                <h4><i class="fa fa-shopping-cart"></i> Cart </h4>
             </div>
                 <div class="card-body">
                     @if(!empty($pesanan))
@@ -50,7 +50,7 @@
                                     <form action="{{ route('checkout') }}/{{ $item->id }}" method="post">
                                         @csrf
                                         {{ method_field('DELETE') }}
-                                        <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('You sure want to delete this item?');"><i class="fa fa-trash"></i></button>
                                     </form>
                                 </td>
                             </tr>
@@ -66,7 +66,7 @@
                     </table> 
                     @endif
                     <div class="d-flex flex-row-reverse">
-                        <a  href="{{ route('confirmation') }}" class="btn btn-success"><i class="fa fa-shopping-cart"></i> Go to Purchase Method </a>
+                        <a  href="{{ route('confirmation') }}" class="btn btn-success" onclick="return confirm('You sure want to buy this template?');"><i class="fa fa-shopping-cart"></i> Buy </a>
                     </div>
                     
                 </div>
