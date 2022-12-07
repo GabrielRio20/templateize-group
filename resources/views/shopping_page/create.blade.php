@@ -50,6 +50,8 @@
                 <label for="picture"> Template Upload </label>
                 <input type="file" class="form-control" name="document">
             </div>
+
+            <div> Upload Drive <input type="text" name="template_name" class="form-control"></div>
             
             {{-- <div>Tgl. Terbit <input type="date" name="tgl_terbit"
             class="date form-control" id="datepicker" placeholder="yyyy/mm/dd"></div> --}}
