@@ -343,6 +343,7 @@
                 </div>
             </div>
          </section>
+         <section>@include ("footer.footer")</section>
          @endsection
     </body>
 </html>

@@ -69,7 +69,7 @@
 
         .card {
         margin-top: 50px;
-        background: #eee;
+        background: rgb(255, 255, 255);
         padding: 3em;
         line-height: 1.5em; }
 
@@ -102,7 +102,7 @@
         font-weight: bold; }
 
         .checked, .price span {
-        color: #ff9f1a; }
+        color: #000000; }
 
         .product-title, .rating, .product-description, .price, .vote, .sizes {
         margin-bottom: 15px; }
@@ -126,7 +126,7 @@
             margin-left: 20px; }
 
         .add-to-cart, .like {
-        background: #ff9f1a;
+        background: #3096FD;
         padding: 1.2em 1.5em;
         border: none;
         text-transform: UPPERCASE;
@@ -135,7 +135,7 @@
         -webkit-transition: background .3s ease;
                 transition: background .3s ease; }
         .add-to-cart:hover, .like:hover {
-            background: #b36800;
+            background: #1d71c4;
             color: #fff; }
 
         .not-available {
@@ -191,7 +191,7 @@
 @include('part.navbar_main')
 <div>
 
-    <div class="mx-5 mt-3">
+    <div class="mx-5 my-5">
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" >
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
@@ -247,35 +247,29 @@
 						
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">men's shoes fashion</h3>
+						<h3 class="product-title">{{ $shopping->template_name }}</h3>
 						<div class="rating">
-							<div class="stars">
+							{{-- <div class="stars">
 								<span class="fa fa-star checked"></span>
 								<span class="fa fa-star checked"></span>
 								<span class="fa fa-star checked"></span>
 								<span class="fa fa-star"></span>
 								<span class="fa fa-star"></span>
-							</div>
-							<span class="review-no">41 reviews</span>
+							</div> --}}
+							{{-- <span class="review-no">41 reviews</span> --}}
 						</div>
-						<p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
-						<h4 class="price">current price: <span>$180</span></h4>
-						<p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
-						<h5 class="sizes">sizes:
-							<span class="size" data-toggle="tooltip" title="small">s</span>
-							<span class="size" data-toggle="tooltip" title="medium">m</span>
-							<span class="size" data-toggle="tooltip" title="large">l</span>
-							<span class="size" data-toggle="tooltip" title="xtra large">xl</span>
-						</h5>
-						<h5 class="colors">colors:
-							<span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
-							<span class="color green"></span>
-							<span class="color blue"></span>
-						</h5>
+						<p class="product-description mb-5">{{ $shopping->description }}</p>
+						<h4 class="price"><span>{{ "Rp ".number_format($shopping->price, 0, '.', '.') }}</h4>
+						{{-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p> --}}
+						
 						<div class="action">
-							<button class="add-to-cart btn btn-default" type="button">add to cart</button>
-							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+                            <form method="get" action="{{ url('buy') }}/{{ $shopping->id }}" >
+                                <button class="add-to-cart btn btn-default" type="submit">add to cart</button>
+                                <button class="like btn btn-default" type="button" type="submit"><span class="fa fa-heart"></span></button>
+                                @include('sweetalert::alert')
+                            </form>
 						</div>
+
 					</div>
 				</div>
 			</div>

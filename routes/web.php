@@ -60,6 +60,8 @@ Route::post('/shop', [ShopController::class, 'store'])->name('shopping.store');
 //shopping from homepage
 Route::get('/', [ShopController::class, 'home']);
 // Route::get('/home', [ShopController::class, 'home']);
+Route::get('/search', [HomeController::class, 'search'])->name('search');
+
 
 //detail route
 Route::get('/details/{id}', [DetailController::class, 'index'])->name('details');

@@ -35,7 +35,7 @@
            <div class="form-row">
               <div class="input-data textarea">
                  <textarea rows="8" cols="80" required></textarea>
-                 <br />
+                 <br/>
                  <div class="underline"></div>
                  <label for="">Your Message</label>
                  <br />
