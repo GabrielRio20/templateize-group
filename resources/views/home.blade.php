@@ -64,10 +64,15 @@
         <h3>Professional Websites <br> Template for Any Project</h3><br>
 
         {{-- @yield('search') <br><br> --}}
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex" role="search" action="{{ route('search') }}" method="get">@csrf
+          <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="templates">
+
           <button class="btn btn-outline-dark" type="submit">Search</button>
         </form><br><br>
+
+        <form action="{{ route('search') }}" method="get">@csrf
+          <input type="text" name="kata" class="form-control" placeholder="Cari..." style="width: 30%; display: inline; margin-top:10px; margin-bottom:10px; float: right;">
+      </form>
 
         {{-- @yield('category') --}}
         
