@@ -72,7 +72,7 @@
                 border: none;
                 outline: none;
                 box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
-                margin-right: 20px;
+                /* margin: 20px; */
             }
             .btn button:hover{
                 background-color: #1d44f9;

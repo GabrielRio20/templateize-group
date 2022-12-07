@@ -80,5 +80,5 @@ Route::get('confirmation', [DetailController::class, 'confirmation'])->name('con
 Route::get('/about', [HomeController::class, 'aboutUs'])->name('aboutUs');
 
 //route to download
-Route::get('download/', [DetailController::class, 'download'])->name('download');
+Route::get('download/{id}', [DetailController::class, 'download'])->name('download');
 

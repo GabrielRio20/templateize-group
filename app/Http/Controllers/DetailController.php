@@ -8,6 +8,8 @@ use App\Models\Shopping;
 use Illuminate\Http\Request;
 use App\Models\PesananDetail;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Response;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class DetailController extends Controller
@@ -101,7 +103,7 @@ class DetailController extends Controller
         $pesanan_1->update();
 
         $pesanan_detail->delete();
-        Alert::error('Danger', 'Template deleted');
+        Alert::error('Okay', 'Template deleted');
         return redirect('checkout');
     }
 
@@ -114,7 +116,21 @@ class DetailController extends Controller
         return redirect('checkout');
     }
 
-    // public function download(){
-    //     $pesanan = Pesanan::where('id')
-    // }
+    public function shop(){
+        $shopping = Shopping::orderBy('id', 'desc')->paginate(8);
+        return view('home', compact('shopping'));
+    }
+
+    public function download(Request $request, $id){
+        $shopping = Shopping::where('id', $id)->first();
+        $doc = $shopping->document;
+        $filepath = storage_path()."/app/docs/".$doc;
+        // $filepath = './storage/app/docs/'.$doc;
+        // $filepath = Storage::path('\docs', $doc);
+        
+        return response()->download($filepath);
+        // return Response::download($filepath);
+
+        // $path = $request->file('fileInRequest')->store('pathToSaveFileTo');
+    }
 }

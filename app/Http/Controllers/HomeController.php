@@ -28,7 +28,7 @@ class HomeController extends Controller
     }
 
     public function shop(){
-        $shopping = Shopping::paginate(8);
+        $shopping = Shopping::orderBy('id', 'desc')->paginate(8);
         return view('home', compact('shopping'));
     }
 

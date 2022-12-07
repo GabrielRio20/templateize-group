@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Template</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/> -->
+
+    <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet'>
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+        .small-img-group{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .small-img-col{
+            flex-basis:24%;
+            cursor: pointer;
+        }
+
+        button{
+            font-size: 0.8rem;
+            font-weight: 700;
+            outline: none;
+            border: none;
+            background-color: #59C1BD;
+            color: aliceblue;
+            padding: 13px 30px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+        }
+
+        .product img{
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            object-fit:cover;
+            transition:0.3s all;
+        }
+
+        .product{
+            cursor:pointer;
+            margin-bottom: 2rem;
+        }
+
+        .product:hover img{
+            opacity: 0.7;
+        }
+
+        .product .buy-btn{
+            background: #59C1BD;
+            transform: translateY(20px);
+            opacity: 0;
+            transition:0.3s all;
+        }
+
+        .product:hover .buy-btn{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    {{-- @if (\Session::has('pesan'))
+    <div class="alert alert-success">
+        <ul>
+            <li>{!! \Session::get('pesan') !!}</li>
+        </ul>
+    </div>
+@endif --}}
+@include('part.navbar_main')
+<div>
+
+    
+<div class="m-5">
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" >
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ route('shopping') }}"> Templates</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Details</li>
+        </ol>
+      </nav>
+</div>
+
+    <section class="container sproduct my-5">
+        <div class="row mt-5 ">
+            <div class="col-lg-5 col-md-12 col-12">
+                <img class="img-fluid w-100 pb-5" src="{{ asset('thumb/'.$shopping->picture) }}" id="MainImg" alt="" >
+                
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="{{ asset('thumb/'.$shopping->picture) }}" width="100%" class="small-img" width="100%" class="small-img" alt="">
+                    </div>
+
+                    <div class="small-img-col">
+                        <img src="https://broonet.com/wp-content/uploads/2020/03/mewarnai-gambar-kartun-4.jpg" width="100%" class="small-img" alt="">
+                    </div>
+
+                    <div class="small-img-col">
+                        <img src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.png" width="100%" class="small-img" alt="">
+                    </div>
+
+                    <div class="small-img-col">
+                        <img src="https://broonet.com/wp-content/uploads/2020/03/mewarnai-gambar-kartun-4.jpg" width="100%" class="small-img" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-10 col-10 ">
+            <form method="get" action="{{ url('buy') }}/{{ $shopping->id }}" >
+
+                <h3 class="py-4">{{ $shopping->template_name }}</h3>
+                <h2>{{ "Rp".number_format($shopping->price, 0, '.', '.') }}</h2>
+
+                <button class="buy-btn" type="submit">Add to Cart</button>
+                @include('sweetalert::alert')
+
+                <h4 class="mt-5 mb-3">Description</h4>
+                <span>{{ $shopping->description }}</span>
+
+            </form>
+            </div>
+
+            {{-- <div class="btn btn-success"> --}}
+                
+            {{-- </div> --}}
+
+        {{-- <div class="row mx-auto container fluid mt-5 mb-5">
+
+            <div class="product text-center col-lg-3 col-md-4 col-12 ">
+                <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+                <h5 class="p-name">1Template</h5>
+                <h4 class="p-price">$1</h4>
+                <button class="buy-btn" onClick="location.href='/detail2'">Buy now</button>
+                <hr>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+                <h5 class="p-name">2Template</h5>
+                <h4 class="p-price">$1</h4>
+                <button class="buy-btn" onClick="location.href='/detail3'">Buy now</button>
+                <hr>
+            </div>
+            
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+                <h5 class="p-name">3Template</h5>
+                <h4 class="p-price">$1</h4>
+                <button class="buy-btn" onClick="location.href='/detail4'">Buy now</button>
+                <hr>
+            </div>
+
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2019/10/WhatsApp-Image-2019-10-29-at-19.52.24-1024x682.jpeg" alt="">
+                <h5 class="p-name">4Template</h5>
+                <h4 class="p-price">$1</h4>
+                <button class="buy-btn" onClick="location.href='/detail5'">Buy now</button>
+                <hr>
+            </div>
+        </div> --}}
+
+        {{-- @endforeach --}}
+    </section>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+{{-- <script src="{{ asset('js/shop_details.js') }}"></script> --}}
+
+    
+</body>
+
+</html>        

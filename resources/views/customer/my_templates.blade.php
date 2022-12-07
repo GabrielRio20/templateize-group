@@ -36,12 +36,17 @@
                                 @foreach($pesanan_detail as $item)
                                     <tr>
                                         <td>{{ $no++ }}</td>
-                                        <td>{{ $item->shopping->template_name }}</td>
+                                        <td>
+                                            <img class="img-fluid m-2" src="{{ asset('thumb/'.$item->shopping->picture) }}" width="90px" alt="">
+                                            {{ $item->shopping->template_name }}
+                                        </td>
                                         <td>{{ $item->pesanan->tanggal }}</td>
                                         <td>
                                             <a class="btn btn-primary btn-sm" href="{{ route('details', $item->shopping->id) }}">Details</a>
 
-                                            <a class="btn btn-success btn-sm" href="{{ route('download') }}">Download</a>
+                                            <a class="btn btn-success btn-sm" href="{{ route('download', $item->shopping->id) }}">Download</a>
+
+                                            {{-- <a class="btn btn-success btn-sm" href="storage/app/docs/ {{ $item->shopping->document }}" download="{{ $item->shopping->document }}">Download</a> --}}
                                         </td>
                                         {{-- <td>{{ $user->level }}</td> --}}
                                     </tr>

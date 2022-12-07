@@ -94,7 +94,7 @@
           @endforeach
         
         </div>
-        <a class="d-flex justify-content-center" href="{{ route('shopping') }}"><button type="submit" class="btn btn-primary w-50">See More...</button>
+        <a class="d-flex justify-content-center mt-5" href="{{ route('shopping') }}"><button type="submit" class="btn btn-primary w-25">See More...</button>
         </a>
       </div>
     </div>

@@ -5,15 +5,16 @@ namespace App\Http\Controllers;
 use ZipArchive;
 use App\Models\Shopping;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Storage;
 
 class ShopController extends Controller
 {
     
     public function index(){
         $batas = 12;
-        $shopping = Shopping::orderBy('id')->paginate($batas);
+        $shopping = Shopping::orderBy('id', 'desc')->paginate($batas);
         $no = $batas * ($shopping->currentPage()-1);
 
         // $shopping = Shopping::paginate(8);
@@ -22,7 +23,7 @@ class ShopController extends Controller
     }
 
     public function home(){
-        $shopping = Shopping::paginate(10);
+        $shopping = Shopping::paginate(8);
         return view('home', compact('shopping'));
     }
 
@@ -40,11 +41,12 @@ class ShopController extends Controller
     }
 
     public function store(Request $request){
+
         $this->validate($request, [
             // 'id' => 'required',
             'template_name' => 'required',
             'picture'=> 'image|mimes:jpeg,jpg,png',
-            'document' => 'required|file',
+            'document' => 'required|file|mimes:zip',
             'description' => 'required',
             'price' => 'required'
         ]);
@@ -56,8 +58,25 @@ class ShopController extends Controller
         $shopping->price = $request->price;
 
         $document = $request->document;
-        $namadoc = time().'.'.$document->getClientOriginalExtension();
-        Storage::putFile('docs/', $document, $request->file('document'));
+        // $namadoc = time().'.'.$document->getClientOriginalExtension();
+        $namadoc = time();
+        // $document->move('docs/'.$namadoc, $document);
+        // Storage::putFile('docs/', $namadoc);
+        Storage::disk('local')->put('docs/'. $namadoc, $document);
+
+        // $zip = new ZipArchive();
+        // $document = $request->document;
+        // $namadoc = time().'.'.$document->getClientOriginalExtension();
+
+        // if ($zip->open(public_path($namadoc), ZipArchive::CREATE)===TRUE) {
+        //     $files = File::files(public_path('docs'));
+
+        //     foreach ($files as $key => $value){
+        //         $filename = basename($value);
+        //         $zip->addFile($value, $filename);
+        //     }
+        //     $zip->close();
+        // }
 
         $picture = $request->picture;
         $namafile = time().'.'.$picture->getClientOriginalExtension();
