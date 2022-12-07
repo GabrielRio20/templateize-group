@@ -35,4 +35,7 @@ class HomeController extends Controller
     public function aboutUs(){
         return view('aboutUs');
     }
+    public function faq(){
+        return view('faq');
+    }
 }

@@ -82,3 +82,6 @@ Route::get('/about', [HomeController::class, 'aboutUs'])->name('aboutUs');
 //route to download
 Route::get('download/{id}', [DetailController::class, 'download'])->name('download');
 
+//faq
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+
