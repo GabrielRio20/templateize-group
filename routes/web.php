@@ -87,3 +87,6 @@ Route::get('download/{id}', [DetailController::class, 'download'])->name('downlo
 //faq
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 
+//Term of Use
+Route::get('/TermsOfUse', [HomeController::class, 'termsOfUse'])->name('termsOfUse');
+
