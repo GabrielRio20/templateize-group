@@ -114,7 +114,7 @@
               <a href="#!" class="text-white">Terms of Service</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Usage Rules</a>
+              <a href="#!" class="text-white">Terms of Use</a>
             </p>
           </div>
           <!-- Grid column -->
