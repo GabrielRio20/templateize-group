@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
    <body>
-   <div class="container">
+   <div class="container" >
     <div class="second">
     <div class="third">   
         <div class="text">Feedback</div>
@@ -36,16 +36,15 @@
            <div class="form-row">
               <div class="input-data textarea">
                  <textarea rows="8" cols="80" name="message"></textarea>
-                 <br />
-                 <textarea rows="8" cols="80" required></textarea>
-                 <br/>
+                 {{-- <br /> --}}
+                 {{-- <textarea rows="8" cols="80" required></textarea> --}}
+                 {{-- <br/> --}}
                  <div class="underline"></div>
                  <label for="">Your Message</label>
-                 <br />
-               
+                 {{-- <br /> --}}
               </div>
            </div>
-           <div class="d-flex justify-content-center mt-5">
+           <div class="d-flex justify-content-center mt-5 mb-5">
             <button type="submit" class="btn btn-primary">Submit</button>
            </div>
            

@@ -106,9 +106,11 @@
         </a>
       </div>
     </div>
-          
-    @include ("feedback")
 
+    <div class="feedback" style="background-color:#1d44f9; padding-top: 10%;">
+      @include ("feedback") 
+    </div>
+          
     @include ("footer.footer")
     {{-- @include('layout.feedback') --}}
     {{-- @include('shopping_page.shopping') --}}
