@@ -9,7 +9,7 @@
 @section('main')
 
 <h1> Manage User </h1>
-<table class="table table-striped">
+<table class="table table-responsive">
     <thead>
         <tr>
             <th>ID</th>

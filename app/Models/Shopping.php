@@ -12,7 +12,6 @@ class Shopping extends Model implements HasMedia
 {
     use InteractsWithMedia;
     protected $table="shopping";
-    protected $fillable = ['document'];
 
     public function pesanan_detail(){
         return $this->hasMany(PesananDetail::class, 'barang_id', 'id');

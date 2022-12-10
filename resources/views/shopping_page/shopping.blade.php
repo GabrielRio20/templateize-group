@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template Shop</title>
 
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
@@ -15,6 +20,7 @@
 
     <style>
         button{
+            font-family: 'Dosis', sans-serif;
             font-size: 0.8rem;
             font-weight: 700;
             outline: none;
@@ -77,7 +83,7 @@
         <div class="product text-center col-lg-3 col-md-4 col-12">
             <img class="img-fluid mb-3" src="{{ asset('thumb/'.$item->picture) }}" alt="">
             <h5 class="p-name">{{ $item->template_name }}</h5>
-            <h4 class="p-price">Rp {{ number_format($item->price, 0, '.', '.') }}</h4>
+            <h4 class="p-price" style="color:#3096FD"><strong>Rp {{ number_format($item->price, 0, '.', '.') }}</strong></h4>
             
             <a class="btn btn-primary" href="{{ route('details', $item->id) }}">Details</a>
             <hr>

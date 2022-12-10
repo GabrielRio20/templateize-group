@@ -1,10 +1,10 @@
-{{-- <style>
+<style>
     *{
-        /* font-family: 'Dosis', sans-serif; */
+        font-family: 'Dosis', sans-serif;
     }
     
-</style> --}}
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+</style>
+<nav class="navbar navbar-expand-md sticky-top navbar-light bg-white shadow-sm">
     <div class="container">
         
         <a class="navbar-brand" href="{{ url('/') }}">
@@ -82,7 +82,7 @@
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             @if(Auth::check() && Auth::user()->level == 'admin')
                             
-                                <a class="dropdown-item" href="{{ route('dBoardAdmin') }}">
+                                <a class="dropdown-item" href="{{ route('main-dashboard') }}">
                                     {{ __('Dahboard') }}
                                 </a>
 
@@ -148,7 +148,7 @@
 
                             @if(Auth::check() && Auth::user()->level == 'customer')
 
-                                <a class="dropdown-item" href="{{ route('dBoardCust') }}">
+                                <a class="dropdown-item" href="{{ route('customerDashboard') }}">
                                     {{ __('Dashboard') }}
                                     
                                 </a>
@@ -201,57 +201,10 @@
 
                             
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            @if(Auth::check() && Auth::user()->level == 'customer')
-                            
-                                <a class="dropdown-item" href="{{ route('dBoardCust') }}">
-                                    {{ __('Dashboard') }}
-                                </a>
-                                
-                            @endif
-
-                                {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form> --}}
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div> 
-                        </li>
-                        @endif
-
-                        {{-- contributor --}}
-                        @if(Auth::check() && Auth::user()->level == 'contributor')
-                        <li class="nav-item px-4">
-                            <a class="nav-link" href="{{ route('home') }}">{{ __('HOME') }}</a>
-                        </li>
-                        <li class="nav-item px-4">
-                            <a class="nav-link " href="{{ route('templates') }}">{{ __('TEMPLATES') }}</a>
-                        </li>
-                        <li class="nav-item px-4">
-                            <a class="nav-link" active href="{{ route('shopping') }}">{{ __('OUR TEMPLATES') }}</a>
-                        </li>
-                        <li class="nav-item px-4">
-                            <a class="nav-link" active href="{{ route('aboutUs') }}">{{ __('ABOUT US') }}</a>
-                        </li>
-                        
-
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-
-                            
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             @if(Auth::check() && Auth::user()->level == 'contributor')
                             
-                                <a class="dropdown-item" href="{{ route('dBoardCust') }}">
-                                    {{ __('Dahboard') }}
+                                <a class="dropdown-item" href="{{ route('dBoardCont') }}">
+                                    {{ __('Dashboard') }}
                                 </a>
                                 
                             @endif

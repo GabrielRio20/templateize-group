@@ -33,7 +33,7 @@ class ShopController extends Controller
     // }
 
     public function create(){
-        return view('shopping_page.create');
+        return view('shopping_page.create1');
     }
 
     public function downloadZip(){

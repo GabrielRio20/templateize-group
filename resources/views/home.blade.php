@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+     <!-- Google Font: Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+
     <link href="{{ url('css/styles.css') }}" type="text/css" rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Templateize</title>
@@ -70,9 +76,6 @@
           <button class="btn btn-outline-dark" type="submit">Search</button>
         </form><br><br>
 
-        <form action="{{ route('search') }}" method="get">@csrf
-          <input type="text" name="kata" class="form-control" placeholder="Cari..." style="width: 30%; display: inline; margin-top:10px; margin-bottom:10px; float: right;">
-      </form>
 
         {{-- @yield('category') --}}
         
@@ -99,7 +102,7 @@
           @endforeach
         
         </div>
-        <a class="d-flex justify-content-center mt-5" href="{{ route('shopping') }}"><button type="submit" class="btn btn-primary w-25">See More...</button>
+        <a class="d-flex justify-content-center mt-5" href="{{ route('shopping') }}"><button type="submit" class="btn btn-primary w-10">See More...</button>
         </a>
       </div>
     </div>

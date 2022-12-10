@@ -42,11 +42,11 @@
                                         </td>
                                         <td>{{ $item->pesanan->tanggal }}</td>
                                         <td>
-                                            <a class="btn btn-primary btn-sm" href="{{ route('details', $item->shopping->id) }}">Details</a>
+                                            <a class="btn btn-primary btn-sm" href="{{ url('details', $item->shopping->id) }}">Details</a>
 
-                                            <a class="btn btn-success btn-sm" href="{{ route('download', $item->shopping->id) }}">Download</a>
+                                            <a class="btn btn-success btn-sm" href="{{ url('download', $item->shopping->id) }}">Download</a>
 
-                                            {{-- <a class="btn btn-success btn-sm" href="storage/app/docs/ {{ $item->shopping->document }}" download="{{ $item->shopping->document }}">Download</a> --}}
+                                            {{-- <a class="btn btn-success btn-sm" href="{{ asset('./storage/app/docs') }}/ {{ $item->shopping->document }}" download="{{ $item->shopping->template_name }}">Download</a> --}}
                                         </td>
                                         {{-- <td>{{ $user->level }}</td> --}}
                                     </tr>

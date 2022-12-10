@@ -7,10 +7,11 @@ use App\Models\Pesanan;
 use App\Models\Shopping;
 use Illuminate\Http\Request;
 use App\Models\PesananDetail;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Response;
 use RealRashid\SweetAlert\Facades\Alert;
+use Symfony\Component\HttpFoundation\Response;
 
 class DetailController extends Controller
 {
@@ -121,16 +122,17 @@ class DetailController extends Controller
         return view('home', compact('shopping'));
     }
 
-    public function download(Request $request, $id){
+    public function download($id){
         $shopping = Shopping::where('id', $id)->first();
         $doc = $shopping->document;
-        $filepath = storage_path()."/app/docs/".$doc;
+        $filepath = storage_path("app/docs/{$shopping->document}");
+        // $filepath = Storage::disk('local')->path('docs/'. $doc);
+        // $content = file_get_contents($filepath);
         // $filepath = './storage/app/docs/'.$doc;
         // $filepath = Storage::path('\docs', $doc);
-        
         return response()->download($filepath);
-        // return Response::download($filepath);
+        // return \Response::download($filepath);
+        // return Storage::disk('local')->download($filepath);
 
-        // $path = $request->file('fileInRequest')->store('pathToSaveFileTo');
     }
 }

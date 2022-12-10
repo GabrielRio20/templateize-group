@@ -10,43 +10,43 @@
     <div class="second">
     <div class="third">   
         <div class="text">Feedback</div>
-        <form action="#">
+        <form method="post" action="{{ route('feedback') }}" >
+         @csrf
            <div class="form-row">
               <div class="input-data">
-                 <input type="text" required>
+                 <input type="text" name="name">
                  <div class="underline"></div>
                  <label for="">Your Name</label>
               </div>
            </div>
            <div class="form-row">
               <div class="input-data">
-                 <input type="text" required>
+                 <input type="text" name="email">
                  <div class="underline"></div>
                  <label for="">Your Email</label>
               </div>
            </div>
            <div class="form-row">
             <div class="input-data">
-               <input type="text" required>
+               <input type="text" name="subject">
                <div class="underline"></div>
                <label for="">Your Subject</label>
             </div>
-         </div>
+            </div>
            <div class="form-row">
               <div class="input-data textarea">
-                 <textarea rows="8" cols="80" required></textarea>
+                 <textarea rows="8" cols="80" name="message"></textarea>
                  <br />
                  <div class="underline"></div>
                  <label for="">Your Message</label>
                  <br />
-                 <div class="form-row submit-btn">
-                    <div class="input-data">
-                       <div class="inner"></div>
-                       <input type="submit" value="submit">
-                    </div>
-                 </div>
+               
               </div>
            </div>
+           <div class="d-flex justify-content-center mt-5">
+            <button type="submit" class="btn btn-primary">Submit</button>
+           </div>
+           
         </form>
      </div>
      </div>

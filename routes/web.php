@@ -2,16 +2,17 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController;
+use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\Auth;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\TemplatesController;
+use App\Http\Controllers\ContributorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,9 +49,14 @@ Route::get('/templates', [TemplatesController::class, 'index'])->name('templates
 //route for dashboard customer
 Route::get('/dashboardCust', [CustomerController::class, 'index'])->name('dBoardCust');
 Route::get('my-templates', [CustomerController::class, 'myTemp'])->name('myTemplates');
+Route::get('customer-dashboard', [CustomerController::class, 'dashboardCust'])->name('customerDashboard');
 
 //route for dashboard admin
 Route::get('/dashboardAdmin', [AdminController::class, 'index'])->name('dBoardAdmin');
+Route::get('admin-dashboard', [AdminController::class, 'dashboard'])->name('main-dashboard');
+
+//route for dashboard contributor
+Route::get('/dashboardContributor', [ContributorController::class, 'index'])->name('dBoardCont');
 
 //route for templates shopping page
 Route::get('/shop', [ShopController::class, 'index'])->name('shopping');
@@ -62,6 +68,8 @@ Route::get('/', [ShopController::class, 'home']);
 // Route::get('/home', [ShopController::class, 'home']);
 Route::get('/search', [HomeController::class, 'search'])->name('search');
 
+//feedback route
+Route::post('/feedback', [HomeController::class, 'feedback'])->name('feedback');
 
 //detail route
 Route::get('/details/{id}', [DetailController::class, 'index'])->name('details');
@@ -84,3 +92,8 @@ Route::get('/about', [HomeController::class, 'aboutUs'])->name('aboutUs');
 //route to download
 Route::get('download/{id}', [DetailController::class, 'download'])->name('download');
 
+Route::get('/admin-feedback', [AdminController::class, 'feedback'])->name('admin.feedback');
+
+Route::get('/form', function() {
+    return view('shopping_page.create1');
+});
