@@ -37,6 +37,8 @@
               <div class="input-data textarea">
                  <textarea rows="8" cols="80" name="message"></textarea>
                  <br />
+                 <textarea rows="8" cols="80" required></textarea>
+                 <br/>
                  <div class="underline"></div>
                  <label for="">Your Message</label>
                  <br />

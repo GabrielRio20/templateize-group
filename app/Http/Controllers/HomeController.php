@@ -61,6 +61,13 @@ class HomeController extends Controller
         $feedback->message = $request->message;
         $feedback->save();
         return back();
+    }
         
+    public function faq(){
+        return view('faq');
+    }
+
+    public function termsOfUse(){
+        return view('terms_o_use');
     }
 }

@@ -97,3 +97,9 @@ Route::get('/admin-feedback', [AdminController::class, 'feedback'])->name('admin
 Route::get('/form', function() {
     return view('shopping_page.create1');
 });
+//faq
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+
+//Term of Use
+Route::get('/TermsOfUse', [HomeController::class, 'termsOfUse'])->name('termsOfUse');
+
