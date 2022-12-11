@@ -14,4 +14,10 @@ class ContributorController extends Controller
     public function index(){
         return view('contributor.d_board_cont');
     }
+
+    public function dashboard(){
+        return view('contributor.main_dashboard');
+    }
+
+    
 }

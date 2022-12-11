@@ -125,14 +125,9 @@ class DetailController extends Controller
     public function download($id){
         $shopping = Shopping::where('id', $id)->first();
         $doc = $shopping->document;
-        $filepath = storage_path("app/docs/{$shopping->document}");
-        // $filepath = Storage::disk('local')->path('docs/'. $doc);
-        // $content = file_get_contents($filepath);
-        // $filepath = './storage/app/docs/'.$doc;
-        // $filepath = Storage::path('\docs', $doc);
+        $filepath = storage_path("docs/".$shopping->template_name.'.zip'
+    
+    );
         return response()->download($filepath);
-        // return \Response::download($filepath);
-        // return Storage::disk('local')->download($filepath);
-
     }
 }
