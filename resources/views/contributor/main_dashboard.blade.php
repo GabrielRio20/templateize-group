@@ -8,31 +8,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
-    @extends('admin.d_board_admin')
+    @extends('contributor.d_board_cont')
     @section('main')
 
     <h1> Dashboard </h1>
 
     <div class="row ms-3 me-5">
-        <div class="col-lg-6 mt-4">
-          <div class="member d-flex align-items-start p-4 shadow rounded justify-content-between">
-            <div>
-              <h4>Customer</h4>
-              <h5>{{ $customer->count('id') }}</h5>
-            </div>
-            <div class="my-auto">
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#949494" class="bi bi-person-fill" viewBox="0 0 16 16">
-                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-              </svg>
-            </div>
-          </div>
-        </div>
 
         <div class="col-lg-6 mt-4">
           <div class="member d-flex align-items-start p-4 shadow rounded justify-content-between">
             <div>
-              <h4>Contributor</h4>
-              <h5>{{ $contributor->count('id') }}</h5>
+              <h4>Template Sold</h4>
+              <h5>10</h5>
             </div>
             <div class="my-auto">
               <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#949494" class="bi bi-person-check-fill" viewBox="0 0 16 16">
@@ -46,8 +33,8 @@
         <div class="col-lg-6 mt-4">
           <div class="member d-flex align-items-start p-4 shadow rounded justify-content-between">
             <div>
-              <h4>Template</h4>
-              <h5>{{ $template->count('id') }}</h5>
+              <h4>Template Uploaded</h4>
+              <h5>4</h5>
             </div>
             <div class="my-auto">
               <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#949494" class="bi bi-collection-fill" viewBox="0 0 16 16">
@@ -61,7 +48,7 @@
           <div class="member d-flex align-items-start p-4 shadow rounded justify-content-between">
             <div>
               <h4>Feedback</h4>
-              <h5>{{ $feedback->count('id') }}</h5>
+              <h5>5</h5>
             </div>
             <div class="my-auto">
               <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#949494" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">

@@ -2,12 +2,13 @@
 
 namespace App\Http\Livewire;
 
+use ZipArchive;
 use Livewire\Component;
-use Livewire\WithFileUploads;
 use App\Models\Shopping;
+use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
-Use File;
 
 class MultiStepForm extends Component
 {
@@ -78,17 +79,26 @@ class MultiStepForm extends Component
         $namafile = time().'.'.$picture->getClientOriginalExtension();
         Image::make($this->picture)->resize(800, 450)->save('thumb/'.$namafile);
 
+        $zip = new ZipArchive();
         $document = $this->document;
-        // $namadoc = 'FT'.date('Ymdhis').'.'.$this->$document->getClientOriginalExtension();
         $namadoc = time();
-        // Storage::putFile('docs/', $namadoc, $this->document);
-        // $document->move('public/docs/', $namadoc);
-        // $document->storeAs('docs/', $namadoc, $document);
-        // $document->storeAs('docs', 'namadoc');
-        // $document->store('public/docs');
-        // $document->storeAs('public/docs', 'namadoc');
+        $name = $this->template_name;
+        
         Storage::disk('local')->put('docs/'. $namadoc, $document);
-        // Storage::put('docs/', $namadoc, $this->document);
+
+        // $file_name = $namadoc.'.zip';
+        $file_name = $name.'.zip';
+
+        if ($zip->open(storage_path('docs/'.$file_name), ZipArchive::CREATE) == TRUE) {
+            $files = File::files(storage_path('app/docs/'.$namadoc));
+
+            foreach ($files as $value){
+                $filename = basename($value);
+                $zip->addFile($value, $filename);
+            }
+            $zip->close();
+            // return Storage::disk('local')->put('docs/', $file_name);
+        }
 
         $values = array(
             "template_name"=>$this->template_name,

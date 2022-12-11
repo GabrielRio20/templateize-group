@@ -203,7 +203,7 @@
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             @if(Auth::check() && Auth::user()->level == 'contributor')
                             
-                                <a class="dropdown-item" href="{{ route('dBoardCont') }}">
+                                <a class="dropdown-item" href="{{ route('contributorDashboard') }}">
                                     {{ __('Dashboard') }}
                                 </a>
                                 

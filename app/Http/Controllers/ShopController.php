@@ -57,27 +57,27 @@ class ShopController extends Controller
         $shopping->description = $request->description;
         $shopping->price = $request->price;
 
-        $document = $request->document;
-        // $namadoc = time().'.'.$document->getClientOriginalExtension();
-        $namadoc = time();
-        // $document->move('docs/'.$namadoc, $document);
-        // Storage::putFile('docs/', $namadoc);
-        Storage::disk('local')->put('docs/'. $namadoc, $document);
-
-        // $zip = new ZipArchive();
         // $document = $request->document;
-        // $namadoc = time().'.'.$document->getClientOriginalExtension();
+        // $namadoc = time();
+        // Storage::disk('local')->put('docs/'.$namadoc, $document);
 
-        // if ($zip->open(public_path($namadoc), ZipArchive::CREATE)===TRUE) {
-        //     $files = File::files(public_path('docs'));
+        $zip = new ZipArchive();
+        $document = $request->file('document');
+        $namadoc = time().'.'.$document->getClientOriginalExtension();
+        Storage::disk('local')->put('docs/'.$namadoc, $document);
 
-        //     foreach ($files as $key => $value){
-        //         $filename = basename($value);
-        //         $zip->addFile($value, $filename);
-        //     }
-        //     $zip->close();
-        // }
+        if ($zip->open(storage_path($namadoc), ZipArchive::CREATE) == TRUE) {
+            $files = File::files(storage_path('app/docs', $namadoc));
 
+            foreach ($files as $value){
+                $filename = basename($value);
+                $zip->addFile($value, $filename);
+            }
+            $zip->close();
+            return Storage::disk('local')->put('docs/', $namadoc);
+        }
+        
+        
         $picture = $request->picture;
         $namafile = time().'.'.$picture->getClientOriginalExtension();
         Image::make($picture)->resize(800, 450)->save('thumb/'.$namafile);

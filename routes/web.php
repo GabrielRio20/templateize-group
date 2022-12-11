@@ -57,6 +57,7 @@ Route::get('admin-dashboard', [AdminController::class, 'dashboard'])->name('main
 
 //route for dashboard contributor
 Route::get('/dashboardContributor', [ContributorController::class, 'index'])->name('dBoardCont');
+Route::get('contributor-dashboard', [ContributorController::class, 'dashboard'])->name('contributorDashboard');
 
 //route for templates shopping page
 Route::get('/shop', [ShopController::class, 'index'])->name('shopping');
