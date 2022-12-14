@@ -112,7 +112,7 @@
             
             body{
                 margin:0;
-                font-family: 'Open Sans', sans-serif;
+                font-family: 'Dosis', sans-serif;
             }
             *{
                 box-sizing: border-box;
