@@ -15,7 +15,7 @@
                 padding: 0;
                 margin: 0;
                 box-sizing: border-box;
-                /* font-family: 'Dosis', sans-serif; */
+                font-family: 'Dosis', sans-serif;
                 outline: none;
             }
             .about{
