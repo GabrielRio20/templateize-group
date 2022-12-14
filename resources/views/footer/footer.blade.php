@@ -28,22 +28,22 @@
 
       <!-- Right -->
       <div>
-        <a href="" class="text-white me-4">
+        <a href="https://id-id.facebook.com" class="text-white me-4">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="" class="text-white me-4">
+        <a href="https://twitter.com" class="text-white me-4">
           <i class="fab fa-twitter"></i>
         </a>
-        <a href="" class="text-white me-4">
+        <a href="https://www.google.com/?hl=id" class="text-white me-4">
           <i class="fab fa-google"></i>
         </a>
-        <a href="" class="text-white me-4">
+        <a href="https://www.instagram.com" class="text-white me-4">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="" class="text-white me-4">
+        <a href="https://www.linkedin.com/login" class="text-white me-4">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="" class="text-white me-4">
+        <a href="https://github.com/" class="text-white me-4">
           <i class="fab fa-github"></i>
         </a>
       </div>
@@ -91,7 +91,7 @@
               <a href="faq" class="text-white">FAQ</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Become an Contributor</a>
+              <a href="{{ route('register') }}" class="text-white">Become an Contributor</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -108,10 +108,10 @@
               <a href="about" class="text-white">About Us</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Privacy Policy</a>
+              <a href="PrivacyPolicy" class="text-white">Privacy Policy</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Terms of Service</a>
+              <a href="TermsOfService" class="text-white">Terms of Service</a>
             </p>
             <p>
               <a href="TermsOfUse" class="text-white">Terms of Use</a>

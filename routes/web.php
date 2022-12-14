@@ -103,6 +103,10 @@ Route::get('/form', function() {
 //faq
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 
-//Term of Use
+//Terms
 Route::get('/TermsOfUse', [HomeController::class, 'termsOfUse'])->name('termsOfUse');
+
+Route::get('/TermsOfService', [HomeController::class, 'termsOfService'])->name('termsOfService');
+
+Route::get('/PrivacyPolicy', [HomeController::class, 'privacyPolicy'])->name('privacyPolicy');
 
