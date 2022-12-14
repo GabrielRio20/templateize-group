@@ -4,15 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Google Font: Source Sans Pro -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
-
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
-        {{-- <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet'> --}}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     
+        <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet'>
+
         <title>About Us</title>
         <link rel="stylesheet" type="text/css" href="">
         <style>
@@ -20,7 +15,7 @@
                 padding: 0;
                 margin: 0;
                 box-sizing: border-box;
-                font-family: 'Dosis', sans-serif;
+                /* font-family: 'Dosis', sans-serif; */
                 outline: none;
             }
             .about{
@@ -71,6 +66,7 @@
                 margin-bottom: 35px;
             }
             .btn button{
+                border-radius:10px;
                 background: white;
                 padding: 20px 32px;
                 font-size: 16px;
@@ -78,7 +74,7 @@
                 color: #111111;
                 border: none;
                 outline: none;
-                box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
+                box-shadow: 0px 5px 25px 0px rgb(0 0 0 / 15%);
                 /* margin: 20px; */
             }
             .btn button:hover{
@@ -108,11 +104,16 @@
                 }
             }
 
-            
+            @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+            @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
             html{
                 scroll-behavior: smooth;
             }
             
+            body{
+                margin:0;
+                font-family: 'Open Sans', sans-serif;
+            }
             *{
                 box-sizing: border-box;
             }
@@ -123,10 +124,10 @@
                 padding:70px 15px 30px;
             }
 
-            /* .container{
+            .container{
                 max-width: 1170px;
                 margin:auto;
-            } */
+            }
 
             .row{
                 display: flex;
@@ -247,20 +248,18 @@
         
     </head>
     <body>
-    @include('part.navbar_main')
+    @extends('layouts.app')
 
+    @section('content')
         <section class="about">
             <div class="main">
                 <img src="https://i0.wp.com/mutupendidikan.com/wp-content/uploads/2020/04/Klasifikasi-Jenis-Tes-Psikologi.jpg?w=740&ssl=1" alt="">
                 <div class="all-text">
                     <h4>About Us</h4>
                     <h1>Templateize</h1>
-                    <p>Landing page personal template untuk profesional yang kami buat rencananya dapat menjadi suatu laman yang menyediakan layanan pembuatan portofolio dengan template-template yang sudah disediakan untuk kebutuhan personal. 
-
-                        Website ini juga dapat menyediakan tempat bagi para creator yang ingin menyumbangkan atau memperjualbelikan karya template portofolionya. 
-                        
-                        Kami memberikan nama website ini Templateize karena terinspirasi dari gabungan kata dari template dan appetize, harapannya website kami dapat menyediakan template portofolio yang sesuai selera bagi para penggunanya. </p>
-                    <div class="btn">
+                    <p>The personal landing page template for professionals that we plan to make can be a page that provides portfolio creation services with templates that have been provided for personal needs.
+                        This website can also provide a place for creators who want to donate or trade their portfolio template works.
+                        We named this website Templateize because it was inspired by a combination of the words template and appetize, we hope that our website can provide portfolio templates that suit the tastes of its users.<div class="btn">
                         <button type="button" onClick="document.getElementById('middle').scrollIntoView();">Our Team</button>
                     </div>
                 </div>
@@ -275,7 +274,7 @@
                         <div id="middle">
                             <h1>Our Team</h1>
                         </div>
-                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                        <!-- <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p> -->
                     </div>
                 </div>
                 <div class="row">
@@ -285,12 +284,10 @@
                              <div class="inner">
                                  <div class="info">
                                       <h5>Ahmad Fatha Mumtaza</h5>
-                                      <p>Front-End</p>
+                                      <p>Bantul, D.I.Y</p>
                                       <div class="social-links">
-                                          <a href=""><span class="fa fa-facebook"></span></a>
-                                          <a href=""><span class="fa fa-twitter"></span></a>
-                                          <a href=""><span class="fa fa-linkedin"></span></a>
-                                          <a href=""><span class="fa fa-youtube"></span></a>
+                                          <a href=""><span class="fab fa-google"></span></a>
+                                          <a href=""><span class="fab fa-linkedin"></span></a>
                                       </div>
                                  </div>
                              </div>
@@ -300,12 +297,10 @@
                              <div class="inner">
                                  <div class="info">
                                       <h5>Gabriel Rio Aditya</h5>
-                                      <p>Full Stack</p>
+                                      <p>Yogyakarta, D.I.Y</p>
                                       <div class="social-links">
-                                          <a href=""><span class="fa fa-facebook"></span></a>
-                                          <a href=""><span class="fa fa-twitter"></span></a>
-                                          <a href=""><span class="fa fa-linkedin"></span></a>
-                                          <a href=""><span class="fa fa-youtube"></span></a>
+                                      <a href=""><span class="fab fa-google"></span></a>
+                                      <a href=""><span class="fab fa-linkedin"></span></a>
                                       </div>
                                  </div>
                              </div>
@@ -315,12 +310,10 @@
                              <div class="inner">
                                  <div class="info">
                                       <h5>Lintang Yandi Nugraha</h5>
-                                      <p>UI/UX Designer</p>
+                                      <p>Kulon Progo, D.I.Y</p>
                                       <div class="social-links">
-                                          <a href=""><span class="fa fa-facebook"></span></a>
-                                          <a href=""><span class="fa fa-twitter"></span></a>
-                                          <a href=""><span class="fa fa-linkedin"></span></a>
-                                          <a href=""><span class="fa fa-youtube"></span></a>
+                                          <a href=""><span class="fab fa-google"></span></a>
+                                          <a href=""><span class="fab fa-linkedin"></span></a>
                                       </div>
                                  </div>
                              </div>
@@ -330,12 +323,10 @@
                              <div class="inner">
                                  <div class="info">
                                       <h5>Rayendra Arya Daneswara</h5>
-                                      <p>Project Manager</p>
+                                      <p>Bantul, D.I.Y</p>
                                       <div class="social-links">
-                                          <a href=""><span class="fa fa-facebook"></span></a>
-                                          <a href=""><span class="fa fa-twitter"></span></a>
-                                          <a href=""><span class="fa fa-linkedin"></span></a>
-                                          <a href=""><span class="fa fa-youtube"></span></a>
+                                          <a href=""><span class="fab fa-google"></span></a>
+                                          <a href=""><span class="fab fa-linkedin"></span></a>
                                       </div>
                                  </div>
                              </div>
@@ -344,9 +335,7 @@
                 </div>
             </div>
          </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
          <section>@include ("footer.footer")</section>
-         
+         @endsection
     </body>
 </html>
