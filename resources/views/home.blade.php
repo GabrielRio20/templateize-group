@@ -30,25 +30,25 @@
         </div>
         <div class="carousel-inner m-auto" style="max-height:91vh">
           <div class="carousel-item active">
-            <img src="{{ asset('img/carousel/Frame 18.png') }}" class="d-block w-100" alt="...">
-            <div class="carousel-caption" style="bottom: 35%">
+            <img src="{{ asset('img/carousel/Frame 22.png') }}" class="d-block w-100" alt="...">
+            {{-- <div class="carousel-caption" style="bottom: 35%">
               <h1>Templateize</h1>
               <p>Professional Website Template for Any Project</p>
-            </div>
+            </div> --}}
           </div>
           <div class="carousel-item">
             <img src="{{ asset('img/carousel/Frame 17.png') }}" class="d-block w-100 h-50" alt="...">
-            <div class="carousel-caption" style="bottom: 35%">
+            {{-- <div class="carousel-caption" style="bottom: 35%">
               <h1>Templateize</h1>
               <p>Professional Website Template for Any Project</p> 
-            </div>
+            </div> --}}
           </div>
           <div class="carousel-item">
             <img src="https://computory.com/wp-content/uploads/2020/11/spek-game-red-dead-redemption-2-computory.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption" style="bottom: 35%">
+            {{-- <div class="carousel-caption" style="bottom: 35%">
               <h1>Templateize</h1>
               <p>Professional Website Template for Any Project</p>
-            </div>
+            </div> --}}
           </div>
         </div>
         <button class="carousel-control-prev" style="left: 0%" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
