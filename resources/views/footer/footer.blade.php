@@ -28,22 +28,22 @@
 
       <!-- Right -->
       <div>
-        <a href="" class="text-white me-4">
+        <a href="https://id-id.facebook.com" class="text-white me-4">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="" class="text-white me-4">
+        <a href="https://twitter.com" class="text-white me-4">
           <i class="fab fa-twitter"></i>
         </a>
-        <a href="" class="text-white me-4">
+        <a href="https://www.google.com/?hl=id" class="text-white me-4">
           <i class="fab fa-google"></i>
         </a>
-        <a href="" class="text-white me-4">
+        <a href="https://www.instagram.com" class="text-white me-4">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="" class="text-white me-4">
+        <a href="https://www.linkedin.com/login" class="text-white me-4">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="" class="text-white me-4">
+        <a href="https://github.com/" class="text-white me-4">
           <i class="fab fa-github"></i>
         </a>
       </div>
