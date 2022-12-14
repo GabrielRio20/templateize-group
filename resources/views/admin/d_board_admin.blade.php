@@ -30,9 +30,17 @@
         user-select: none;
       }
 
+      #sidebarMenu{
+          padding-top: 10px;
+        }
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
+        }
+
+        #sidebarMenu{
+        height: 100vh;
         }
       }
     </style>
