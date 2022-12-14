@@ -108,10 +108,10 @@
               <a href="about" class="text-white">About Us</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Privacy Policy</a>
+              <a href="PrivacyPolicy" class="text-white">Privacy Policy</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Terms of Service</a>
+              <a href="TermsOfService" class="text-white">Terms of Service</a>
             </p>
             <p>
               <a href="TermsOfUse" class="text-white">Terms of Use</a>
