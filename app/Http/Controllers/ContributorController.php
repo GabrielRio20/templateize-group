@@ -19,5 +19,8 @@ class ContributorController extends Controller
         return view('contributor.main_dashboard');
     }
 
-    
+    public function uploadTemp(){
+        return view('contributor.uploadTemp');
+    }
+   
 }

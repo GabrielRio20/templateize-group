@@ -15,7 +15,7 @@
                 padding: 0;
                 margin: 0;
                 box-sizing: border-box;
-                /* font-family: 'Dosis', sans-serif; */
+                font-family: 'Dosis', sans-serif;
                 outline: none;
             }
             .about{
@@ -112,7 +112,7 @@
             
             body{
                 margin:0;
-                font-family: 'Open Sans', sans-serif;
+                font-family: 'Dosis', sans-serif;
             }
             *{
                 box-sizing: border-box;
