@@ -58,7 +58,7 @@ Route::get('admin-dashboard', [AdminController::class, 'dashboard'])->name('main
 //route for dashboard contributor
 Route::get('/dashboardContributor', [ContributorController::class, 'index'])->name('dBoardCont');
 Route::get('contributor-dashboard', [ContributorController::class, 'dashboard'])->name('contributorDashboard');
-Route::get('upload-temp', [ContributorController::class, 'uploadTemp'])->name('uploadTemp');
+Route::get('/upload-temp', [ContributorController::class, 'uploadTemp'])->name('cont.uploadTemp');
 
 //route for templates shopping page
 Route::get('/shop', [ShopController::class, 'index'])->name('shopping');
@@ -99,6 +99,7 @@ Route::get('/admin-feedback', [AdminController::class, 'feedback'])->name('admin
 Route::get('/form', function() {
     return view('shopping_page.create1');
 });
+
 //faq
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 

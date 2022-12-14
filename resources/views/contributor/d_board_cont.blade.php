@@ -71,7 +71,7 @@
                 </li>
                 
                 <li class="nav-item">
-                  <a class="nav-link {{ Request::is('shop-create') ? 'active' : '' }}" href="{{ route('shopping.create') }}">
+                  <a class="nav-link {{ Request::is('upload-temp') ? 'active' : '' }}" href="{{ route('cont.uploadTemp') }}">
                     <span data-feather="shopping-cart"></span>
                     Upload Template
                   </a>
