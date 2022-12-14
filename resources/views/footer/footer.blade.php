@@ -91,7 +91,7 @@
               <a href="faq" class="text-white">FAQ</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Become an Contributor</a>
+              <a href="{{ route('register') }}" class="text-white">Become an Contributor</a>
             </p>
           </div>
           <!-- Grid column -->
