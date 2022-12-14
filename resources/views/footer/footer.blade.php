@@ -82,13 +82,13 @@
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p>
-              <a href="#!" class="text-white">Template</a>
+              <a href="shop" class="text-white">Template</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Cart</a>
+              <a href="checkout" class="text-white">Cart</a>
             </p>
             <p>
-              <a href="#!" class="text-white">FAQ</a>
+              <a href="faq" class="text-white">FAQ</a>
             </p>
             <p>
               <a href="#!" class="text-white">Become an Contributor</a>
@@ -105,7 +105,7 @@
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p>
-              <a href="#!" class="text-white">About Us</a>
+              <a href="about" class="text-white">About Us</a>
             </p>
             <p>
               <a href="#!" class="text-white">Privacy Policy</a>
@@ -114,7 +114,7 @@
               <a href="#!" class="text-white">Terms of Service</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Terms of Use</a>
+              <a href="TermsOfUse" class="text-white">Terms of Use</a>
             </p>
           </div>
           <!-- Grid column -->
