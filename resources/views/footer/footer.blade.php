@@ -57,24 +57,17 @@
         <!-- Grid row -->
         <div class="row mt-3">
           <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <div id="text-footer" class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="display: flex; align-items: center; font-size: 18px;">
             <!-- Content -->
-            <h6 class="text-uppercase fw-bold">Company name</h6>
-            <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-                />
-            <p>
-            
-            Email us with any questions, we will be happy to answer them. For contributors, join us and sell your templates on our website. 
-            We will help our customers find the right template for your portfolio.
-
+            <p style=" text-align: justify;">
+            Email us with any questions, we will be happy to answer them. <br> For contributors, join us and sell your templates on our website. 
+            <br> We will help our customers find the right template for your portfolio.
             </p>
           </div>
           <!-- Grid column -->
 
           <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" style="text-decoration:none">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold">Products</h6>
             <hr
@@ -105,7 +98,7 @@
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p>
-              <a href="about" class="text-white">About Us</a>
+              <a href="about" class="a text-white">About Us</a>
             </p>
             <p>
               <a href="PrivacyPolicy" class="text-white">Privacy Policy</a>
