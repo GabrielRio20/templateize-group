@@ -57,14 +57,9 @@
         <!-- Grid row -->
         <div class="row mt-3">
           <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <div id="text-footer" class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="display: flex; justify-items: center; align-items: center; font-size: 18px; margin: 12px;">
             <!-- Content -->
-            <h6 class="text-uppercase fw-bold">Company name</h6>
-            <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-                />
-            <p>
+            <p style=" text-align: justify;">
             
             Email us with any questions, we will be happy to answer them. For contributors, join us and sell your templates on our website. 
             We will help our customers find the right template for your portfolio.
