@@ -62,7 +62,6 @@
             <p style=" text-align: justify;">
             Email us with any questions, we will be happy to answer them. <br> For contributors, join us and sell your templates on our website. 
             <br> We will help our customers find the right template for your portfolio.
-
             </p>
           </div>
           <!-- Grid column -->
