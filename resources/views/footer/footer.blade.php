@@ -57,12 +57,11 @@
         <!-- Grid row -->
         <div class="row mt-3">
           <!-- Grid column -->
-          <div id="text-footer" class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="display: flex; justify-items: center; align-items: center; font-size: 18px; margin: 12px;">
+          <div id="text-footer" class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="display: flex; align-items: center; font-size: 18px;">
             <!-- Content -->
             <p style=" text-align: justify;">
-            
-            Email us with any questions, we will be happy to answer them. For contributors, join us and sell your templates on our website. 
-            We will help our customers find the right template for your portfolio.
+            Email us with any questions, we will be happy to answer them. <br> For contributors, join us and sell your templates on our website. 
+            <br> We will help our customers find the right template for your portfolio.
 
             </p>
           </div>
