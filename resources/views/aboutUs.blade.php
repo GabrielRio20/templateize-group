@@ -120,7 +120,7 @@
 
             .team-section{
                 background-color:#1d44f9;
-                min-height: 100vh;
+                min-height: 85vh;
                 padding:70px 15px 30px;
             }
 
@@ -280,7 +280,7 @@
                 <div class="row">
                     <div class="team-items">
                          <div class="item">
-                             <img src="https://cdn.idntimes.com/content-images/community/2022/04/13-70c6d66a74f3cea6c9573bee957f66ff-4377b384a91ac9abad04ac656f9e353f.jpg" alt="team" />
+                             <img src="{{asset('img/aboutUs/taza.png')}}" alt="team" />
                              <div class="inner">
                                  <div class="info">
                                       <h5>Ahmad Fatha Mumtaza</h5>
@@ -293,7 +293,7 @@
                              </div>
                          </div>
                          <div class="item">
-                            <img src="https://cdn.idntimes.com/content-images/community/2022/04/7-70c6d66a74f3cea6c9573bee957f66ff-95693296e8ca1cb5755370e62b7445b0.jpg" alt="team" />
+                            <img src="{{asset('img/aboutUs/rio.png')}}" alt="team" />
                              <div class="inner">
                                  <div class="info">
                                       <h5>Gabriel Rio Aditya</h5>
@@ -306,7 +306,7 @@
                              </div>
                          </div>
                          <div class="item">
-                            <img src="https://cdn.idntimes.com/content-images/community/2022/04/16-70c6d66a74f3cea6c9573bee957f66ff-88f99a00a88d77d9ddca8a7c3e3cdb9d.jpg" alt="team" />
+                            <img src="{{asset('img/aboutUs/yandi.png')}}" alt="team" />
                              <div class="inner">
                                  <div class="info">
                                       <h5>Lintang Yandi Nugraha</h5>
@@ -319,7 +319,7 @@
                              </div>
                          </div>
                          <div class="item">
-                            <img src="https://cdn.idntimes.com/content-images/community/2022/04/4-70c6d66a74f3cea6c9573bee957f66ff-72486fb1f910664e8a853a17e0848d6b.jpg" alt="team" />
+                            <img src="{{asset('img/aboutUs/arya.png')}}" alt="team" />
                              <div class="inner">
                                  <div class="info">
                                       <h5>Rayendra Arya Daneswara</h5>
