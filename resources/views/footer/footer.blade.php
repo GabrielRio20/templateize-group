@@ -74,7 +74,7 @@
           <!-- Grid column -->
 
           <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" style="text-decoration:none">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold">Products</h6>
             <hr
@@ -105,7 +105,7 @@
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p>
-              <a href="about" class="text-white">About Us</a>
+              <a href="about" class="a text-white">About Us</a>
             </p>
             <p>
               <a href="#!" class="text-white">Privacy Policy</a>
