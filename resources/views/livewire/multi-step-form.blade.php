@@ -91,6 +91,16 @@
                             <label for="picture"> Upload Foto</label>
                             <input type="file" class="form-control" name="picture" wire:model="picture">
                             <span class="text-danger">@error('picture'){{ $message }}@enderror</span><br>
+
+                            <input type="file" class="form-control" name="picture2" wire:model="picture2">
+                            <span class="text-danger">@error('picture'){{ $message }}@enderror</span><br>
+
+                            <input type="file" class="form-control" name="picture3" wire:model="picture3">
+                            <span class="text-danger">@error('picture'){{ $message }}@enderror</span><br>
+
+                            <input type="file" class="form-control" name="picture4" wire:model="picture4">
+                            <span class="text-danger">@error('picture'){{ $message }}@enderror</span><br>
+
                             <label for="picture"> Upload File</label>
                             <input type="file" class="form-control" name="document" wire:model="document">
                             <span class="text-danger">@error('document'){{ $message }}@enderror</span>

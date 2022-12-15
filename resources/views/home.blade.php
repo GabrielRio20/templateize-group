@@ -30,14 +30,14 @@
         </div>
         <div class="carousel-inner m-auto" style="max-height:91vh">
           <div class="carousel-item active">
-            <img src="{{ asset('img/carousel/Frame 18.png') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('img/carousel/Frame 22.png') }}" class="d-block w-100" alt="...">
             <div class="carousel-caption" style="bottom: 35%">
               <!-- <h1>Templateize</h1>
               <p>Professional Website Template for Any Project</p> -->
             </div>
           </div>
           <div class="carousel-item">
-            <img src="{{ asset('img/carousel/Frame 17.png') }}" class="d-block w-100 h-50" alt="...">
+            <img src="{{ asset('img/carousel/Frame 23.png') }}" class="d-block w-100 h-50" alt="...">
             <div class="carousel-caption" style="bottom: 35%">
               <!-- <h1>Templateize</h1>
               <p>Professional Website Template for Any Project</p>  -->
@@ -48,6 +48,25 @@
             <div class="carousel-caption" style="bottom: 35%">
               <!-- <h1>Templateize</h1>
               <p>Professional Website Template for Any Project</p> -->
+            </div>
+            <img src="{{ asset('img/carousel/Frame 22.png') }}" class="d-block w-100" alt="...">
+            {{-- <div class="carousel-caption" style="bottom: 35%">
+              <h1>Templateize</h1>
+              <p>Professional Website Template for Any Project</p>
+            </div> --}}
+          </div>
+          <div class="carousel-item">
+            <img src="{{ asset('img/carousel/Frame 17.png') }}" class="d-block w-100 h-50" alt="...">
+            <div class="carousel-caption" style="bottom: 35%">
+              <h1>Templateize</h1>
+              <p>Professional Website Template for Any Project</p> 
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://computory.com/wp-content/uploads/2020/11/spek-game-red-dead-redemption-2-computory.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption" style="bottom: 35%">
+              <h1>Templateize</h1>
+              <p>Professional Website Template for Any Project</p>
             </div>
           </div>
         </div>
@@ -66,22 +85,6 @@
     <div class="p-5 mb-5 text-light" style="background-image: url('/img/Background.png')">
       <div class="container mt-5 mb-5 ml-0" style="padding-top: 10%; padding-bottom:10%">
         <div class="row">
-          <!-- <div class="col-md-4">
-            <img class="opacity-25 mx-auto" style="height: 280px" src="{{asset('img/t.png')}}">
-          </div>
-          <div class="col-md-8 order-md-first">
-            {{-- @yield('container') --}}
-            <h1>Professional Websites Template <br> for Any Project</h1><br>
-            <p>Discover a lot of easy to customize themes, templates & CMS products, <br> made by world-class developers.</p>
-
-            {{-- @yield('search') <br><br> --}}
-            <form class="d-flex" role="search" action="{{ route('search') }}" method="get">@csrf
-              <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="templates" style="height: 50px">
-
-              <button class="btn btn-dark me-5" type="submit" style="height: 50px">Search</button>
-            </form><br><br>
-          </div> -->
-
           <div class="col-md-7 order-md-first">
             {{-- @yield('container') --}}
             <h1>Professional Websites Template <br> for Any Project</h1><br>

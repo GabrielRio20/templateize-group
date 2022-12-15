@@ -232,15 +232,15 @@
                                 </li>
             
                                 <li class="small-img-col">
-                                    <img src="https://broonet.com/wp-content/uploads/2020/03/mewarnai-gambar-kartun-4.jpg" width="100%" class="small-img" alt="">
+                                    <img src="{{ asset('thumb/'.$shopping->picture2) }}" width="100%" class="small-img" alt="">
                                 </li>
             
                                 <li class="small-img-col">
-                                    <img src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.png" width="100%" class="small-img" alt="">
+                                    <img src="{{ asset('thumb/'.$shopping->picture3) }}" width="100%" class="small-img" alt="">
                                 </li>
             
                                 <li class="small-img-col">
-                                    <img src="https://broonet.com/wp-content/uploads/2020/03/mewarnai-gambar-kartun-4.jpg" width="100%" class="small-img" alt="">
+                                    <img src="{{ asset('thumb/'.$shopping->picture4) }}" width="100%" class="small-img" alt="">
                                 </li>
                             </ul>
                         {{-- </div> --}}
