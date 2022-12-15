@@ -37,7 +37,7 @@
             </div> --}}
           </div>
           <div class="carousel-item">
-            <img src="{{ asset('img/carousel/Frame 17.png') }}" class="d-block w-100 h-50" alt="...">
+            <img src="{{ asset('img/carousel/Frame 23.png') }}" class="d-block w-100 h-50" alt="...">
             {{-- <div class="carousel-caption" style="bottom: 35%">
               <h1>Templateize</h1>
               <p>Professional Website Template for Any Project</p> 

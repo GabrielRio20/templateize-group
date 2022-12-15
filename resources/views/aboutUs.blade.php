@@ -191,7 +191,7 @@
                 transform: translateY(-20px);
             }
             .team-section .team-items .item:hover{
-            transform: translateY(-10px);	
+                transform: translateY(-10px);	
             }
             .team-section .team-items .item .inner .info h5{
                 margin:0;
