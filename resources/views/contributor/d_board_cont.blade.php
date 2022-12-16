@@ -83,15 +83,15 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="users"></span>
-                    Customers
+                  <a class="nav-link" href="{{ route('contributor.mytemp') }}">
+                    <span data-feather="layers"></span>
+                    My Templates
                   </a>
                 </li>
                 
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    <span data-feather="layers"></span>
+                    <span data-feather="dollar-sign"></span>
                     Earnings
                   </a>
                 </li>

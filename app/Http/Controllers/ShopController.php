@@ -89,4 +89,9 @@ class ShopController extends Controller
         return redirect('/shop')->with('pesan', 'Data berhasil disimpan');
     }
 
+    public function destroy($id) {
+        $template = Shopping::find($id);
+        $template->delete();
+        return redirect('/ContributorTemplates');
+    }
 }

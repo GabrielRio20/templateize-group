@@ -110,3 +110,7 @@ Route::get('/TermsOfService', [HomeController::class, 'termsOfService'])->name('
 
 Route::get('/PrivacyPolicy', [HomeController::class, 'privacyPolicy'])->name('privacyPolicy');
 
+// Contributor My Templates
+Route::get('/ContributorTemplates', [ContributorController::class, 'myTemp'])->name('contributor.mytemp');
+
+// Delete Template
