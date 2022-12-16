@@ -6,6 +6,15 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+   <style>
+    #text{
+      text-decoration: none;
+    }
+    
+    #text:hover {
+      text-decoration: underline;
+    }
+   </style>
    <body>
 
 <!-- Remove the container if you want to extend the Footer to full width. -->
@@ -75,16 +84,16 @@
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p>
-              <a href="shop" class="text-white">Template</a>
+              <a id="text" href="shop" class="text-white">Template</a>
             </p>
             <p>
-              <a href="checkout" class="text-white">Cart</a>
+              <a id="text" href="checkout" class="text-white">Cart</a>
             </p>
             <p>
-              <a href="faq" class="text-white">FAQ</a>
+              <a id="text" href="faq" class="text-white">FAQ</a>
             </p>
             <p>
-              <a href="{{ route('register') }}" class="text-white">Become an Contributor</a>
+              <a id="text" href="{{ route('register') }}" class="text-white">Become an Contributor</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -98,10 +107,10 @@
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p>
-              <a href="about" class="a text-white">About Us</a>
+              <a id="text" href="about" class="a text-white">About Us</a>
             </p>
             <p>
-              <a href="TermsAndConditions" class="text-white">Terms and Conditions</a>
+              <a id="text" href="TermsAndConditions" class="text-white">Terms and Conditions</a>
             </p>
           </div>
           <!-- Grid column -->
