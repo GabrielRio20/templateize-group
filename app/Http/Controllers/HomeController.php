@@ -67,15 +67,7 @@ class HomeController extends Controller
         return view('faq');
     }
 
-    public function termsOfUse(){
-        return view('terms_o_use');
-    }
-
-    public function termsOfService(){
-        return view('terms_o_service');
-    }
-
-    public function privacyPolicy(){
-        return view('privacy_policy');
+    public function termsAndConditions(){
+        return view('terms_n_conditions');
     }
 }

@@ -104,11 +104,7 @@ Route::get('/form', function() {
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 
 //Terms
-Route::get('/TermsOfUse', [HomeController::class, 'termsOfUse'])->name('termsOfUse');
-
-Route::get('/TermsOfService', [HomeController::class, 'termsOfService'])->name('termsOfService');
-
-Route::get('/PrivacyPolicy', [HomeController::class, 'privacyPolicy'])->name('privacyPolicy');
+Route::get('/TermsAndConditions', [HomeController::class, 'termsAndConditions'])->name('termsAndConditions');
 
 // Contributor My Templates
 Route::get('/ContributorTemplates', [ContributorController::class, 'myTemp'])->name('contributor.mytemp');

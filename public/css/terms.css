@@ -3,11 +3,10 @@
 }
 
 .main-container{
+    margin: 35px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
 }
 
 .content{
@@ -32,6 +31,11 @@
     height: 4px;
     width: 80%;
     border-radius: 3px;
+}
+
+#heading{
+    font-weight: 700;
+    font-size: medium;
 }
 
 
