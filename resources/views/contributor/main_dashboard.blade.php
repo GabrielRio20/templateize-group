@@ -48,7 +48,7 @@
           <div class="member d-flex align-items-start p-4 shadow rounded justify-content-between">
             <div>
               <h4>Feedback</h4>
-              <h5>5</h5>
+              <h5>{{ $feedback->count('id') }}</h5>
             </div>
             <div class="my-auto">
               <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#949494" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">

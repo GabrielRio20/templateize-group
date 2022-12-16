@@ -19,7 +19,7 @@
           <div class="member d-flex align-items-start p-4 shadow rounded justify-content-between">
             <div>
               <h4>My Money</h4>
-              <h5>{{ $pesanan_detail->count('id') }}</h5>
+              <h5 class="text text-primary"><strong>Rp {{ number_format($user->money, 0, '.', '.') }}</strong></h5>
             </div>
             <div class="my-auto">
               <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#949494" class="bi bi-person-fill" viewBox="0 0 16 16">

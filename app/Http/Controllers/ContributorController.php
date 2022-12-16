@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Feedback;
 
 class ContributorController extends Controller
 {
@@ -16,7 +17,8 @@ class ContributorController extends Controller
     }
 
     public function dashboard(){
-        return view('contributor.main_dashboard');
+        $feedback = Feedback::all();
+        return view('contributor.main_dashboard', compact('feedback'));
     }
 
     public function uploadTemp(){

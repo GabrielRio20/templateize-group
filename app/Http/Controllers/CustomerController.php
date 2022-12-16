@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Pesanan;
 use App\Models\Shopping;
 use Illuminate\Http\Request;
@@ -46,6 +47,9 @@ class CustomerController extends Controller
     }
 
     public function dashboardCust(){
+        $user = User::where('id', Auth::user()->id)->first();
+        $money = User::where('money', $user->money)->first();
+
         $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 1)->first();
         if(!empty($pesanan)){
             // $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
@@ -59,7 +63,7 @@ class CustomerController extends Controller
             $tanggal = 0;
         }
 
-        return view('customer.main_dashboard', compact('pesanan', 'pesanan_detail', 'shopping', 'tanggal'));
+        return view('customer.main_dashboard', compact('pesanan', 'pesanan_detail', 'shopping', 'tanggal', 'money', 'user'));
     }
 
 }
