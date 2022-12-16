@@ -245,14 +245,15 @@
             }
             }
         </style>
-        
+        <link rel="stylesheet" href="aos-by-red.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
     @extends('layouts.app')
 
     @section('content')
         <section class="about">
-            <div class="main">
+            <div class="main" data-aos="fade-up">
                 <img src="https://i0.wp.com/mutupendidikan.com/wp-content/uploads/2020/04/Klasifikasi-Jenis-Tes-Psikologi.jpg?w=740&ssl=1" alt="">
                 <div class="all-text">
                     <h4>About Us</h4>
@@ -269,8 +270,7 @@
         <section class="team-section">
             <div class="container">
                 <div class="row">
-                    <div class="section-title">
-                        
+                    <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
                         <div id="middle">
                             <h1>Our Team</h1>
                         </div>
@@ -279,7 +279,7 @@
                 </div>
                 <div class="row">
                     <div class="team-items">
-                         <div class="item">
+                         <div class="item" data-aos="fade-up" data-aos-duration="1000">
                              <img src="{{asset('img/aboutUs/taza.png')}}" alt="team" />
                              <div class="inner">
                                  <div class="info">
@@ -292,7 +292,7 @@
                                  </div>
                              </div>
                          </div>
-                         <div class="item">
+                         <div class="item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
                             <img src="{{asset('img/aboutUs/rio.png')}}" alt="team" />
                              <div class="inner">
                                  <div class="info">
@@ -305,7 +305,7 @@
                                  </div>
                              </div>
                          </div>
-                         <div class="item">
+                         <div class="item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                             <img src="{{asset('img/aboutUs/yandi.png')}}" alt="team" />
                              <div class="inner">
                                  <div class="info">
@@ -318,7 +318,7 @@
                                  </div>
                              </div>
                          </div>
-                         <div class="item">
+                         <div class="item" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
                             <img src="{{asset('img/aboutUs/arya.png')}}" alt="team" />
                              <div class="inner">
                                  <div class="info">
@@ -337,5 +337,13 @@
          </section>
          <section>@include ("footer.footer")</section>
          @endsection
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 3000,
+                once: true,
+            });
+        </script>
     </body>
 </html>

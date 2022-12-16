@@ -12,6 +12,8 @@
 
     <link href="{{ url('css/styles.css') }}" type="text/css" rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="aos-by-red.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Templateize</title>
 </head>
 <body style="background-color: #ffffff; "> 
@@ -79,13 +81,10 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
-      
-      
     <div class="p-5 mb-5 text-light" style="background-image: url('/img/Background.png')">
       <div class="container mt-5 mb-5 ml-0" style="padding-top: 10%; padding-bottom:10%">
         <div class="row">
-          <div class="col-md-7 order-md-first">
+          <div class="col-md-7 order-md-first" data-aos="fade-up" data-aos-duration="1500">
             {{-- @yield('container') --}}
             <h1>Professional Websites Template <br> for Any Project</h1><br>
             <p>Discover a lot of easy to customize themes, templates & CMS products, <br> made by world-class developers.</p>
@@ -97,7 +96,7 @@
               <button class="btn btn-dark" type="submit" style="height: 50px; width: 14%"> Search</button>
             </form><br><br>
           </div>
-          <div class="col-md-5 d-flex justify-content-center">
+          <div class="col-md-5 d-flex justify-content-center" data-aos="fade-up">
             <img style="height: 320px" src="{{asset('img/Group-69.png')}}">
           </div>
         </div>
@@ -114,9 +113,9 @@
     <div class="p-5 mb-5 text-dark" style="background-color: #ffffff;">
       <div class="container mt-3 mb-5 ml-0">
         <div class="row">
-          <h3 class="text-dark mb-5" id="template">Templates</h3>
+          <h3 class="text-dark mb-5" id="template" data-aos="fade-up" data-aos-duration="1000">Templates</h3>
           @foreach($shopping as $item)
-          <div class="product text-center col-lg-3 col-md-4 col-12">
+          <div class="product text-center col-lg-3 col-md-4 col-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <img class="img-fluid mb-3" src="{{ asset('thumb/'.$item->picture) }}" alt="">
             <h5 class="p-name">{{ $item->template_name }}</h5>
             <h4 class="p-price">Rp {{ number_format($item->price, 0, '.', '.') }}</h4>
@@ -128,7 +127,7 @@
           @endforeach
         
         </div>
-        <a class="d-flex justify-content-center mt-5" href="{{ route('shopping') }}"><button type="submit" class="btn btn-primary w-10">See More...</button>
+        <a class="d-flex justify-content-center mt-5" href="{{ route('shopping') }}" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><button type="submit" class="btn btn-primary w-10">See More...</button>
         </a>
       </div>
     </div>
@@ -148,6 +147,13 @@
     </div> --}}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
 </body>
 </html>
 
