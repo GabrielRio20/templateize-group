@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
+use App\Models\User;
 use App\Models\Pesanan;
 use App\Models\Shopping;
 use Illuminate\Http\Request;
@@ -109,9 +110,15 @@ class DetailController extends Controller
     }
 
     public function confirmation(){
+
         $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
+        $user = User::where('id', $pesanan->user_id)->first();
+        $money = $user->money;
+
         $pesanan->status = 1;
+        $money = (int)$money - (int)$pesanan->total_price;
         $pesanan->update();
+        $user->update();
 
         Alert::success('Congratulations!', 'Your template purchased succesfully.');
         return redirect('checkout');
