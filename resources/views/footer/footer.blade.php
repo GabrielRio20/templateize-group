@@ -101,13 +101,7 @@
               <a href="about" class="a text-white">About Us</a>
             </p>
             <p>
-              <a href="PrivacyPolicy" class="text-white">Privacy Policy</a>
-            </p>
-            <p>
-              <a href="TermsOfService" class="text-white">Terms of Service</a>
-            </p>
-            <p>
-              <a href="TermsOfUse" class="text-white">Terms of Use</a>
+              <a href="TermsAndConditions" class="text-white">Terms and Conditions</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -121,7 +115,7 @@
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p><i class="fas fa-home mr-3"></i> D.I.Y Indonesia</p>
-            <p><i class="fas fa-envelope mr-3"></i> template@gmail.com</p>
+            <p><i class="fas fa-envelope mr-3"></i> templateize01@gmail.com</p>
             <p><i class="fas fa-phone mr-3"></i> + 62-8123-4567-8910</p>
             <p><i class="fas fa-print mr-3"></i> + 62-8109-8765-4321</p>
           </div>
