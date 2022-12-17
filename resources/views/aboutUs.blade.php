@@ -246,12 +246,15 @@
             }
         </style>
         <link rel="stylesheet" href="aos-by-red.css">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     </head>
     <body>
-    @extends('layouts.app')
+    {{-- @extends('layouts.app') --}}
+    @include('part.navbar_main')
 
-    @section('content')
+    {{-- @section('content') --}}
         <section class="about">
             <div class="main" data-aos="fade-up">
                 <img src="https://i0.wp.com/mutupendidikan.com/wp-content/uploads/2020/04/Klasifikasi-Jenis-Tes-Psikologi.jpg?w=740&ssl=1" alt="">
@@ -335,9 +338,9 @@
                 </div>
             </div>
          </section>
-         <section>@include ("footer.footer")</section>
-         @endsection
-
+         @include ("footer.footer")
+         {{-- @endsection --}}
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init({

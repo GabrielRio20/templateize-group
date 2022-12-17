@@ -83,13 +83,13 @@
                             @enderror
                         </div>
 
-                        <div class="wrap-input100 validate-input">
+                        <div class="wrap-input100 validate-input mb-5">
                             <input class="input100" type="password" id="password-confirm" name="password_confirmation" required autocomplete="new-password">
                             <span class="focus-input100"></span>
                             <span class="label-input100">Confirm Password</span>
                         </div>
 
-                        <div class="row mb-1">
+                        {{-- <div class="row mb-1">
                             <label for="password" class="col-md-4 col-form-label">{{ __('Level') }}</label>
                         </div>
                         
@@ -115,12 +115,20 @@
                                     Admin
                                 </label>
                             </div>
-                        </div>
+                        </div> --}}
 
-                        <div class="row mb-0">
+                        <div class="row mb-4">
                             <div class="container-login100-form-btn">
-                                <button type="submit" class="login100-form-btn">
-                                    {{ __('Register') }}
+                                <button type="submit" class="login101-form-btn" name="level" id="customer" value="customer">
+                                    <strong>{{ __('Register as Customer') }}</strong>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="container-login100-form-btn" name="level" id="contributor" 
+                            value="contributor">
+                                <button type="submit" class="login102-form-btn">
+                                    <strong>{{ __('Register as Contributor') }}</strong>
                                 </button>
                             </div>
                         </div>

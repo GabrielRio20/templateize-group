@@ -45,7 +45,7 @@
                             <option value="photographer">Photographer</option>
                             <option value="web developer">Web Developer</option>
                         </select><br> -->
-                        <div>Description <input type="textarea" name="description" class="form-control" wire:model="description"></div>
+                        <div>Description <textarea type="textarea" name="description" class="form-control" wire:model="description" rows="4" cols="50"></textarea></div>
                         <span class="text-danger">@error('description'){{ $message }}@enderror</span><br>
                         <div>Price <input type="text" name="price" class="form-control" wire:model="price">
                         <span class="text-danger">@error('price'){{ $message }}@enderror</span></div>

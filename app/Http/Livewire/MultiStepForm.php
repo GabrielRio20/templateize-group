@@ -9,6 +9,7 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class MultiStepForm extends Component
 {
@@ -25,6 +26,7 @@ class MultiStepForm extends Component
     public $document;
     public $checkbox;
     public $namafile;
+    public $uploader;
 
     public $totalSteps = 3;
     public $currentStep = 1;
@@ -117,6 +119,8 @@ class MultiStepForm extends Component
             $zip->close();
         }
 
+        $uploader = Auth::id();
+
         $values = array(
             "template_name"=>$this->template_name,
             "description"=>$this->description,
@@ -125,7 +129,8 @@ class MultiStepForm extends Component
             "picture2"=>$namafile2,
             "picture3"=>$namafile3,
             "picture4"=>$namafile4,
-            "document"=>$namadoc
+            "document"=>$namadoc,
+            "uploader"=>$uploader
         );
 
         Shopping::insert($values);

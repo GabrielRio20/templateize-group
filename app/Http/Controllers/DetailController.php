@@ -23,7 +23,8 @@ class DetailController extends Controller
 
     public function index($id){
         $shopping = Shopping::where('id', $id)->first();
-        return view('shopping_details.details', compact('shopping'));
+        $recommend = Shopping::all()->random(4);
+        return view('shopping_details.details', compact('shopping', 'recommend'));
     }
 
     public function buy(Request $request, $id){
@@ -112,13 +113,14 @@ class DetailController extends Controller
     public function confirmation(){
 
         $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
-        $user = User::where('id', $pesanan->user_id)->first();
-        $money = $user->money;
+        $user = User::where('id', Auth::user()->id)->first();
+        (int)$money = $user->money;
 
         $pesanan->status = 1;
         $money = (int)$money - (int)$pesanan->total_price;
+
         $pesanan->update();
-        $user->update();
+        $user->update(['money' => $money]);
 
         Alert::success('Congratulations!', 'Your template purchased succesfully.');
         return redirect('checkout');
@@ -137,4 +139,10 @@ class DetailController extends Controller
     );
         return response()->download($filepath);
     }
+
+    // public function recommendation(){
+    //     $shopping = Shopping::orderBy('id', 'desc')->paginate(4);
+    //     // return view('details', compact('shopping'));
+    //     return back()->with(compact('shopping'));
+    // }
 }

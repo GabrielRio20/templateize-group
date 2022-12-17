@@ -90,9 +90,6 @@
               <a id="text" href="checkout" class="text-white">Cart</a>
             </p>
             <p>
-              <a id="text" href="faq" class="text-white">FAQ</a>
-            </p>
-            <p>
               <a id="text" href="{{ route('register') }}" class="text-white">Become an Contributor</a>
             </p>
           </div>
@@ -108,6 +105,9 @@
                 />
             <p>
               <a id="text" href="about" class="a text-white">About Us</a>
+            </p>
+            <p>
+              <a id="text" href="faq" class="text-white">FAQ</a>
             </p>
             <p>
               <a id="text" href="TermsAndConditions" class="text-white">Terms and Conditions</a>

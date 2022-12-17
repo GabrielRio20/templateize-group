@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>My Templates</title>
 </head>
 <body >
     @extends('customer.d_board_cust')
@@ -46,7 +46,6 @@
 
                                             <a class="btn btn-success btn-sm" href="{{ url('download', $item->shopping->id) }}">Download</a>
 
-                                            {{-- <a class="btn btn-success btn-sm" href="{{ asset('./storage/app/docs') }}/ {{ $item->shopping->document }}" download="{{ $item->shopping->template_name }}">Download</a> --}}
                                         </td>
                                         {{-- <td>{{ $user->level }}</td> --}}
                                     </tr>
