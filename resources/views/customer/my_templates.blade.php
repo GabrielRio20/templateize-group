@@ -27,38 +27,29 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-        
-                    {{-- @foreach($pesanan as $pesan) --}}
                     <tbody>
                         <?php $no = 1; ?>
                         @if(!empty($pesanan))
-                            {{-- @foreach($pesanan as $pesan) --}}
-                                @foreach($pesanan_detail as $item)
-                                    <tr>
-                                        <td>{{ $no++ }}</td>
-                                        <td>
-                                            <img class="img-fluid m-2" src="{{ asset('thumb/'.$item->shopping->picture) }}" width="90px" alt="">
-                                            {{ $item->shopping->template_name }}
-                                        </td>
-                                        <td>{{ $item->pesanan->tanggal }}</td>
-                                        <td>
-                                            <a class="btn btn-primary btn-sm" href="{{ url('details', $item->shopping->id) }}">Details</a>
-
-                                            <a class="btn btn-success btn-sm" href="{{ url('download', $item->shopping->id) }}">Download</a>
-
-                                        </td>
-                                        {{-- <td>{{ $user->level }}</td> --}}
-                                    </tr>
-                                @endforeach
-                            {{-- @endforeach --}}
+                            @foreach($pesanan_detail as $item)
+                                <tr>
+                                    <td>{{ $no++ }}</td>
+                                    <td>
+                                        <img class="img-fluid m-2" src="{{ asset('thumb/'.$item->shopping->picture) }}" width="90px" alt="">
+                                        {{ $item->shopping->template_name }}
+                                    </td>
+                                    <td>{{ $item->pesanan->tanggal }}</td>
+                                    <td>
+                                        <a class="btn btn-primary btn-sm" href="{{ url('details', $item->shopping->id) }}">Details</a>
+                                        <a class="btn btn-success btn-sm" href="{{ url('download', $item->shopping->id) }}">Download</a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         @endif
                     </tbody>
-                    {{-- @endforeach --}}
                 </table>
             </div>
         </div> 
     </div>
-    
     @endsection
 </body>
 </html>

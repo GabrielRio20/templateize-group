@@ -33,20 +33,19 @@ class CustomerController extends Controller
             $shopping = 0;
             $tanggal = 0;
         }
-        
-        // $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
 
         return view('customer.my_templates', compact('pesanan', 'pesanan_detail', 'shopping', 'tanggal'));
     }
 
     public function dashboardCust(){
         $user = User::where('id', Auth::user()->id)->first();
-        $money = User::where('money', $user->money)->first();
+        // $money = User::where('money', $user->money)->first();
+        $money = $user->money;
 
         $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 1)->first();
         if(!empty($pesanan)){
-            // $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
-            $pesanan_detail = PesananDetail::all();
+            $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
+            // $pesanan_detail = PesananDetail::all();
             $shopping = Shopping::where('id', $pesanan->id)->get();
             $tanggal = Pesanan::where('tanggal', $pesanan->tanggal);
         }
@@ -54,6 +53,10 @@ class CustomerController extends Controller
             $pesanan_detail = 0;
             $shopping = 0;
             $tanggal = 0;
+        }
+
+        if($money < 0){
+            $money = 0;
         }
 
         return view('customer.main_dashboard', compact('pesanan', 'pesanan_detail', 'shopping', 'tanggal', 'money', 'user'));
