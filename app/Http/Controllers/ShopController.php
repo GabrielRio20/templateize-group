@@ -94,4 +94,10 @@ class ShopController extends Controller
         $template->delete();
         return redirect('/ContributorTemplates');
     }
+
+    public function edit($id) {
+        $template = Shopping::find($id);
+        
+        return view('contributor.update_template', ['template' => $template]);
+    }
 }

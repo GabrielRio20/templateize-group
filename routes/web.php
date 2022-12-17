@@ -110,3 +110,11 @@ Route::get('/TermsAndConditions', [HomeController::class, 'termsAndConditions'])
 Route::get('/ContributorTemplates', [ContributorController::class, 'myTemp'])->name('contributor.mytemp');
 
 // Delete Template
+Route::post('/ContributorTemplates/delete/{id}', [ContributorController::class, 'destroy'])->name('contributor.destroy');
+
+// Edit Template
+Route::get('/ContributorTemplates/edit/{id}', [ShopController::class, 'edit'])->name('shopping.edit');
+
+Route::get('/updateForm', function() {
+    return view('contributor.update_template');
+});

@@ -23,6 +23,7 @@
                         <tr>
                             <th>No</th>
                             <th>Template</th>
+                            <th>Price</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -40,9 +41,19 @@
                                             {{ $item->template_name }}
                                         </td>
                                         <td>
+                                            Rp{{ $item->price }}
+                                        </td>
+                                        <td>
                                             <a class="btn btn-primary btn-sm" href="{{ url('details', $item->id) }}">Details</a>
 
-                                            <a class="btn btn-danger btn-sm" href="#">Delete</a>
+                                            <a class="btn btn-secondary btn-sm" href="{{ route('shopping.edit', $item->id) }}">Edit</a>
+
+                                            <form action="{{ route('contributor.destroy', $item->id) }}" method="post">
+                                                @csrf
+                                                <button class="btn btn-danger btn-sm" onClick="return confirm('Yakin?')">Delete</button>
+                                            </form>
+
+                                            <!-- <a class="btn btn-danger btn-sm" href="{{ route('contributor.destroy', $item->id) }}">Delete</a> -->
 
                                             {{-- <a class="btn btn-success btn-sm" href="{{ asset('./storage/app/docs') }}/ {{ $item->shopping->document }}" download="{{ $item->shopping->template_name }}">Download</a> --}}
                                         </td>

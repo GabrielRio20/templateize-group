@@ -33,4 +33,12 @@ class ContributorController extends Controller
 
         return view('contributor.my_templates', compact('templates'));
     }
+
+    public function destroy($id) {
+        $template = Shopping::find($id);
+        $template->delete();
+        return redirect('/ContributorTemplates');
+    }
+
+    
 }
