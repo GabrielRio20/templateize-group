@@ -85,7 +85,7 @@
                         @if(Auth::check() && Auth::user()->level == 'admin')
                         
                             <a class="dropdown-item" href="{{ route('dBoardAdmin') }}">
-                                {{ __('Dahboard') }}
+                                {{ __('Dashboard') }}
                             </a>
 
                             {{-- <a class="dropdown-item" href="{{ route('user.index') }}">
@@ -253,7 +253,7 @@
                         @if(Auth::check() && Auth::user()->level == 'contributor')
                         
                             <a class="dropdown-item" href="{{ route('dBoardCust') }}">
-                                {{ __('Dahboard') }}
+                                {{ __('Dashboard') }}
                             </a>
                             
                         @endif
