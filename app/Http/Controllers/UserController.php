@@ -14,10 +14,9 @@ class UserController extends Controller
     }
 
     public function index(){
-        // $no = 0;
-        // $money = 100000;
-        // $data_user = User::all();
-        // return view('user.index', compact('data_user', 'no', 'money'));
+        $no = 0;
+        $data_user = User::all();
+        return view('user.index', compact('data_user', 'no'));
         // return view('admin.d_board_admin', compact('data_user', 'no'));
     }
 

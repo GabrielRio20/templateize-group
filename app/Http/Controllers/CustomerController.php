@@ -30,8 +30,8 @@ class CustomerController extends Controller
         // $id = $batas * ($shopping -> currentPage() - 1);
         $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 1)->first();
         if(!empty($pesanan)){
-            // $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
-            $pesanan_detail = PesananDetail::all();
+            $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
+            // $pesanan_detail = PesananDetail::all();
             $shopping = Shopping::where('id', $pesanan->id)->get();
             $tanggal = Pesanan::where('tanggal', $pesanan->tanggal);
         }

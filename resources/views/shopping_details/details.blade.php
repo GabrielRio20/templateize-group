@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="responDetail.css">
+
     <title>Detail Template</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -181,15 +184,9 @@
 </head>
 
 <body>
-    {{-- @if (\Session::has('pesan'))
-    <div class="alert alert-success">
-        <ul>
-            <li>{!! \Session::get('pesan') !!}</li>
-        </ul>
-    </div>
-@endif --}}
-@include('part.navbar_main')
-<div>
+    
+    @include('part.navbar_main')
+    <div>
 
     <div class="mx-5 my-5">
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" >
@@ -204,26 +201,9 @@
     
     <div class="container">
 		<div class="card">
-			<div class="container-fliud">
+			<div class="container-fluid">
 				<div class="wrapper row">
 					<div class="preview col-md-6">
-						
-						{{-- <div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src="{{ asset('thumb/'.$shopping->picture) }}" id="MainImg"/></div>
-						  <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div>
-						</div>
-						<ul class="preview-thumbnail nav nav-tabs">
-						  <li class="small-img"><a data-target="#pic-1" data-toggle="tab"><img ssrc="{{ asset('thumb/'.$shopping->picture) }}" /></a></li>
-						  <li class="small-img"><a data-target="#pic-2" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li class="small-img"><a data-target="#pic-3" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li class="small-img"><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li class="small-img"><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						</ul> --}}
-
-                        {{-- <div class="col-lg-5 col-md-12 col-12"> --}}
                             <img class="tab-pane  pb-5" src="{{ asset('thumb/'.$shopping->picture) }}" id="MainImg" alt="" style="width:90%">
                             
                             <ul class="preview-thumbnail nav nav-tabs">
@@ -243,7 +223,6 @@
                                     <img src="{{ asset('thumb/'.$shopping->picture4) }}" width="100%" class="small-img" alt="">
                                 </li>
                             </ul>
-                        {{-- </div> --}}
 						
 					</div>
 					<div class="details col-md-6">
@@ -275,6 +254,24 @@
 			</div>
 		</div>
 	</div>
+
+    <div class="container mt-3 mb-5 ml-0">
+        <div class="row">
+          <h3 class="text-dark mb-5 mt-5" id="template" data-aos="fade-up" data-aos-duration="1000">You may also like</h3>
+
+          @foreach($recommend as $item)
+          <div class="product text-center col-lg-3 col-md-4 col-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <img class="img-fluid mb-3" src="{{ asset('thumb/'.$item->picture) }}" alt="">
+            <h5 class="p-name">{{ $item->template_name }}</h5>
+            <h4 class="p-price">Rp {{ number_format($item->price, 0, '.', '.') }}</h4>          
+            <a class="btn btn-primary" href="{{ route('details', $item->id) }}">Details</a>
+            <hr>
+          </div>
+          @endforeach
+        
+        </div>
+    </div>
+    @include ("footer.footer")
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>

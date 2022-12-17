@@ -47,7 +47,7 @@
                     <form method="POST" action="{{ route('register') }}" class="login100-form validate-form">
                         @csrf
                         <span class="login100-form-title p-b-43">
-                            Welcome! Register Here
+                            Become an Admin
                         </span>
 
                         <div class="wrap-input100 validate-input" >
@@ -119,22 +119,23 @@
 
                         <div class="row mb-4">
                             <div class="container-login100-form-btn">
-                                <button type="submit" class="login101-form-btn" name="level" id="customer" value="customer">
-                                    {{ __('Register as Customer') }}
+                                <button type="submit" class="login100-form-btn" name="level" id="admin" value="admin">
+                                    {{ __('Register as Admin') }}
                                 </button>
                             </div>
                         </div>
-                        <div class="row mb-0">
+
+                        {{-- <div class="row mb-0">
                             <div class="container-login100-form-btn" name="level" id="contributor" 
                             value="contributor">
-                                <button type="submit" class="login102-form-btn">
+                                <button type="submit" class="login101-form-btn">
                                     {{ __('Register as Contributor') }}
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </form>
 
-                    <div class="login100-more" style="background-image: url({{asset("/img/background_login.jpeg")}});">
+                    <div class="login100-more" style="background-image: url({{asset("/img/admin_register.jpg")}});">
                     </div>
 
                 </div>

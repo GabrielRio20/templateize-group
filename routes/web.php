@@ -51,6 +51,10 @@ Route::get('/dashboardCust', [CustomerController::class, 'index'])->name('dBoard
 Route::get('my-templates', [CustomerController::class, 'myTemp'])->name('myTemplates');
 Route::get('customer-dashboard', [CustomerController::class, 'dashboardCust'])->name('customerDashboard');
 
+
+//route for admin login
+Route::get('/adminLoginSiniYa', [AdminController::class, 'loginSini'])->name('loginAdmin');
+
 //route for dashboard admin
 Route::get('/dashboardAdmin', [AdminController::class, 'index'])->name('dBoardAdmin');
 Route::get('admin-dashboard', [AdminController::class, 'dashboard'])->name('main-dashboard');
@@ -75,6 +79,7 @@ Route::post('/feedback', [HomeController::class, 'feedback'])->name('feedback');
 
 //detail route
 Route::get('/details/{id}', [DetailController::class, 'index'])->name('details');
+// Route::get('/details', [DetailController::class, 'recommendation'])->name('recommendation');
 
 //buy route
 Route::get('/buy/{id}', [DetailController::class, 'buy'])->name('buy');

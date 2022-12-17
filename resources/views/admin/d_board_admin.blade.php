@@ -31,17 +31,22 @@
       }
 
       #sidebarMenu{
-          padding-top: 10px;
-        }
+        padding-top: 10px;
+      }
 
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
 
-        #sidebarMenu{
+      #sidebarMenu{
         height: 100vh;
-        }
+      }
+
+      #sidebarMenu{
+        z-index: 100;
+      }
+
       }
     </style>
 
@@ -95,19 +100,12 @@
                     Feedbacks
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="users"></span>
-                    Customers
-                  </a>
-                </li>
-                
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                   <a class="nav-link" href="#">
                     <span data-feather="layers"></span>
                     Integrations
                   </a>
-                </li>
+                </li> --}}
               </ul>
 
               {{-- <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">

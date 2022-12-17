@@ -11,9 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
 
     <link href="{{ url('css/styles.css') }}" type="text/css" rel='stylesheet'>
+    <link href="{{ url('css/responDetail.css') }}" type="text/css" rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="aos-by-red.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    {{-- Carousel --}}
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+
+    
+
     <title>Templateize</title>
 </head>
 <body style="background-color: #ffffff; "> 
@@ -24,40 +32,30 @@
 
     {{-- @section('content') --}}
 
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators" >
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner m-auto" style="max-height:91vh">
-          <div class="carousel-item active">
+
+        <div class="carousel-inner m-auto" style="max-height:91vh" id="move">
+          <div class="carousel-item active" data-target="#move">
             <img src="{{ asset('img/carousel/Frame 22.png') }}" class="d-block w-100" alt="...">
-            {{-- <div class="carousel-caption" style="bottom: 35%">
-              <h1>Templateize</h1>
-              <p>Professional Website Template for Any Project</p>
-            </div> --}}
           </div>
-          <div class="carousel-item">
-            <img src="{{ asset('img/carousel/Frame 23.png') }}" class="d-block w-100 h-50" alt="...">
-            {{-- <div class="carousel-caption" style="bottom: 35%">
-              <h1>Templateize</h1>
-              <p>Professional Website Template for Any Project</p> 
-            </div> --}}
+          <div class="carousel-item" data-target="#move">
+            <img src="{{ asset('img/carousel/Frame 23.png') }}" class="d-block w-100" alt="...">
           </div>
-          <div class="carousel-item">
-            <img src="https://computory.com/wp-content/uploads/2020/11/spek-game-red-dead-redemption-2-computory.jpg" class="d-block w-100" alt="...">
-            {{-- <div class="carousel-caption" style="bottom: 35%">
-              <h1>Templateize</h1>
-              <p>Professional Website Template for Any Project</p>
-            </div> --}}
+          <div class="carousel-item" data-target="#move">
+            <img src="{{ asset('img/carousel/Frame 26.png') }}" class="d-block w-100" alt="...">
           </div>
         </div>
-        <button class="carousel-control-prev" style="left: 0%" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        
+        <button class="carousel-control-prev" style="left: 0%" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" style="right: 0%" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <button class="carousel-control-next" style="right: 0%" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -72,9 +70,10 @@
 
             {{-- @yield('search') <br><br> --}}
             <form class="d-flex" role="search" action="{{ route('search') }}" method="get">@csrf
-              <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="templates" style="height: 50px">
+              <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="templates" style="height: 50px" id="search_bar">
               
-              <button class="btn btn-dark" type="submit" style="height: 50px; width: 14%"> Search</button>
+              <button class="btn btn-dark" type="submit" style="height: 50px; width: 14%; min-width:70px"><label for="search_bar">Search</label></button>
+              
             </form><br><br>
           </div>
           <div class="col-md-5 d-flex justify-content-center" data-aos="fade-up">
@@ -95,6 +94,7 @@
       <div class="container mt-3 mb-5 ml-0">
         <div class="row">
           <h3 class="text-dark mb-5" id="template" data-aos="fade-up" data-aos-duration="1000">Templates</h3>
+
           @foreach($shopping as $item)
           <div class="product text-center col-lg-3 col-md-4 col-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <img class="img-fluid mb-3" src="{{ asset('thumb/'.$item->picture) }}" alt="">
@@ -103,7 +103,6 @@
             
             <a class="btn btn-primary" href="{{ route('details', $item->id) }}">Details</a>
             <hr>
-
           </div>
           @endforeach
         
@@ -135,6 +134,16 @@
         once: true,
       });
     </script>
+
+    {{-- Carousel --}}
+    <!-- Calling jQuery -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Calling Slick Library -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    {{-- <script src="{{ asset('js/carousel.js') }}"></script> --}}
 </body>
 </html>
 

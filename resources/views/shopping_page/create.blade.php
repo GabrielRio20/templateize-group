@@ -28,7 +28,10 @@
             <div>Template Name <input type="text" name="template_name" class="form-control"></div>
             
             <div>Price <input type="text" name="price" class="form-control"></div>
-            <div>Description <textarea type="desc" name="description" class="form-control"></textarea></div>
+            
+            <div>Description <textarea type="desc" name="description" 
+            rows="4" cols="50"    
+            class="form-control"></textarea></div>
     
             <div class="form-group mb-4">
                 <label for="picture"> 1st Picture </label>
