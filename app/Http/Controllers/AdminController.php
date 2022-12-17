@@ -30,4 +30,8 @@ class AdminController extends Controller
         $template = Shopping::all();
         return view('admin.feedback', compact('feedback', 'contributor', 'template'));
     }
+
+    public function loginSini(){
+        return view('admin.loginSini');
+    }
 }

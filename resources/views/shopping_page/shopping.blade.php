@@ -16,54 +16,7 @@
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 
-    <!-- <link rel="stylesheet" href="style.css"> -->
-
-    <style>
-        button{
-            font-family: 'Dosis', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 700;
-            outline: none;
-            border: none;
-            background-color: #59C1BD;
-            color: aliceblue;
-            padding: 13px 30px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: 0.3s ease;
-        }
-
-        .product img{
-            width: 100%;
-            height: auto;
-            box-sizing: border-box;
-            object-fit:cover;
-            transition:0.3s all;
-        }
-
-        .product{
-            cursor:pointer;
-            margin-bottom: 2rem;
-        }
-
-        .product:hover img{
-            opacity: 0.7;
-        }
-
-        .product .btn{
-            /* background: #59C1BD; */
-            transform: translateY(20px);
-            opacity: 0;
-            transition:0.3s all;
-        }
-
-        .product:hover .btn{
-            transform: translateY(0);
-            opacity: 0.7;
-        }
-
-    </style>
-
+    <link href="{{ url('css/responDetail.css') }}" type="text/css" rel='stylesheet'>
 </head>
 
 <body>

@@ -23,7 +23,8 @@ class DetailController extends Controller
 
     public function index($id){
         $shopping = Shopping::where('id', $id)->first();
-        return view('shopping_details.details', compact('shopping'));
+        $recommend = Shopping::all()->random(4);
+        return view('shopping_details.details', compact('shopping', 'recommend'));
     }
 
     public function buy(Request $request, $id){
@@ -138,4 +139,10 @@ class DetailController extends Controller
     );
         return response()->download($filepath);
     }
+
+    // public function recommendation(){
+    //     $shopping = Shopping::orderBy('id', 'desc')->paginate(4);
+    //     // return view('details', compact('shopping'));
+    //     return back()->with(compact('shopping'));
+    // }
 }
