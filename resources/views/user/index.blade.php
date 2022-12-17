@@ -16,6 +16,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Level</th>
+            <th>Action</th>
         </tr>
     </thead>
 
@@ -26,6 +27,12 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->level }}</td>
+                <td>
+                <form action="{{route('user.destroy', $user->id)}}" method="post">
+                        @csrf
+                    <button class="btn btn-danger"onClick="return confirm('Are you sure?')">Hapus</button>
+                </form>
+                </td>
             </tr>
         @endforeach
     </tbody>
