@@ -34,6 +34,7 @@
             <div>
               <h4>My Templates</h4>
               <h5>{{ $shopping->count('id') }}</h5>
+              {{-- <h5>{{ count($shopping->id) }}</h5> --}}
             </div>
             <div class="my-auto">
               <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#949494" class="bi bi-person-fill" viewBox="0 0 16 16">
