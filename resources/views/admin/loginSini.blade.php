@@ -38,6 +38,20 @@
 <!--===============================================================================================-->
 </head>
 <body style="background-color: #ffffff;">
+
+    {{-- Admin authentication --}}
+    <script>
+        var auth = prompt("Enter admin authentication");
+        if (auth == "aku admin asli bang, sumpah"){
+            txt = "Welcome, Admin!"
+        }
+        else{
+            history.back();
+            txt = "You're not allowed to enter this page"
+        }
+        alert(txt);
+    </script>
+
 	@include('part.navbar_main')
 
 	<div class="limiter">

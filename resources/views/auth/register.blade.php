@@ -120,7 +120,7 @@
                         <div class="row mb-4">
                             <div class="container-login100-form-btn">
                                 <button type="submit" class="login101-form-btn" name="level" id="customer" value="customer">
-                                    {{ __('Register as Customer') }}
+                                    <strong>{{ __('Register as Customer') }}</strong>
                                 </button>
                             </div>
                         </div>
@@ -128,7 +128,7 @@
                             <div class="container-login100-form-btn" name="level" id="contributor" 
                             value="contributor">
                                 <button type="submit" class="login102-form-btn">
-                                    {{ __('Register as Contributor') }}
+                                    <strong>{{ __('Register as Contributor') }}</strong>
                                 </button>
                             </div>
                         </div>

@@ -86,7 +86,7 @@
 			
 					<div class="container-login100-form-btn">
 						<button type="submit" class="login100-form-btn">
-							Login
+							<strong>Login</strong>
 						</button>
 					</div>
 					
