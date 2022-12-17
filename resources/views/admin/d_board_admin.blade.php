@@ -57,6 +57,18 @@
   </head>
   <body>
 
+    <script>
+      var auth = prompt("Enter admin authentication");
+      if (auth == "aku admin asli bang, sumpah"){
+          txt = "Welcome, Admin!"
+      }
+      else{
+          history.back();
+          txt = "You're not allowed to enter this page"
+      }
+      alert(txt);
+    </script>
+
     @include('part.navbar_main')
     
       <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">

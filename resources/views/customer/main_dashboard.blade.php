@@ -33,7 +33,7 @@
           <div class="member d-flex align-items-start p-4 shadow rounded justify-content-between">
             <div>
               <h4>My Templates</h4>
-              <h5>{{ $shopping->count('id') }}</h5>
+              {{-- <h5>{{ $shopping->count('id') }}</h5> --}}
               {{-- <h5>{{ count($shopping->id) }}</h5> --}}
             </div>
             <div class="my-auto">

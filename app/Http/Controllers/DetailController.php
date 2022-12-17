@@ -116,14 +116,25 @@ class DetailController extends Controller
         $user = User::where('id', Auth::user()->id)->first();
         (int)$money = $user->money;
 
-        $pesanan->status = 1;
-        $money = (int)$money - (int)$pesanan->total_price;
+        
+        // $money = (int)$money - (int)$pesanan->total_price;
+
+        if((int)$money < $pesanan->total_price){
+            (int)$money = $money;
+            Alert::error('Sorry', 'Your money is not enough');
+        }
+        if((int)$money > (int)$pesanan->total_price){
+            $pesanan->status = 1;
+            $money = (int)$money - (int)$pesanan->total_price;
+            Alert::success('Congratulations!', 'Your template purchased succesfully.');
+        }
+        
 
         $pesanan->update();
         $user->update(['money' => $money]);
-
-        Alert::success('Congratulations!', 'Your template purchased succesfully.');
         return redirect('checkout');
+
+        
     }
 
     public function shop(){

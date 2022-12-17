@@ -25,7 +25,7 @@ class CustomerController extends Controller
         if(!empty($pesanan)){
             $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
             // $pesanan_detail = PesananDetail::all();
-            $shopping = Shopping::where('id', $pesanan->id)->get();
+            // $shopping = Shopping::where('id', $pesanan->id)->get();
             $tanggal = Pesanan::where('tanggal', $pesanan->tanggal);
         }
         else{
@@ -34,7 +34,7 @@ class CustomerController extends Controller
             $tanggal = 0;
         }
 
-        return view('customer.my_templates', compact('pesanan', 'pesanan_detail', 'shopping', 'tanggal'));
+        return view('customer.my_templates', compact('pesanan', 'pesanan_detail', 'tanggal'));
     }
 
     public function dashboardCust(){

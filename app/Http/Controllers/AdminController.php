@@ -9,6 +9,13 @@ use App\Models\Shopping;
 
 class AdminController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('admin');
+    }
+
     public function index(){
         $customer = User::where('level', 'customer');
         $contributor = User::where('level', 'contributor');

@@ -1,5 +1,18 @@
 {{-- @extends('layouts.app') --}}
 {{-- @section('content') --}}
+
+<script>
+    var auth = prompt("Enter admin authentication");
+    if (auth == "aku admin asli bang, sumpah"){
+        txt = "Welcome, Admin!"
+    }
+    else{
+        history.back();
+        txt = "You're not allowed to enter this page"
+    }
+    alert(txt);
+</script>
+
 @if(Session::has('pesan'))
     <div class="alert alert-success">{{ Session::get('pesan') }}</div>
 @endif
