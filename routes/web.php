@@ -111,3 +111,7 @@ Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 //Terms
 Route::get('/TermsAndConditions', [HomeController::class, 'termsAndConditions'])->name('termsAndConditions');
 
+// Contributor My Templates
+Route::get('/ContributorTemplates', [ContributorController::class, 'myTemp'])->name('contributor.mytemp');
+
+// Delete Template
