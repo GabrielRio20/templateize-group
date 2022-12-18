@@ -39,6 +39,4 @@ class ContributorController extends Controller
         $template->delete();
         return redirect('/ContributorTemplates');
     }
-
-    
 }
