@@ -123,3 +123,6 @@ Route::get('/ContributorTemplates/edit/{id}', [ShopController::class, 'edit'])->
 Route::get('/updateForm', function() {
     return view('contributor.update_template');
 });
+
+//Hapus User
+Route::post('/user/delete/{id}', [UserController::class, 'destroy'])->name('user.destroy');

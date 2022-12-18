@@ -20,4 +20,10 @@ class UserController extends Controller
         // return view('admin.d_board_admin', compact('data_user', 'no'));
     }
 
+    public function destroy($id) {
+        $data_user = User::find($id);
+        $data_user->delete();
+        return redirect('/user');
+    }
+
 }

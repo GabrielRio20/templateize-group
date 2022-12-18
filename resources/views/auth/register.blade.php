@@ -125,9 +125,9 @@
                             </div>
                         </div>
                         <div class="row mb-0">
-                            <div class="container-login100-form-btn" name="level" id="contributor" 
-                            value="contributor">
-                                <button type="submit" class="login102-form-btn">
+                            <div class="container-login100-form-btn" >
+                                <button type="submit" class="login102-form-btn" name="level" id="contributor" 
+                                value="contributor">
                                     <strong>{{ __('Register as Contributor') }}</strong>
                                 </button>
                             </div>
