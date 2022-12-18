@@ -83,7 +83,7 @@
                             @if(Auth::check() && Auth::user()->level == 'admin')
                             
                                 <a class="dropdown-item" href="{{ route('main-dashboard') }}">
-                                    {{ __('Dahboard') }}
+                                    {{ __('Dashboard') }}
                                 </a>
 
                                 {{-- <a class="dropdown-item" href="{{ route('user.index') }}">

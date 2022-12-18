@@ -101,10 +101,6 @@ Route::get('download/{id}', [DetailController::class, 'download'])->name('downlo
 
 Route::get('/admin-feedback', [AdminController::class, 'feedback'])->name('admin.feedback');
 
-Route::get('/form', function() {
-    return view('shopping_page.create1');
-});
-
 //faq
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 
@@ -117,12 +113,21 @@ Route::get('/ContributorTemplates', [ContributorController::class, 'myTemp'])->n
 // Delete Template
 Route::post('/ContributorTemplates/delete/{id}', [ContributorController::class, 'destroy'])->name('contributor.destroy');
 
-// Edit Template
+// Edit Template Contributor
 Route::get('/ContributorTemplates/edit/{id}', [ShopController::class, 'edit'])->name('shopping.edit');
-
-Route::get('/updateForm', function() {
-    return view('contributor.update_template');
-});
 
 //Hapus User
 Route::post('/user/delete/{id}', [UserController::class, 'destroy'])->name('user.destroy');
+
+// Admin Templates
+Route::get('/AdminTemplates', [AdminController::class, 'templates'])->name('admin.templates');
+
+// Delete Template Admin
+Route::post('/AdminTemplates/delete/{id}', [AdminController::class, 'destroy'])->name('admin.destroy');
+
+// Edit Template Admin
+Route::get('/AdminTemplates/edit/{id}', [ShopController::class, 'edit2'])->name('admin.edit');
+
+Route::get('/test/1', function () {
+    return view('admin.update_template');
+});

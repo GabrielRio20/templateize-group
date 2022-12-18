@@ -41,4 +41,17 @@ class AdminController extends Controller
     public function loginSini(){
         return view('admin.loginSini');
     }
+
+    public function templates(){
+        $templates = Shopping::all();
+        $admin = User::where('level', 'admin')->get();
+
+        return view('admin.templates', compact('templates', 'admin'));
+    }
+
+    public function destroy($id) {
+        $template = Shopping::find($id);
+        $template->delete();
+        return redirect('/AdminTemplates');
+    }
 }
