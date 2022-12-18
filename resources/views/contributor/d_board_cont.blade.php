@@ -76,12 +76,12 @@
                     Upload Template
                   </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                   <a class="nav-link {{ Request::is('admin-feedback') ? 'active' : '' }}" href="{{ route('admin.feedback') }}">
                     <span data-feather="bar-chart-2"></span>
                     Feedbacks
                   </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('contributor.mytemp') }}">
                     <span data-feather="layers"></span>
@@ -89,12 +89,12 @@
                   </a>
                 </li>
                 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                   <a class="nav-link" href="#">
                     <span data-feather="dollar-sign"></span>
                     Earnings
                   </a>
-                </li>
+                </li> --}}
               </ul>
 
              

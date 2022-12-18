@@ -44,14 +44,16 @@
                                             Rp{{ $item->price }}
                                         </td>
                                         <td>
-                                            <a class="btn btn-primary btn-sm" href="{{ url('details', $item->id) }}">Details</a>
+                                            <div class="d-flex flex-row ">
+                                                <a class="btn btn-primary btn-sm" href="{{ url('details', $item->id) }}">Details</a>
 
-                                            <a class="btn btn-secondary btn-sm" href="{{ route('shopping.edit', $item->id) }}">Edit</a>
+                                                <a class="btn btn-secondary btn-sm mx-2" href="{{ route('shopping.edit', $item->id) }}">Edit</a>
 
-                                            <form action="{{ route('contributor.destroy', $item->id) }}" method="post">
-                                                @csrf
-                                                <button class="btn btn-danger btn-sm" onClick="return confirm('Yakin?')">Delete</button>
-                                            </form>
+                                                <form action="{{ route('contributor.destroy', $item->id) }}" method="post">
+                                                    @csrf
+                                                    <button class="btn btn-danger btn-sm" onClick="return confirm('Yakin?')">Delete</button>
+                                                </form>
+                                            </div>
 
                                             <!-- <a class="btn btn-danger btn-sm" href="{{ route('contributor.destroy', $item->id) }}">Delete</a> -->
 

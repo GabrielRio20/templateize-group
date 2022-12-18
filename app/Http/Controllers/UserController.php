@@ -22,7 +22,14 @@ class UserController extends Controller
 
     public function destroy($id) {
         $data_user = User::find($id);
-        $data_user->delete();
+        
+        if ($data_user->level == 'customer' || $data_user->level == 'contributor'){
+            $data_user->delete();
+        }
+        if ($data_user->level == 'admin'){
+            die("Could not delete");
+        }
+        
         return redirect('/user');
     }
 

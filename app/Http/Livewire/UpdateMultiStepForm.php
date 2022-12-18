@@ -79,6 +79,7 @@ class UpdateMultiStepForm extends Component
         if($this->currentStep == 1) {
             $this->validate([
                 'template_name'=>'required|string',
+                'category'=>'required|string',
                 'description'=>'required|string',
                 'price'=>'required|string'
             ]);
@@ -152,6 +153,7 @@ class UpdateMultiStepForm extends Component
 
         $values = array(
             "template_name"=>$this->template_name,
+            "category"=>$this->category,
             "description"=>$this->description,
             "price"=>$this->price,
             "picture"=>$picture,

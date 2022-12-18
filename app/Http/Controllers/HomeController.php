@@ -31,7 +31,7 @@ class HomeController extends Controller
     public function search(Request $request){
         $batas = 5;
         $search = $request -> templates;
-        $shopping = Shopping::where('template_name', 'like', "%".$search."%") ->paginate($batas);
+        $shopping = Shopping::where('template_name', 'like', "%".$search."%")->orwhere('category', 'like', "%".$search."%")->paginate($batas);
         $temp_amount = $shopping -> count();
         $no = $batas * ($shopping -> currentPage() - 1);
         return view('shopping_page.shopping', compact('shopping', 'temp_amount', 'no', 'search'));

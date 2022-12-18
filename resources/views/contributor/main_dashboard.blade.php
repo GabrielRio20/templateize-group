@@ -32,7 +32,7 @@
         <div class="col-lg-6 mt-4">
           <div class="member d-flex align-items-start p-4 shadow rounded justify-content-between">
             <div>
-              <h4>Feedback</h4>
+              <h4>Request Edit</h4>
               <h5>{{ $feedback->count('id') }}</h5>
             </div>
             <div class="my-auto">
