@@ -100,4 +100,10 @@ class ShopController extends Controller
         
         return view('contributor.update_template', ['template' => $template]);
     }
+
+    public function edit2($id) {
+        $template = Shopping::find($id);
+        
+        return view('admin.update_template', ['template' => $template]);
+    }
 }

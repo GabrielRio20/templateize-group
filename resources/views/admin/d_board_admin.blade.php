@@ -107,6 +107,12 @@
                   </a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="{{ route('admin.templates') }}">
+                    <span data-feather="layers"></span>
+                    My Templates
+                  </a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link {{ Request::is('admin-feedback') ? 'active' : '' }}" href="{{ route('admin.feedback') }}">
                     <span data-feather="bar-chart-2"></span>
                     Feedbacks
