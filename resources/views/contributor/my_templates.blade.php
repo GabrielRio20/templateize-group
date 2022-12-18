@@ -28,42 +28,39 @@
                         </tr>
                     </thead>
         
-                    {{-- @foreach($templates as $data) --}}
                     <tbody>
                         <?php $no = 1; ?>
                         @if(!empty($templates))
-                            {{-- @foreach($pesanan as $pesan) --}}
-                                @foreach($templates as $item)
-                                    <tr>
-                                        <td>{{ $no++ }}</td>
-                                        <td>
-                                            <img class="img-fluid m-2" src="{{ asset('thumb/'.$item->picture) }}" width="90px" alt="">
-                                            {{ $item->template_name }}
-                                        </td>
-                                        <td>
-                                            Rp{{ $item->price }}
-                                        </td>
-                                        <td>
-                                            <a class="btn btn-primary btn-sm" href="{{ url('details', $item->id) }}">Details</a>
-
-                                            <a class="btn btn-secondary btn-sm" href="{{ route('shopping.edit', $item->id) }}">Edit</a>
-
-                                            <form action="{{ route('contributor.destroy', $item->id) }}" method="post">
+                            @foreach($templates as $item)
+                                <tr>
+                                    <td>{{ $no++ }}</td>
+                                    <td>
+                                        <img class="img-fluid m-2" src="{{ asset('thumb/'.$item->picture) }}" width="90px" alt="">
+                                        {{ $item->template_name }}
+                                    </td>
+                                    <td>
+                                        Rp {{ number_format($item->price, 0, '.', '.') }}
+                                    </td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <div class="p-1">
+                                                <a class="btn btn-primary btn-sm" href="{{ url('details', $item->id) }}">Details</a>
+                                            </div>
+                                            <div class="p-1">
+                                                <form action="{{ route('contributor.destroy', $item->id) }}" method="post">
                                                 @csrf
                                                 <button class="btn btn-danger btn-sm" onClick="return confirm('Yakin?')">Delete</button>
-                                            </form>
-
-                                            <!-- <a class="btn btn-danger btn-sm" href="{{ route('contributor.destroy', $item->id) }}">Delete</a> -->
-
-                                            {{-- <a class="btn btn-success btn-sm" href="{{ asset('./storage/app/docs') }}/ {{ $item->shopping->document }}" download="{{ $item->shopping->template_name }}">Download</a> --}}
-                                        </td>
-                                        {{-- <td>{{ $user->level }}</td> --}}
-                                    </tr>
-                                @endforeach
-                            {{-- @endforeach --}}
+                                                </form>
+                                            </div>
+                                            <div class="p-1">
+                                                <a class="btn btn-secondary btn-sm" href="{{ route('shopping.edit', $item->id) }}">Edit</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
                         @endif
                     </tbody>
-                    {{-- @endforeach --}}
                 </table>
             </div>
         </div> 
