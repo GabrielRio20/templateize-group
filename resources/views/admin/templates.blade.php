@@ -40,20 +40,27 @@
                                         {{ $item->template_name }}
                                     </td>
                                     <td>
-                                        Rp{{ $item->price }}
+                                        Rp {{ number_format($item->price, 0, '.', '.') }}
                                     </td>
                                     <td>
-                                        <a class="btn btn-primary btn-sm" href="{{ url('details', $item->id) }}">Details</a>
-                                        @foreach($admin as $user)
-                                            @if($item->uploader == $user->id)
-                                            <a class="btn btn-secondary btn-sm" href="{{ route('admin.edit', $item->id) }}">Edit</a>
-                                            @endif
-                                        @endforeach
-
-                                        <form action="{{ route('admin.destroy', $item->id) }}" method="post">
-                                            @csrf
-                                            <button class="btn btn-danger btn-sm" onClick="return confirm('Yakin?')">Delete</button>
-                                        </form>
+                                        <div class="d-flex flex-row">
+                                            <div class="p-1">
+                                                <a class="btn btn-primary btn-sm" href="{{ url('details', $item->id) }}">Details</a>
+                                            </div>
+                                            <div class="p-1">
+                                                <form action="{{ route('admin.destroy', $item->id) }}" method="post">
+                                                @csrf
+                                                <button class="btn btn-danger btn-sm" onClick="return confirm('Yakin?')">Delete</button>
+                                                </form>
+                                            </div>
+                                            <div class="p-1">
+                                                @foreach($admin as $user)
+                                                @if($item->uploader == $user->id)
+                                                <a class="btn btn-secondary btn-sm" href="{{ route('admin.edit', $item->id) }}">Edit</a>
+                                                @endif
+                                                @endforeach
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach
