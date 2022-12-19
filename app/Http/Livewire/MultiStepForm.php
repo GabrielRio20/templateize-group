@@ -27,6 +27,7 @@ class MultiStepForm extends Component
     public $checkbox;
     public $namafile;
     public $uploader;
+    public $terms;
 
     public $totalSteps = 3;
     public $currentStep = 1;
@@ -84,6 +85,12 @@ class MultiStepForm extends Component
     }
 
     public function submit() {
+        if($this->currentStep == 3) {
+            $this->validate([
+                'terms'=>'required'
+            ]);
+        }
+
         $picture = $this->picture;
         $picture2 = $this->picture2;
         $picture3 = $this->picture3;
