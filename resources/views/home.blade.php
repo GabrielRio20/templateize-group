@@ -24,7 +24,7 @@
 
     <title>Templateize</title>
 </head>
-<body style="background-color: #ffffff; "> 
+<body style="background-color: #E9EBF8; "> 
 
   
   {{-- @extends('layouts.app') --}}
@@ -90,7 +90,7 @@
     </div>
 
     
-    <div class="p-5 mb-5 text-dark" style="background-color: #ffffff;">
+    <div class="p-5 mb-5 text-dark" style="background-color: #E9EBF8;">
       <div class="container mt-3 mb-5 ml-0">
         <div class="row">
           <h3 class="text-dark mb-5" id="template" data-aos="fade-up" data-aos-duration="1000">Templates</h3>
@@ -112,7 +112,7 @@
       </div>
     </div>
 
-    <div class="feedback" style="background-color:#1d44f9; padding-top: 10%;">
+    <div class="feedback" style="background-image: url('/img/Background.png'); padding-top: 10%;">
       @include ("feedback") 
     </div>
           

@@ -22,12 +22,12 @@
   <!-- Footer -->
   <footer
           class="text-center text-lg-start text-white"
-          style="background-color: #164472"
+          style="background-color: #226bb4"
           >
     <!-- Section: Social media -->
     <section
              class="d-flex justify-content-between p-4"
-             style="background-color: #3096FD"
+             style="background-color: #3096fd"
              >
       <!-- Left -->
       <div class="me-5">
@@ -139,7 +139,7 @@
     <!-- Copyright -->
     <div
          class="text-center p-3"
-         style="background-color: #1C1C1C"
+         style="background-color: #164472"
          >
       © 2022 Copyright:
       <a class="text-white" href="https://mdbootstrap.com/"
