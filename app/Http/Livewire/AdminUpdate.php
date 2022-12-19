@@ -44,6 +44,7 @@ class AdminUpdate extends Component
         $this->picture3 = $template->picture3;
         $this->picture4 = $template->picture4;
         $this->document = $template->document;
+        $this->category = $template->category;
     }
 
     public function render()
@@ -79,6 +80,7 @@ class AdminUpdate extends Component
         if($this->currentStep == 1) {
             $this->validate([
                 'template_name'=>'required|string',
+                'category'=>'required|string',
                 'description'=>'required|string',
                 'price'=>'required|string'
             ]);
@@ -152,6 +154,7 @@ class AdminUpdate extends Component
 
         $values = array(
             "template_name"=>$this->template_name,
+            "category"=>$this->category,
             "description"=>$this->description,
             "price"=>$this->price,
             "picture"=>$picture,
