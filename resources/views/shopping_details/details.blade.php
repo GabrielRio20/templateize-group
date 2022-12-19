@@ -249,7 +249,7 @@
 						<div class="action">
                             <form method="get" action="{{ url('buy') }}/{{ $shopping->id }}" >
                                 <button class="add-to-cart btn btn-default" type="submit">add to cart</button>
-                                <button class="like btn btn-default" type="button" type="submit"><span class="fa fa-heart"></span></button>
+                                {{-- <button class="like btn btn-default" type="button" type="submit"><span class="fa fa-heart"></span></button> --}}
                                 @include('sweetalert::alert')
                             </form>
 						</div>

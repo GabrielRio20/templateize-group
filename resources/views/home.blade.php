@@ -41,13 +41,13 @@
 
         <div class="carousel-inner m-auto" style="max-height:91vh" id="move">
           <div class="carousel-item active" data-target="#move">
-            <img src="{{ asset('img/carousel/Frame 22.png') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('img/carousel/Halaman1.png') }}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item" data-target="#move">
-            <img src="{{ asset('img/carousel/Frame 23.png') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('img/carousel/Halaman2.png') }}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item" data-target="#move">
-            <img src="{{ asset('img/carousel/Frame 26.png') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('img/carousel/Halaman3.png') }}" class="d-block w-100" alt="...">
           </div>
         </div>
         
