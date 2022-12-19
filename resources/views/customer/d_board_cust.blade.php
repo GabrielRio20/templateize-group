@@ -28,15 +28,14 @@
         user-select: none;
       }
 
+      #sidebarMenu{
+        padding-top: 10px;
+      }
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-      }
-
-      #sidebarMenu{
-        padding-top: 10px;
-      }
 
       #sidebarMenu{
         height: 100vh;
@@ -44,6 +43,8 @@
 
       #sidebarMenu{
         z-index: 100;
+      }
+
       }
     </style>
 

@@ -13,7 +13,7 @@
     @extends('admin.d_board_admin')
     @section('main')
     <div class="container m-3">
-        <h1>Ini Halaman Edit</h1>
+        <h1>Edit Template</h1>
         @livewire('admin-update', ['template'=>$template])
     </div>
     

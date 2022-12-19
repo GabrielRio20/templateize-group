@@ -44,6 +44,7 @@ class UpdateMultiStepForm extends Component
         $this->picture3 = $template->picture3;
         $this->picture4 = $template->picture4;
         $this->document = $template->document;
+        $this->category = $template->category;
     }
 
     public function render()

@@ -115,6 +115,19 @@
     <div class="feedback" style="background-image: url('/img/Background.png'); padding-top: 10%;">
       @include ("feedback") 
     </div>
+
+    <section>
+    <div class="p-5 m-5 text-dark" style="background-color: #E9EBF8;text-align: center; text-color:#3096fd">
+      <div class="container mt-3 ml-3">
+        <div class="row">
+          <h2 class="text-dark" id="template" data-aos="fade-up" data-aos-duration="1000">          
+          "Provides template services through an online website. The expected benefits are that it can become a website that 
+          provides templates that are useful for promoting personal works according to the wishes of the user"
+          </h2>
+        </div>
+      </div>
+    </div>
+    </section>
           
     @include ("footer.footer")
     {{-- @include('layout.feedback') --}}
