@@ -30,17 +30,17 @@
                     <tbody>
                         <?php $no = 1; ?>
                         @if(!empty($pesanan))
-                            @foreach($pesanan_detail as $item)
+                            @foreach($shopping as $item)
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td>
-                                        <img class="img-fluid m-2" src="{{ asset('thumb/'.$item->shopping->picture) }}" width="90px" alt="">
-                                        {{ $item->shopping->template_name }}
+                                        <img class="img-fluid m-2" src="{{ asset('thumb/'.$item->picture) }}" width="90px" alt="">
+                                        {{ $item->template_name }}
                                     </td>
-                                    <td>{{ $item->pesanan->tanggal }}</td>
+                                    <td>{{ $pesanan->tanggal }}</td>
                                     <td>
-                                        <a class="btn btn-primary btn-sm" href="{{ url('details', $item->shopping->id) }}">Details</a>
-                                        <a class="btn btn-success btn-sm" href="{{ url('download', $item->shopping->id) }}">Download</a>
+                                        <a class="btn btn-primary btn-sm" href="{{ url('details', $item->id) }}">Details</a>
+                                        <a class="btn btn-success btn-sm" href="{{ url('download', $item->id) }}">Download</a>
                                     </td>
                                 </tr>
                             @endforeach

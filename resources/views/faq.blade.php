@@ -71,6 +71,7 @@
 <section>@include ("footer.footer")</section>
 @endsection
 
-<script> src="{{asset('js/faq.js')}}"</script>
+<script src="{{ asset('js/faq.js') }}"></script>
+
 </body>
 </html>
