@@ -111,7 +111,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('admin.templates') }}">
                     <span data-feather="layers"></span>
-                    My Templates
+                    Templates
                   </a>
                 </li>
                 <li class="nav-item">

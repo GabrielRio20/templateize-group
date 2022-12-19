@@ -291,6 +291,7 @@
                                       <div class="social-links">
                                           <a href=""><span class="fab fa-google"></span></a>
                                           <a href=""><span class="fab fa-linkedin"></span></a>
+                                          <a href="https://github.com/Mumtaza15"><i class="fab fa-github"></i></a>
                                       </div>
                                  </div>
                              </div>
@@ -304,6 +305,7 @@
                                       <div class="social-links">
                                       <a href=""><span class="fab fa-google"></span></a>
                                       <a href=""><span class="fab fa-linkedin"></span></a>
+                                      <a href="https://github.com/GabrielRio20"><i class="fab fa-github"></i></a>
                                       </div>
                                  </div>
                              </div>
@@ -317,6 +319,7 @@
                                       <div class="social-links">
                                           <a href=""><span class="fab fa-google"></span></a>
                                           <a href=""><span class="fab fa-linkedin"></span></a>
+                                          <a href="https://github.com/yandi-nugraha"><i class="fab fa-github"></i></a>
                                       </div>
                                  </div>
                              </div>
@@ -330,6 +333,7 @@
                                       <div class="social-links">
                                           <a href=""><span class="fab fa-google"></span></a>
                                           <a href=""><span class="fab fa-linkedin"></span></a>
+                                          <a href="https://github.com/Rayendraarya26"><i class="fab fa-github"></i></a>
                                       </div>
                                  </div>
                              </div>
