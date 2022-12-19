@@ -36,6 +36,8 @@
                     <div class="form-group">
                         <div>Template Name <input type="text" name="template_name" class="form-control" wire:model="template_name"></div>
                         <span class="text-danger">@error('template_name'){{ $message }}@enderror</span><br>
+                        <div>Template Category <input type="text" name="category" class="form-control" wire:model="category"></div>
+                        <span class="text-danger">@error('category'){{ $message }}@enderror</span><br>
                         <!-- <label for="category">Category</label>
                         <select name="category" class="form-control" wire:model="category">
                             <option value="" selected>Choose category</option>
@@ -45,7 +47,7 @@
                             <option value="photographer">Photographer</option>
                             <option value="web developer">Web Developer</option>
                         </select><br> -->
-                        <div>Description <input type="textarea" name="description" class="form-control" wire:model="description"></div>
+                        <div>Description <textarea type="textarea" name="description" class="form-control" wire:model="description"></textarea></div>
                         <span class="text-danger">@error('description'){{ $message }}@enderror</span><br>
                         <div>Price <input type="text" name="price" class="form-control" wire:model="price">
                         <span class="text-danger">@error('price'){{ $message }}@enderror</span></div>

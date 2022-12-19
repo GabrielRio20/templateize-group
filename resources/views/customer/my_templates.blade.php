@@ -29,7 +29,7 @@
                     </thead>
                     <tbody>
                         <?php $no = 1; ?>
-                        @foreach($pesanan as $data)
+                        @foreach($pesanan->reverse() as $data)
                             @if(!empty($pesanan))
                                 @foreach($pesanan_detail as $item)
                                     @if($data->id == $item->pesanan_id)

@@ -25,7 +25,7 @@
 
 <section id="featured" class="my-5 pb-5">
     <div class="container text-center mt-5 py-5">
-        <h3>Templates</h3>
+        <h3 style="color:#1e5baf"><strong>Templates</strong></h3>
         <hr class="mx-auto">
         <p>Please, take a look at these Cool Templates</p>
     </div>
