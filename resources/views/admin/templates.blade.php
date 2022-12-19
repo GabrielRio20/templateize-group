@@ -32,7 +32,7 @@
                     <tbody>
                         <?php $no = 1; ?>
                         @if(!empty($templates))
-                            @foreach($templates as $item)
+                            @foreach($templates->reverse() as $item)
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td>

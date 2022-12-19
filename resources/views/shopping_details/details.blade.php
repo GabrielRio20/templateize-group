@@ -16,6 +16,9 @@
 
     <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet'>
 
+    {{-- External CSS --}}
+    <link href="{{ url('css/responDetail.css') }}" type="text/css" rel='stylesheet'>
+
     <!-- <link rel="stylesheet" href="style.css"> -->
 
     <style>
@@ -246,7 +249,7 @@
 						<div class="action">
                             <form method="get" action="{{ url('buy') }}/{{ $shopping->id }}" >
                                 <button class="add-to-cart btn btn-default" type="submit">add to cart</button>
-                                <button class="like btn btn-default" type="button" type="submit"><span class="fa fa-heart"></span></button>
+                                {{-- <button class="like btn btn-default" type="button" type="submit"><span class="fa fa-heart"></span></button> --}}
                                 @include('sweetalert::alert')
                             </form>
 						</div>
@@ -259,7 +262,7 @@
 
     <div class="container mt-3 mb-5 ml-0">
         <div class="row">
-          <h3 class="text-dark mb-5 mt-5" id="template" data-aos="fade-up" data-aos-duration="1000">You may also like</h3>
+          <h3 class="text mb-5 mt-5" id="template" data-aos="fade-up" data-aos-duration="1000" style="color:#1e5baf"><strong>You may also like</strong></h3>
 
           @foreach($recommend as $item)
           <div class="product text-center col-lg-3 col-md-4 col-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">

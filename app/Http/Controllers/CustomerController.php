@@ -22,49 +22,21 @@ class CustomerController extends Controller
 
     public function myTemp(){
         $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 1)->get();
-        // $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
         $pesanan_detail = PesananDetail::all();
-        // $tanggal = Pesanan::where('tanggal', $pesanan->tanggal)->get();
-        // if(!empty($pesanan)){
-        //     $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
-        //     // $pesanan_detail = PesananDetail::all();
-        //     // $shopping = Shopping::where('id', $pesanan->id)->get();
-        //     $tanggal = Pesanan::where('tanggal', $pesanan->tanggal);
-        // }
-        // else{
-        //     $pesanan_detail = 0;
-        //     // $shopping = 0;
-        //     $tanggal = 0;
-        // }
-
+        // $pesanan_detail = PesananDetail::orderBy('pesanan_id', 'asc')->get();
+        
         return view('customer.my_templates', compact('pesanan', 'pesanan_detail'));
     }
 
     public function dashboardCust(){
         $user = User::where('id', Auth::user()->id)->first();
-        // $money = User::where('money', $user->money)->first();
         $money = $user->money;
 
         $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 1)->get();
         $pesanan_detail = PesananDetail::all();
-        // if(!empty($pesanan)){
-        //     $pesanan_detail = PesananDetail::where('pesanan_id', $pesanan->id)->get();
-        //     // $pesanan_detail = PesananDetail::all();
-        //     $shopping = Shopping::where('id', $pesanan->id)->get();
-        //     $tanggal = Pesanan::where('tanggal', $pesanan->tanggal);
-        // }
-        // else{
-        //     $pesanan_detail = 0;
-        //     $shopping = 0;
-        //     $tanggal = 0;
-        // }
-
-
-
         if($money < 0){
             $money = 0;
         }
-
         return view('customer.main_dashboard', compact('pesanan', 'pesanan_detail', 'money', 'user'));
     }
 

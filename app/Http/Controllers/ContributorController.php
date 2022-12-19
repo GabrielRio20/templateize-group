@@ -30,7 +30,6 @@ class ContributorController extends Controller
     
     public function myTemp(){
         $templates = Shopping::where('uploader', Auth::id())->get();
-
         return view('contributor.my_templates', compact('templates'));
     }
 

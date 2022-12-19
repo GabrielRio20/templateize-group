@@ -88,7 +88,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('contributor.mytemp') }}">
+                  <a class="nav-link {{ Request::is('ContributorTemplates') ? 'active' : '' }}" href="{{ route('contributor.mytemp') }}">
                     <span data-feather="layers"></span>
                     My Templates
                   </a>

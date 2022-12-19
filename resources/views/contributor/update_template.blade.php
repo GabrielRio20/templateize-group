@@ -13,7 +13,7 @@
     @extends('contributor.d_board_cont')
     @section('main')
     <div class="container m-3">
-        <h1>Ini Halaman Edit</h1>
+        <h1>Edit Template</h1>
         @livewire('update-multi-step-form', ['template'=>$template])
     </div>
     

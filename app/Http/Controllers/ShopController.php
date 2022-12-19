@@ -16,7 +16,6 @@ class ShopController extends Controller
         $batas = 12;
         $shopping = Shopping::orderBy('id', 'desc')->paginate($batas);
         $no = $batas * ($shopping->currentPage()-1);
-
         // $shopping = Shopping::paginate(8);
         return view('shopping_page.shopping', compact('shopping', 'no'));
         // return view('home', compact('shopping'));
