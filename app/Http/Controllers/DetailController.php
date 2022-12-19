@@ -31,6 +31,7 @@ class DetailController extends Controller
         $shopping_all = Shopping::all();
         $shopping = Shopping::where('id', $id)->first();
         $tanggal = Carbon::now();
+        $jumlah = 1;
 
         //cek validasi
         $cek_pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
