@@ -30,10 +30,21 @@
         user-select: none;
       }
 
+      #sidebarMenu{
+        padding-top: 10px;
+      }
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
+
+      #sidebarMenu{
+        height: 100vh;
+      }
+
+      #sidebarMenu{
+        z-index: 100;
       }
     </style>
 
@@ -74,12 +85,6 @@
                   <a class="nav-link {{ Request::is('upload-temp') ? 'active' : '' }}" href="{{ route('cont.uploadTemp') }}">
                     <span data-feather="shopping-cart"></span>
                     Upload Template
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link {{ Request::is('admin-feedback') ? 'active' : '' }}" href="{{ route('admin.feedback') }}">
-                    <span data-feather="bar-chart-2"></span>
-                    Feedbacks
                   </a>
                 </li>
                 <li class="nav-item">
