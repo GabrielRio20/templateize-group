@@ -226,7 +226,8 @@
 						
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">{{ $shopping->template_name }}</h3>
+						<h3 class="product-title" style="color:#1e5baf"><strong>{{ $shopping->template_name }}</strong></h3>
+                        <p class="product-description mb-1"><strong>Category : </strong>{{ $shopping->category }}</p>
 						<div class="rating">
 							{{-- <div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -237,6 +238,7 @@
 							</div> --}}
 							{{-- <span class="review-no">41 reviews</span> --}}
 						</div>
+                        <h5 class="mt-1"><strong>Description</strong></h5>
 						<p class="product-description mb-5">{{ $shopping->description }}</p>
 						<h4 class="price"><span>{{ "Rp ".number_format($shopping->price, 0, '.', '.') }}</h4>
 						{{-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p> --}}
@@ -272,7 +274,7 @@
         </div>
     </div>
     
-    @include ("footer.footer")
+    {{-- @include ("footer.footer") --}}
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>

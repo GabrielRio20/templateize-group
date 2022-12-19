@@ -94,12 +94,12 @@
                   </a>
                 </li>
                 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                   <a class="nav-link" href="#">
                     <span data-feather="dollar-sign"></span>
                     Earnings
                   </a>
-                </li>
+                </li> --}}
               </ul>
 
              

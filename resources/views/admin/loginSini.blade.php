@@ -42,7 +42,7 @@
     {{-- Admin authentication --}}
     <script>
         var auth = prompt("Enter admin authentication");
-        if (auth == "aku admin asli bang, sumpah"){
+        if (auth == "TemplateizeAdmin$12345"){
             txt = "Welcome, Admin!"
         }
         else{

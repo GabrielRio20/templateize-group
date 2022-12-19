@@ -45,6 +45,7 @@ class ShopController extends Controller
         $this->validate($request, [
             // 'id' => 'required',
             'template_name' => 'required',
+            'category' => 'required',
             'picture'=> 'image|mimes:jpeg,jpg,png',
             'document' => 'required|file|mimes:zip',
             'description' => 'required',
@@ -54,6 +55,7 @@ class ShopController extends Controller
         $shopping = New Shopping;
         $shopping->id = $request->id;
         $shopping->template_name = $request->template_name;
+        $shopping->category = $request->category;
         $shopping->description = $request->description;
         $shopping->price = $request->price;
 

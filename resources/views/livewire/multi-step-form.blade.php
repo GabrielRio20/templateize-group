@@ -36,6 +36,8 @@
                     <div class="form-group">
                         <div>Template Name <input type="text" name="template_name" class="form-control" wire:model="template_name"></div>
                         <span class="text-danger">@error('template_name'){{ $message }}@enderror</span><br>
+                        <div>Template Category <input type="text" name="category" class="form-control" wire:model="category"></div>
+                        <span class="text-danger">@error('category'){{ $message }}@enderror</span><br>
                         <!-- <label for="category">Category</label>
                         <select name="category" class="form-control" wire:model="category">
                             <option value="" selected>Choose category</option>
@@ -89,7 +91,7 @@
                     <div class="form-group">
                         <div class="form-group mb-4">
                             <label for="picture"> Upload Foto</label>
-                            <input type="file" class="form-control" name="picture" wire:model="picture">
+                            <input type="file" class="form-control" id="picture" name="picture" wire:model="picture" onchange="loadfile(event)">
                             <span class="text-danger">@error('picture'){{ $message }}@enderror</span><br>
 
                             <input type="file" class="form-control" name="picture2" wire:model="picture2">
@@ -148,7 +150,8 @@
                         <br>
                         <table class="table">
                             <tr>
-                                <td><img src="{{ asset('thumb/'.$namafile) }}"></td>
+                                {{-- <td><img src="{{ asset('thumb/'.$namafile) }}"></td> --}}
+                                <td><img id="picture" ></div></td>
                                 <td>{{ $template_name }}</td>
                                 <td>{{ $price }}</td>
                             </tr>
@@ -158,6 +161,12 @@
                         </label> -->
                     </div>
                 </div>
+                <script>
+                    var loadfile = function(event){
+                        var picture = document.getElementById("picture");
+                        picture.src = URL.createObjectURL(event.target.files[0]);
+                    };
+                </script>
             </div>
         </div>
 
