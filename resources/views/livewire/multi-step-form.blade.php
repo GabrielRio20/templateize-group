@@ -153,9 +153,20 @@
                                 {{-- <td><img src="{{ asset('thumb/'.$namafile) }}"></td> --}}
                                 <td><img id="picture" ></div></td>
                                 <td>{{ $template_name }}</td>
-                                <td>{{ $price }}</td>
+                                <td>Rp {{ number_format($price, 0, '.', '.') }}</td>
+                                <!-- <td>{{ $price }}</td> -->
                             </tr>
                         </table>
+
+                        <!-- <label for="picture"> Upload Foto</label>
+                        <input type="file" class="form-control" id="picture" name="picture" wire:model="picture" onchange="loadfile(event)">
+                        <span class="text-danger">@error('picture'){{ $message }}@enderror</span><br> -->
+                        <label for="terms" class="d-block">
+                            <input type="checkbox" id="terms" name="terms" wire:model="terms">I agree to the
+                            <a href="/TermsAndConditions"> terms and conditions</a> and the
+                            <a href="/TermsAndConditions"> privacy policy</a>
+                            <span class="text-danger">@error('terms'){{ $message }}@enderror</span><br>
+                        </label>
                         <!-- <label for="checkbox">
                             <input type="checkbox" wire:model="checkbox"> I agree
                         </label> -->
