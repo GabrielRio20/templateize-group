@@ -29,22 +29,26 @@
                     </thead>
                     <tbody>
                         <?php $no = 1; ?>
-                        @if(!empty($pesanan))
-                            @foreach($pesanan_detail as $item)
-                                <tr>
-                                    <td>{{ $no++ }}</td>
-                                    <td>
-                                        <img class="img-fluid m-2" src="{{ asset('thumb/'.$item->shopping->picture) }}" width="90px" alt="">
-                                        {{ $item->shopping->template_name }}
-                                    </td>
-                                    <td>{{ $item->pesanan->tanggal }}</td>
-                                    <td>
-                                        <a class="btn btn-primary btn-sm" href="{{ url('details', $item->shopping->id) }}">Details</a>
-                                        <a class="btn btn-success btn-sm" href="{{ url('download', $item->shopping->id) }}">Download</a>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        @endif
+                        @foreach($pesanan as $data)
+                            @if(!empty($pesanan))
+                                @foreach($pesanan_detail as $item)
+                                    @if($data->id == $item->pesanan_id)
+                                    <tr>
+                                        <td>{{ $no++ }}</td>
+                                        <td>
+                                            <img class="img-fluid m-2" src="{{ asset('thumb/'.$item->shopping->picture) }}" width="90px" alt="">
+                                            {{ $item->shopping->template_name }}
+                                        </td>
+                                        <td>{{ $item->pesanan->tanggal }}</td>
+                                        <td>
+                                            <a class="btn btn-primary btn-sm" href="{{ url('details', $item->shopping->id) }}">Details</a>
+                                            <a class="btn btn-success btn-sm" href="{{ url('download', $item->shopping->id) }}">Download</a>
+                                        </td>
+                                    </tr>
+                                    @endif
+                                @endforeach
+                            @endif
+                        @endforeach
                     </tbody>
                 </table>
             </div>

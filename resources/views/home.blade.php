@@ -107,7 +107,7 @@
           @endforeach
         
         </div>
-        <a class="d-flex justify-content-center mt-5" href="{{ route('shopping') }}" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><button type="submit" class="btn btn-primary w-10">See More...</button>
+        <a class="d-flex justify-content-center mt-5" href="{{ route('shopping') }}" data-aos="fade-up" data-aos-duration="1000"><button type="submit" class="btn btn-primary w-10">See More...</button>
         </a>
       </div>
     </div>
