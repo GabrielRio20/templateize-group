@@ -89,7 +89,7 @@
           <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
             <div class="position-sticky pt-3">
               <ul class="nav flex-column">
-                <li></
+                <li>
                 <li class="nav-item">
                   <a class="nav-link {{ Request::is('admin-dashboard') ? 'active' : '' }}" aria-current="page" href="{{ route('main-dashboard') }}">
                     <span data-feather="home"></span>
@@ -109,7 +109,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('admin.templates') }}">
+                  <a class="nav-link {{ Request::is('AdminTemplates') ? 'active' : '' }}" href="{{ route('admin.templates') }}">
                     <span data-feather="layers"></span>
                     Templates
                   </a>
